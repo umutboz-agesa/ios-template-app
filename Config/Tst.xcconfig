@@ -1,0 +1,9 @@
+// ── FLAVOR: tst (iç QA) ──
+SABANCIM_FLAVOR = tst
+BUNDLE_ID = com.agesa.template.tst
+SABANCIM_DISPLAY_NAME = iOSTemplate TST
+
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1
+
+API_BASE_URL = https:/$()/mobiletst.agesa.com.tr/maf-ui-bff-mobile/

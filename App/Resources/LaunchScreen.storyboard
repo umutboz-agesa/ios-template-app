@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LVC-01-abc">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="LSC-01-scn">
+            <objects>
+                <viewController id="LVC-01-abc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIW-01-abc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="IMG-01-abc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAF-01-abc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IMG-01-abc" firstAttribute="bottom" secondItem="VIW-01-abc" secondAttribute="bottom" id="con-bot"/>
+                            <constraint firstItem="IMG-01-abc" firstAttribute="leading" secondItem="VIW-01-abc" secondAttribute="leading" id="con-lead"/>
+                            <constraint firstItem="IMG-01-abc" firstAttribute="top" secondItem="VIW-01-abc" secondAttribute="top" id="con-top"/>
+                            <constraint firstItem="IMG-01-abc" firstAttribute="trailing" secondItem="VIW-01-abc" secondAttribute="trailing" id="con-trail"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRP-01-abc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchImage" width="853" height="1844"/>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+// ── FLAVOR: prd (production) ──
+SABANCIM_FLAVOR = prd
+BUNDLE_ID = com.agesa.template
+SABANCIM_DISPLAY_NAME = iOSTemplate
+
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1
+
+// Backend adresi — .xcconfig'ten okunur (bkz. NetworkEnvironment.swift).
+// xcconfig'te "//" yorum başlatabildiği için URL DAİMA tırnak içinde yazılır.
+API_BASE_URL = https:/$()/mobileapp.agesa.com.tr/maf-ui-bff-mobile/

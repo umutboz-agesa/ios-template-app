@@ -1,0 +1,10 @@
+// ── FLAVOR: pilot (prod backend, ayrı bundle → yan yana kurulum) ──
+SABANCIM_FLAVOR = pilot
+BUNDLE_ID = com.agesa.template.pilot
+SABANCIM_DISPLAY_NAME = iOSTemplate Pilot
+
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1
+
+// prd ile aynı backend (pilot = prod backend, ayrı bundle id).
+API_BASE_URL = https:/$()/mobileapp.agesa.com.tr/maf-ui-bff-mobile/

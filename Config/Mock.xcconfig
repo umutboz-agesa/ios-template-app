@@ -1,0 +1,9 @@
+// ── FLAVOR: mock (ağ YOK, in-memory) ── NetworkEnvironment.mock.baseURL = nil.
+SABANCIM_FLAVOR = mock
+BUNDLE_ID = com.agesa.template.mock
+SABANCIM_DISPLAY_NAME = iOSTemplate Mock
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1
+
+// Boş = ağ yok (NetworkEnvironment.baseURL nil döner).
+API_BASE_URL =
