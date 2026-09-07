@@ -1,5 +1,4 @@
 import SwiftUI
-import CoreNavigation
 
 /// Uygulama kökü — Splash ilk ekran. Sıra: Splash → (oturuma göre) Login veya
 /// doğrudan ana akış (tab'lar). Superapp'teki gerçek `RootView`'ın birebir

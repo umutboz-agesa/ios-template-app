@@ -1,6 +1,4 @@
 import Foundation
-import DataNetwork
-import CoreCommon
  
 final class AuthRemoteDataSource: BaseRemoteDataSource, @unchecked Sendable {
     private let api: AuthApi

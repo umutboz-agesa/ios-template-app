@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 24.07.2026.
 //
 import Foundation
-import DataNetwork
  
 ///`.startLogin` endpoint'i.
 struct StartLoginApi: Sendable {

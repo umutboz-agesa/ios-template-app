@@ -24,6 +24,8 @@
 	<string>$(SABANCIM_DISPLAY_NAME)</string>
 	<key>SabancimFlavor</key>
 	<string>$(SABANCIM_FLAVOR)</string>
+	<key>ApiBaseURL</key>
+	<string>$(API_BASE_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -35,7 +37,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>ApiBaseURL</key>
-	<string>$(API_BASE_URL)</string>
 </dict>
 </plist>

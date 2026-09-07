@@ -6,12 +6,8 @@
 //
 
 import Foundation
-import CoreSession
 import Observation
 import Dependencies
-import CoreNavigation
-import CoreCommon
-import DataNetwork
 import UIKit   // UIDevice.identifierForVendor
 
 /// Splash ekranının UI-state'i. `Loadable` yerine kendi enum'u —

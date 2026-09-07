@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import CoreCommon
 
 public struct LoginRegistrationCredentials: Sendable, Equatable {
     public let identityNumber: String

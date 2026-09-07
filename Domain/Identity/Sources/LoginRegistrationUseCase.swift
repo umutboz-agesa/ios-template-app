@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import CoreCommon
  
 /// Android `:domain:identity` `LoginRegistrationUseCase` karşılığı.
 /// Validation + domain logic burada; UI'dan ayrık, test edilebilir.

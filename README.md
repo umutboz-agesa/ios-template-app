@@ -3,25 +3,20 @@
 ## Proje ağacı
 
 ```
-iOSTemplate.xcodeproj/     App target'ı: App/Sources + TÜM Domain/ + Feature/ dosyaları burada derleniyor
-Config/                    Prd/Preprod/Tst/Pilot/Mock.xcconfig — BUNDLE_ID buradan
-App/
-  Sources/                 AppEntry (@main), AppComposition (swift-dependencies bootstrap), RootView
-  Resources/Info.plist
-Domain/                    ← App target'ının düz kaynağı
-  Identity/Sources/        SessionManager HARİÇ hepsi (UseCase'ler, UserSession, IdentityDependencies)
-  Platform/Sources/        CheckVersionUseCase, VersionRepository contract'ı, PlatformDependencies
-Feature/                   ← App target'ının düz kaynağı
-  Splash/Sources/{Presentation,Data}
-  Login/Sources/{Presentation,Data}
-  Home/Sources/{Presentation,Data}
-Modules/                   ←(App target'ı bunları import eder)
-  Core/Common/              CoreCommon — SabancimError, SabancimResult, Loadable<T>
-  Core/Navigation/          CoreNavigation — AppNavigator, SabancimRoute
-  Core/Presentation/        CorePresentation — BaseView, LoadableView
-  Core/Session/             CoreSession — SessionManaging + SessionManager (bu turda yeni)
-  DesignSystem/              DesignSystem — Atoms/Molecules/States/Theme + Media.xcassets
-  Data/Network/              DataNetwork — HTTPClient, Interceptors, APIEnvelope, ErrorMapper, NetworkEnvironment, Endpoints
+iOSTemplate.xcodeproj/   Tek target — TÜM aşağıdaki klasörler Sources build phase'inde
+Config/                  Prd/Preprod/Tst/Pilot/Mock.xcconfig
+App/                     AppEntry, AppComposition, RootView, MainTabView, AppNavHost, RootTab
+Core/
+  Common/Sources/         SabancimError, SabancimResult, Loadable<T>
+  Navigation/Sources/      AppNavigator, SabancimRoute
+  Presentation/Sources/    BaseView, LoadableView
+  Session/Sources/         SessionManaging + SessionManager (bkz. aşağıdaki NOT)
+Data/
+  Network/Sources/         HTTPClient, Interceptors, APIEnvelope, ErrorMapper, NetworkEnvironment, Endpoints
+DesignSystem/
+  Sources/                 Atoms/Molecules/States/Theme + Resources/Media.xcassets
+Domain/                   (değişmedi) Identity, Platform, Policy
+Feature/                  (değişmedi) Splash, Login, Home, Profile
 ```
 
 ## Hemen açmak için
@@ -36,10 +31,7 @@ Modules/                   ←(App target'ı bunları import eder)
 
 ## Yeni feature eklerken
 
-`Feature/Home`'un yanına `Feature/<Ad>/Sources/{Presentation,Data}` olarak
-düz klasör açın — Package.swift YOK, sadece dosyaları Xcode'da App
-target'ına sürükleyin (ya da "Add Files to iOSTemplate..."). `Modules/`
-altındaki paylaşılan paketleri (`DesignSystem`, `CorePresentation`,
-`CoreNavigation`, `CoreCommon`, `DataNetwork`, `CoreSession`) normal
-`import` ile kullanırsınız; `Domain/`/`Feature/` içi diğer dosyalarla
-aranızda import YOK (hepsi aynı target/modül).
+`Feature/Home`'un yanına `Feature/<Ad>/Sources/{Presentation,Data}`
+açın — Package.swift yok, dosyaları Xcode'a ekleyin ("Add Files to
+iOSTemplate..."), `Core/`/`Data/`/`DesignSystem/` altındaki paylaşılan
+kodu normal `import` OLMADAN (aynı target) doğrudan kullanabilirsiniz.

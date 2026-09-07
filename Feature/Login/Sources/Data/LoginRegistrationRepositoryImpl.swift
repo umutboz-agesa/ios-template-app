@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import CoreCommon
 
 final class LoginRegistrationRepositoryImpl: LoginRegistrationRepository, @unchecked Sendable {
     private let remote: LoginRegistrationRemoteDataSource

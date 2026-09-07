@@ -5,7 +5,6 @@
 //  Created by AVS21862 on 22.07.2026.
 //
 import Foundation
-import CoreCommon
 
 /// Android `CheckVersionUseCase` karşılığı — business burada, UI/Data'dan ayrık.
 /// Ham `AppVersionInfo` + `currentVersion` → `VersionCheckResult` kararı.

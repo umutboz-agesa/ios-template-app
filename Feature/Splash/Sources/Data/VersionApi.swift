@@ -5,7 +5,6 @@
 //  Created by AVS21862 on 22.07.2026.
 //
 import Foundation
-import DataNetwork
 
 /// `AuthApi` kalıbı — HTTPClient üzerine tipli çağrı sarmalayıcısı.
 struct VersionApi: Sendable {

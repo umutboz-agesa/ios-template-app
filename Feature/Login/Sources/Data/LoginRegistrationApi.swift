@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import DataNetwork
  
 /// Not: `APIEnvelope<T>` DEĞİL doğrudan `LoginRegistrationResponseDTO` — bu endpoint'in
 /// kendi düz `success` alanı var, genel zarf şemasını kullanmıyor.

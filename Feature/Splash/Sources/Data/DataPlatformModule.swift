@@ -5,7 +5,6 @@
 //  Created by AVS21862 on 22.07.2026.
 //
 import Foundation
-import DataNetwork
 
 /// Data'nın kompozisyon kapısı (`AuthModule` kalıbı).
 /// App composition root, HTTPClient'ı kurup buradan repository üretir ve

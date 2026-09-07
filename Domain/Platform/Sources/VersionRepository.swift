@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreCommon
 
 /// Android `:domain:platform` `VersionRepository` contract'ı karşılığı.
 /// Implementasyon `Feature:Splash` içinde (`VersionRepositoryImpl`),

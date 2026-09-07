@@ -6,7 +6,6 @@
 //
 import Foundation
 import Dependencies
-import CoreCommon
 
 /// versionRepository DI anahtarı.
 /// `DependencyKey` (liveValue VAR) — çünkü version check'in makul canlı varsayılanı

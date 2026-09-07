@@ -7,177 +7,281 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000000000000000000000019 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000016 /* AppEntry.swift */; };
-		00000000000000000000001A /* AppComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000017 /* AppComposition.swift */; };
-		00000000000000000000001B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* RootView.swift */; };
-		000000000000000000000029 /* CoreCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000023 /* CoreCommon */; };
-		00000000000000000000002A /* CoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000024 /* CoreNavigation */; };
-		00000000000000000000002B /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000025 /* CorePresentation */; };
-		00000000000000000000002C /* CoreSession in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000026 /* CoreSession */; };
-		00000000000000000000002D /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000027 /* DesignSystem */; };
-		00000000000000000000002E /* DataNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000028 /* DataNetwork */; };
-		000000000000000000000031 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 000000000000000000000030 /* Dependencies */; };
-		0000000000000000000000BD /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004E /* AuthRepository.swift */; };
-		0000000000000000000000BE /* AuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004F /* AuthenticationResult.swift */; };
-		0000000000000000000000BF /* ConfirmOtpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000050 /* ConfirmOtpUseCase.swift */; };
-		0000000000000000000000C0 /* IdentityDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000051 /* IdentityDependencies.swift */; };
-		0000000000000000000000C1 /* LoginRegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000052 /* LoginRegistrationRepository.swift */; };
-		0000000000000000000000C2 /* LoginRegistrationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000053 /* LoginRegistrationUseCase.swift */; };
-		0000000000000000000000C3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000054 /* LoginUseCase.swift */; };
-		0000000000000000000000C4 /* OtpConfirmationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000055 /* OtpConfirmationRepository.swift */; };
-		0000000000000000000000C5 /* StartLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000056 /* StartLoginRepository.swift */; };
-		0000000000000000000000C6 /* StartLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000057 /* StartLoginUseCase.swift */; };
-		0000000000000000000000C7 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000058 /* UserSession.swift */; };
-		0000000000000000000000C8 /* CheckVersionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005F /* CheckVersionUseCase.swift */; };
-		0000000000000000000000C9 /* DomainPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000060 /* DomainPlatform.swift */; };
-		0000000000000000000000CA /* PlatformDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000061 /* PlatformDependencies.swift */; };
-		0000000000000000000000CB /* PlatformModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000062 /* PlatformModels.swift */; };
-		0000000000000000000000CC /* VersionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000063 /* VersionRepository.swift */; };
-		0000000000000000000000CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* HomeView.swift */; };
-		0000000000000000000000CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000079 /* HomeViewModel.swift */; };
-		0000000000000000000000CF /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000086 /* AuthApi.swift */; };
-		0000000000000000000000D0 /* AuthDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000087 /* AuthDTOs.swift */; };
-		0000000000000000000000D1 /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000088 /* AuthRemoteDataSource.swift */; };
-		0000000000000000000000D2 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000089 /* AuthRepositoryImpl.swift */; };
-		0000000000000000000000D3 /* AuthenticationCustomDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008A /* AuthenticationCustomDataDTO.swift */; };
-		0000000000000000000000D4 /* DataIdentityModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008B /* DataIdentityModule.swift */; };
-		0000000000000000000000D5 /* LoginRegistrationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008C /* LoginRegistrationApi.swift */; };
-		0000000000000000000000D6 /* LoginRegistrationRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008D /* LoginRegistrationRemoteDataSource.swift */; };
-		0000000000000000000000D7 /* LoginRegistrationRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008E /* LoginRegistrationRepositoryImpl.swift */; };
-		0000000000000000000000D8 /* LoginRegistrationRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000008F /* LoginRegistrationRequestDTO.swift */; };
-		0000000000000000000000D9 /* OtpConfirmationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000090 /* OtpConfirmationApi.swift */; };
-		0000000000000000000000DA /* OtpConfirmationRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000091 /* OtpConfirmationRemoteDataSource.swift */; };
-		0000000000000000000000DB /* OtpConfirmationRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000092 /* OtpConfirmationRepositoryImpl.swift */; };
-		0000000000000000000000DC /* OtpConfirmationRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000093 /* OtpConfirmationRequestDTO.swift */; };
-		0000000000000000000000DD /* StartLoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000094 /* StartLoginApi.swift */; };
-		0000000000000000000000DE /* StartLoginMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000095 /* StartLoginMapper.swift */; };
-		0000000000000000000000DF /* StartLoginRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000096 /* StartLoginRemoteDataSource.swift */; };
-		0000000000000000000000E0 /* StartLoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000097 /* StartLoginRepositoryImpl.swift */; };
-		0000000000000000000000E1 /* StartLoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000098 /* StartLoginRequestDTO.swift */; };
-		0000000000000000000000E2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009F /* LoginView.swift */; };
-		0000000000000000000000E3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A0 /* LoginViewModel.swift */; };
-		0000000000000000000000E4 /* OtpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A1 /* OtpView.swift */; };
-		0000000000000000000000E5 /* OtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A2 /* OtpViewModel.swift */; };
-		0000000000000000000000E6 /* DataPlatformModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AF /* DataPlatformModule.swift */; };
-		0000000000000000000000E7 /* VersionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B0 /* VersionApi.swift */; };
-		0000000000000000000000E8 /* VersionDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B1 /* VersionDTOs.swift */; };
-		0000000000000000000000E9 /* VersionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B2 /* VersionMapper.swift */; };
-		0000000000000000000000EA /* VersionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B3 /* VersionRemoteDataSource.swift */; };
-		0000000000000000000000EB /* VersionRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000B4 /* VersionRepositoryImpl.swift */; };
-		0000000000000000000000EC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000BB /* SplashView.swift */; };
-		0000000000000000000000ED /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000BC /* SplashViewModel.swift */; };
-		9C3D554B3049804100E07EB6 /* PensionContractsSummaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55473049804100E07EB6 /* PensionContractsSummaryRepository.swift */; };
-		9C3D554C3049804100E07EB6 /* FetchPensionContractsSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55453049804100E07EB6 /* FetchPensionContractsSummaryUseCase.swift */; };
-		9C3D554D3049804100E07EB6 /* PensionContractsSummaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55463049804100E07EB6 /* PensionContractsSummaryModels.swift */; };
-		9C3D554E3049804100E07EB6 /* PolicyDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55483049804100E07EB6 /* PolicyDependencies.swift */; };
-		9C3D55553049809C00E07EB6 /* PensionContractsAndSummaryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55523049809C00E07EB6 /* PensionContractsAndSummaryMapper.swift */; };
-		9C3D55563049809C00E07EB6 /* DataPolicyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D554F3049809C00E07EB6 /* DataPolicyModule.swift */; };
-		9C3D55573049809C00E07EB6 /* PensionContractsAndSummaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55503049809C00E07EB6 /* PensionContractsAndSummaryApi.swift */; };
-		9C3D55583049809C00E07EB6 /* PensionContractsAndSummaryDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55513049809C00E07EB6 /* PensionContractsAndSummaryDataDTO.swift */; };
-		9C3D55593049809C00E07EB6 /* PensionContractsAndSummaryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55533049809C00E07EB6 /* PensionContractsAndSummaryRemoteDataSource.swift */; };
-		9C3D555A3049809C00E07EB6 /* PensionContractsSummaryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55543049809C00E07EB6 /* PensionContractsSummaryRepositoryImpl.swift */; };
-		9C3D555C304980EE00E07EB6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D555B304980EE00E07EB6 /* MainTabView.swift */; };
-		9C3D556130498C4200E07EB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D556030498C4200E07EB6 /* ProfileView.swift */; };
-		9C3D556330498C5000E07EB6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D556230498C5000E07EB6 /* SettingsView.swift */; };
-		9C3D556530498C6C00E07EB6 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D556430498C6C00E07EB6 /* ProfilePhotoView.swift */; };
-		9C3D556A3049932100E07EB6 /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55693049932100E07EB6 /* RootTab.swift */; };
-		9C3D556B3049932100E07EB6 /* AppNavHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D55683049932100E07EB6 /* AppNavHost.swift */; };
-		9C3D556E304AAF0600E07EB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D556D304AAF0600E07EB6 /* Media.xcassets */; };
-		9C3D556F304AAF0600E07EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D556C304AAF0600E07EB6 /* LaunchScreen.storyboard */; };
+		00000000000000000000000E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* Media.xcassets */; };
+		000000000000000000000021 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001B /* AppEntry.swift */; };
+		000000000000000000000022 /* AppComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001C /* AppComposition.swift */; };
+		000000000000000000000023 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* RootView.swift */; };
+		000000000000000000000024 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001E /* MainTabView.swift */; };
+		000000000000000000000025 /* AppNavHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001F /* AppNavHost.swift */; };
+		000000000000000000000026 /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000020 /* RootTab.swift */; };
+		00000000000000000000002C /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 00000000000000000000002A /* Dependencies */; };
+		00000000000000000000002D /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00000000000000000000002B /* NukeUI */; };
+		00000000000000000000014A /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004A /* AuthRepository.swift */; };
+		00000000000000000000014B /* AuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004B /* AuthenticationResult.swift */; };
+		00000000000000000000014C /* ConfirmOtpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004C /* ConfirmOtpUseCase.swift */; };
+		00000000000000000000014D /* IdentityDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004D /* IdentityDependencies.swift */; };
+		00000000000000000000014E /* LoginRegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004E /* LoginRegistrationRepository.swift */; };
+		00000000000000000000014F /* LoginRegistrationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000004F /* LoginRegistrationUseCase.swift */; };
+		000000000000000000000150 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000050 /* LoginUseCase.swift */; };
+		000000000000000000000151 /* OtpConfirmationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000051 /* OtpConfirmationRepository.swift */; };
+		000000000000000000000152 /* StartLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000052 /* StartLoginRepository.swift */; };
+		000000000000000000000153 /* StartLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000053 /* StartLoginUseCase.swift */; };
+		000000000000000000000154 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000054 /* UserSession.swift */; };
+		000000000000000000000155 /* CheckVersionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005B /* CheckVersionUseCase.swift */; };
+		000000000000000000000156 /* DomainPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005C /* DomainPlatform.swift */; };
+		000000000000000000000157 /* PlatformDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005D /* PlatformDependencies.swift */; };
+		000000000000000000000158 /* PlatformModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005E /* PlatformModels.swift */; };
+		000000000000000000000159 /* VersionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000005F /* VersionRepository.swift */; };
+		00000000000000000000015A /* FetchPensionContractsSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000066 /* FetchPensionContractsSummaryUseCase.swift */; };
+		00000000000000000000015B /* PensionContractsSummaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* PensionContractsSummaryModels.swift */; };
+		00000000000000000000015C /* PensionContractsSummaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* PensionContractsSummaryRepository.swift */; };
+		00000000000000000000015D /* PolicyDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000069 /* PolicyDependencies.swift */; };
+		00000000000000000000015E /* DataPolicyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000078 /* DataPolicyModule.swift */; };
+		00000000000000000000015F /* PensionContractsAndSummaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000079 /* PensionContractsAndSummaryApi.swift */; };
+		000000000000000000000160 /* PensionContractsAndSummaryDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007A /* PensionContractsAndSummaryDataDTO.swift */; };
+		000000000000000000000161 /* PensionContractsAndSummaryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007B /* PensionContractsAndSummaryMapper.swift */; };
+		000000000000000000000162 /* PensionContractsAndSummaryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007C /* PensionContractsAndSummaryRemoteDataSource.swift */; };
+		000000000000000000000163 /* PensionContractsSummaryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000007D /* PensionContractsSummaryRepositoryImpl.swift */; };
+		000000000000000000000164 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000084 /* HomeView.swift */; };
+		000000000000000000000165 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000085 /* HomeViewModel.swift */; };
+		000000000000000000000166 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000092 /* AuthApi.swift */; };
+		000000000000000000000167 /* AuthDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000093 /* AuthDTOs.swift */; };
+		000000000000000000000168 /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000094 /* AuthRemoteDataSource.swift */; };
+		000000000000000000000169 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000095 /* AuthRepositoryImpl.swift */; };
+		00000000000000000000016A /* AuthenticationCustomDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000096 /* AuthenticationCustomDataDTO.swift */; };
+		00000000000000000000016B /* DataIdentityModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000097 /* DataIdentityModule.swift */; };
+		00000000000000000000016C /* LoginRegistrationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000098 /* LoginRegistrationApi.swift */; };
+		00000000000000000000016D /* LoginRegistrationRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000099 /* LoginRegistrationRemoteDataSource.swift */; };
+		00000000000000000000016E /* LoginRegistrationRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009A /* LoginRegistrationRepositoryImpl.swift */; };
+		00000000000000000000016F /* LoginRegistrationRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009B /* LoginRegistrationRequestDTO.swift */; };
+		000000000000000000000170 /* OtpConfirmationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009C /* OtpConfirmationApi.swift */; };
+		000000000000000000000171 /* OtpConfirmationRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009D /* OtpConfirmationRemoteDataSource.swift */; };
+		000000000000000000000172 /* OtpConfirmationRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009E /* OtpConfirmationRepositoryImpl.swift */; };
+		000000000000000000000173 /* OtpConfirmationRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000009F /* OtpConfirmationRequestDTO.swift */; };
+		000000000000000000000174 /* StartLoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A0 /* StartLoginApi.swift */; };
+		000000000000000000000175 /* StartLoginMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A1 /* StartLoginMapper.swift */; };
+		000000000000000000000176 /* StartLoginRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A2 /* StartLoginRemoteDataSource.swift */; };
+		000000000000000000000177 /* StartLoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A3 /* StartLoginRepositoryImpl.swift */; };
+		000000000000000000000178 /* StartLoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000A4 /* StartLoginRequestDTO.swift */; };
+		000000000000000000000179 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AB /* LoginView.swift */; };
+		00000000000000000000017A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AC /* LoginViewModel.swift */; };
+		00000000000000000000017B /* OtpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AD /* OtpView.swift */; };
+		00000000000000000000017C /* OtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000AE /* OtpViewModel.swift */; };
+		00000000000000000000017D /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000BB /* ProfilePhotoView.swift */; };
+		00000000000000000000017E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000BC /* ProfileView.swift */; };
+		00000000000000000000017F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000BD /* SettingsView.swift */; };
+		000000000000000000000180 /* DataPlatformModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CA /* DataPlatformModule.swift */; };
+		000000000000000000000181 /* VersionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CB /* VersionApi.swift */; };
+		000000000000000000000182 /* VersionDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CC /* VersionDTOs.swift */; };
+		000000000000000000000183 /* VersionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CD /* VersionMapper.swift */; };
+		000000000000000000000184 /* VersionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CE /* VersionRemoteDataSource.swift */; };
+		000000000000000000000185 /* VersionRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CF /* VersionRepositoryImpl.swift */; };
+		000000000000000000000186 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000D6 /* SplashView.swift */; };
+		000000000000000000000187 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000D7 /* SplashViewModel.swift */; };
+		000000000000000000000188 /* SabancimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E0 /* SabancimError.swift */; };
+		000000000000000000000189 /* SabancimResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E1 /* SabancimResult.swift */; };
+		00000000000000000000018A /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E8 /* AppNavigator.swift */; };
+		00000000000000000000018B /* SabancimRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E9 /* SabancimRoute.swift */; };
+		00000000000000000000018C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F0 /* BaseView.swift */; };
+		00000000000000000000018D /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F1 /* LoadableView.swift */; };
+		00000000000000000000018E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F8 /* SessionManager.swift */; };
+		00000000000000000000018F /* APIEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000101 /* APIEnvelope.swift */; };
+		000000000000000000000190 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000102 /* Endpoints.swift */; };
+		000000000000000000000191 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000103 /* ErrorMapper.swift */; };
+		000000000000000000000192 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000104 /* HTTPClient.swift */; };
+		000000000000000000000193 /* Interceptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000105 /* Interceptors.swift */; };
+		000000000000000000000194 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000106 /* NetworkEnvironment.swift */; };
+		000000000000000000000195 /* BrandLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010F /* BrandLogo.swift */; };
+		000000000000000000000196 /* SabancimAmountText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000110 /* SabancimAmountText.swift */; };
+		000000000000000000000197 /* SabancimCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000111 /* SabancimCard.swift */; };
+		000000000000000000000198 /* SabancimCategoryTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000112 /* SabancimCategoryTile.swift */; };
+		000000000000000000000199 /* SabancimCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000113 /* SabancimCheckbox.swift */; };
+		00000000000000000000019A /* SabancimCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000114 /* SabancimCircularProgress.swift */; };
+		00000000000000000000019B /* SabancimComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000115 /* SabancimComponents.swift */; };
+		00000000000000000000019C /* SabancimIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000116 /* SabancimIconButton.swift */; };
+		00000000000000000000019D /* SabancimInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000117 /* SabancimInfoRow.swift */; };
+		00000000000000000000019E /* SabancimLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000118 /* SabancimLinkButton.swift */; };
+		00000000000000000000019F /* SabancimNavListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000119 /* SabancimNavListRow.swift */; };
+		0000000000000000000001A0 /* SabancimPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000011A /* SabancimPageIndicator.swift */; };
+		0000000000000000000001A1 /* SabancimQuickActionChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000011B /* SabancimQuickActionChip.swift */; };
+		0000000000000000000001A2 /* SabancimSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000011C /* SabancimSegmentedControl.swift */; };
+		0000000000000000000001A3 /* SabancimTrendBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000011D /* SabancimTrendBadge.swift */; };
+		0000000000000000000001A4 /* SabancimAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000122 /* SabancimAsyncImage.swift */; };
+		0000000000000000000001A5 /* SabancimBrandCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000123 /* SabancimBrandCard.swift */; };
+		0000000000000000000001A6 /* SabancimCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000124 /* SabancimCategoryRow.swift */; };
+		0000000000000000000001A7 /* SabancimContractsSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000125 /* SabancimContractsSummaryCard.swift */; };
+		0000000000000000000001A8 /* SabancimDetailBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000126 /* SabancimDetailBar.swift */; };
+		0000000000000000000001A9 /* SabancimDonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000127 /* SabancimDonutChart.swift */; };
+		0000000000000000000001AA /* SabancimExpandableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000128 /* SabancimExpandableRow.swift */; };
+		0000000000000000000001AB /* SabancimGradientStatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000129 /* SabancimGradientStatCard.swift */; };
+		0000000000000000000001AC /* SabancimGreetingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012A /* SabancimGreetingHeader.swift */; };
+		0000000000000000000001AD /* SabancimHeroBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012B /* SabancimHeroBackground.swift */; };
+		0000000000000000000001AE /* SabancimLabeledCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012C /* SabancimLabeledCheckbox.swift */; };
+		0000000000000000000001AF /* SabancimNotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012D /* SabancimNotificationRow.swift */; };
+		0000000000000000000001B0 /* SabancimPolicyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012E /* SabancimPolicyRow.swift */; };
+		0000000000000000000001B1 /* SabancimProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000012F /* SabancimProductCard.swift */; };
+		0000000000000000000001B2 /* SabancimPromoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000130 /* SabancimPromoBanner.swift */; };
+		0000000000000000000001B3 /* SabancimQuickActionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000131 /* SabancimQuickActionsRow.swift */; };
+		0000000000000000000001B4 /* SabancimSavingsOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000132 /* SabancimSavingsOverviewCard.swift */; };
+		0000000000000000000001B5 /* SabancimSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000133 /* SabancimSectionHeader.swift */; };
+		0000000000000000000001B6 /* SabancimSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000134 /* SabancimSummaryCard.swift */; };
+		0000000000000000000001B7 /* SabancimTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000135 /* SabancimTabBar.swift */; };
+		0000000000000000000001B8 /* SabancimTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000136 /* SabancimTopBar.swift */; };
+		0000000000000000000001B9 /* SabancimComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000013F /* SabancimComingSoonView.swift */; };
+		0000000000000000000001BA /* StateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000140 /* StateViews.swift */; };
+		0000000000000000000001BB /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000145 /* AppTheme.swift */; };
+		0000000000000000000001BC /* SabancimBrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000146 /* SabancimBrandColors.swift */; };
+		0000000000000000000001BD /* SabancimFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000147 /* SabancimFormat.swift */; };
+		0000000000000000000001BE /* SabancimTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000148 /* SabancimTheme.swift */; };
+		0000000000000000000001BF /* SabancimThemeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000149 /* SabancimThemeTokens.swift */; };
+		9C3D5572304E92F100E07EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D5571304E92F100E07EB6 /* LaunchScreen.storyboard */; };
+		9C3D5574304E930200E07EB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D5573304E930200E07EB6 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00000000000000000000000B /* iOSTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000000000000000011 /* Prd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Prd.xcconfig; path = Config/Prd.xcconfig; sourceTree = "<group>"; };
-		000000000000000000000012 /* Preprod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Preprod.xcconfig; path = Config/Preprod.xcconfig; sourceTree = "<group>"; };
-		000000000000000000000013 /* Tst.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Tst.xcconfig; path = Config/Tst.xcconfig; sourceTree = "<group>"; };
-		000000000000000000000014 /* Pilot.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pilot.xcconfig; path = Config/Pilot.xcconfig; sourceTree = "<group>"; };
-		000000000000000000000015 /* Mock.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Mock.xcconfig; path = Config/Mock.xcconfig; sourceTree = "<group>"; };
-		000000000000000000000016 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppEntry.swift; path = App/Sources/AppEntry.swift; sourceTree = "<group>"; };
-		000000000000000000000017 /* AppComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppComposition.swift; path = App/Sources/AppComposition.swift; sourceTree = "<group>"; };
-		000000000000000000000018 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = App/Sources/RootView.swift; sourceTree = "<group>"; };
-		00000000000000000000001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = App/Resources/Info.plist; sourceTree = "<group>"; };
-		00000000000000000000004E /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRepository.swift; path = Domain/Identity/Sources/AuthRepository.swift; sourceTree = "<group>"; };
-		00000000000000000000004F /* AuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationResult.swift; path = Domain/Identity/Sources/AuthenticationResult.swift; sourceTree = "<group>"; };
-		000000000000000000000050 /* ConfirmOtpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmOtpUseCase.swift; path = Domain/Identity/Sources/ConfirmOtpUseCase.swift; sourceTree = "<group>"; };
-		000000000000000000000051 /* IdentityDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdentityDependencies.swift; path = Domain/Identity/Sources/IdentityDependencies.swift; sourceTree = "<group>"; };
-		000000000000000000000052 /* LoginRegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRepository.swift; path = Domain/Identity/Sources/LoginRegistrationRepository.swift; sourceTree = "<group>"; };
-		000000000000000000000053 /* LoginRegistrationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationUseCase.swift; path = Domain/Identity/Sources/LoginRegistrationUseCase.swift; sourceTree = "<group>"; };
-		000000000000000000000054 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = Domain/Identity/Sources/LoginUseCase.swift; sourceTree = "<group>"; };
-		000000000000000000000055 /* OtpConfirmationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRepository.swift; path = Domain/Identity/Sources/OtpConfirmationRepository.swift; sourceTree = "<group>"; };
-		000000000000000000000056 /* StartLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRepository.swift; path = Domain/Identity/Sources/StartLoginRepository.swift; sourceTree = "<group>"; };
-		000000000000000000000057 /* StartLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginUseCase.swift; path = Domain/Identity/Sources/StartLoginUseCase.swift; sourceTree = "<group>"; };
-		000000000000000000000058 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSession.swift; path = Domain/Identity/Sources/UserSession.swift; sourceTree = "<group>"; };
-		00000000000000000000005F /* CheckVersionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckVersionUseCase.swift; path = Domain/Platform/Sources/CheckVersionUseCase.swift; sourceTree = "<group>"; };
-		000000000000000000000060 /* DomainPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DomainPlatform.swift; path = Domain/Platform/Sources/DomainPlatform.swift; sourceTree = "<group>"; };
-		000000000000000000000061 /* PlatformDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlatformDependencies.swift; path = Domain/Platform/Sources/PlatformDependencies.swift; sourceTree = "<group>"; };
-		000000000000000000000062 /* PlatformModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlatformModels.swift; path = Domain/Platform/Sources/PlatformModels.swift; sourceTree = "<group>"; };
-		000000000000000000000063 /* VersionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRepository.swift; path = Domain/Platform/Sources/VersionRepository.swift; sourceTree = "<group>"; };
-		000000000000000000000078 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Feature/Home/Sources/Presentation/HomeView.swift; sourceTree = "<group>"; };
-		000000000000000000000079 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Feature/Home/Sources/Presentation/HomeViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000000086 /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthApi.swift; path = Feature/Login/Sources/Data/AuthApi.swift; sourceTree = "<group>"; };
-		000000000000000000000087 /* AuthDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthDTOs.swift; path = Feature/Login/Sources/Data/AuthDTOs.swift; sourceTree = "<group>"; };
-		000000000000000000000088 /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRemoteDataSource.swift; path = Feature/Login/Sources/Data/AuthRemoteDataSource.swift; sourceTree = "<group>"; };
-		000000000000000000000089 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRepositoryImpl.swift; path = Feature/Login/Sources/Data/AuthRepositoryImpl.swift; sourceTree = "<group>"; };
-		00000000000000000000008A /* AuthenticationCustomDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationCustomDataDTO.swift; path = Feature/Login/Sources/Data/AuthenticationCustomDataDTO.swift; sourceTree = "<group>"; };
-		00000000000000000000008B /* DataIdentityModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataIdentityModule.swift; path = Feature/Login/Sources/Data/DataIdentityModule.swift; sourceTree = "<group>"; };
-		00000000000000000000008C /* LoginRegistrationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationApi.swift; path = Feature/Login/Sources/Data/LoginRegistrationApi.swift; sourceTree = "<group>"; };
-		00000000000000000000008D /* LoginRegistrationRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRemoteDataSource.swift; path = Feature/Login/Sources/Data/LoginRegistrationRemoteDataSource.swift; sourceTree = "<group>"; };
-		00000000000000000000008E /* LoginRegistrationRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRepositoryImpl.swift; path = Feature/Login/Sources/Data/LoginRegistrationRepositoryImpl.swift; sourceTree = "<group>"; };
-		00000000000000000000008F /* LoginRegistrationRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRequestDTO.swift; path = Feature/Login/Sources/Data/LoginRegistrationRequestDTO.swift; sourceTree = "<group>"; };
-		000000000000000000000090 /* OtpConfirmationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationApi.swift; path = Feature/Login/Sources/Data/OtpConfirmationApi.swift; sourceTree = "<group>"; };
-		000000000000000000000091 /* OtpConfirmationRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRemoteDataSource.swift; path = Feature/Login/Sources/Data/OtpConfirmationRemoteDataSource.swift; sourceTree = "<group>"; };
-		000000000000000000000092 /* OtpConfirmationRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRepositoryImpl.swift; path = Feature/Login/Sources/Data/OtpConfirmationRepositoryImpl.swift; sourceTree = "<group>"; };
-		000000000000000000000093 /* OtpConfirmationRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRequestDTO.swift; path = Feature/Login/Sources/Data/OtpConfirmationRequestDTO.swift; sourceTree = "<group>"; };
-		000000000000000000000094 /* StartLoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginApi.swift; path = Feature/Login/Sources/Data/StartLoginApi.swift; sourceTree = "<group>"; };
-		000000000000000000000095 /* StartLoginMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginMapper.swift; path = Feature/Login/Sources/Data/StartLoginMapper.swift; sourceTree = "<group>"; };
-		000000000000000000000096 /* StartLoginRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRemoteDataSource.swift; path = Feature/Login/Sources/Data/StartLoginRemoteDataSource.swift; sourceTree = "<group>"; };
-		000000000000000000000097 /* StartLoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRepositoryImpl.swift; path = Feature/Login/Sources/Data/StartLoginRepositoryImpl.swift; sourceTree = "<group>"; };
-		000000000000000000000098 /* StartLoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRequestDTO.swift; path = Feature/Login/Sources/Data/StartLoginRequestDTO.swift; sourceTree = "<group>"; };
-		00000000000000000000009F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Feature/Login/Sources/Presentation/LoginView.swift; sourceTree = "<group>"; };
-		0000000000000000000000A0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Feature/Login/Sources/Presentation/LoginViewModel.swift; sourceTree = "<group>"; };
-		0000000000000000000000A1 /* OtpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpView.swift; path = Feature/Login/Sources/Presentation/OtpView.swift; sourceTree = "<group>"; };
-		0000000000000000000000A2 /* OtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpViewModel.swift; path = Feature/Login/Sources/Presentation/OtpViewModel.swift; sourceTree = "<group>"; };
-		0000000000000000000000AF /* DataPlatformModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlatformModule.swift; path = Feature/Splash/Sources/Data/DataPlatformModule.swift; sourceTree = "<group>"; };
-		0000000000000000000000B0 /* VersionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionApi.swift; path = Feature/Splash/Sources/Data/VersionApi.swift; sourceTree = "<group>"; };
-		0000000000000000000000B1 /* VersionDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionDTOs.swift; path = Feature/Splash/Sources/Data/VersionDTOs.swift; sourceTree = "<group>"; };
-		0000000000000000000000B2 /* VersionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionMapper.swift; path = Feature/Splash/Sources/Data/VersionMapper.swift; sourceTree = "<group>"; };
-		0000000000000000000000B3 /* VersionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRemoteDataSource.swift; path = Feature/Splash/Sources/Data/VersionRemoteDataSource.swift; sourceTree = "<group>"; };
-		0000000000000000000000B4 /* VersionRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRepositoryImpl.swift; path = Feature/Splash/Sources/Data/VersionRepositoryImpl.swift; sourceTree = "<group>"; };
-		0000000000000000000000BB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = Feature/Splash/Sources/Presentation/SplashView.swift; sourceTree = "<group>"; };
-		0000000000000000000000BC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewModel.swift; path = Feature/Splash/Sources/Presentation/SplashViewModel.swift; sourceTree = "<group>"; };
-		9C3D55453049804100E07EB6 /* FetchPensionContractsSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPensionContractsSummaryUseCase.swift; sourceTree = "<group>"; };
-		9C3D55463049804100E07EB6 /* PensionContractsSummaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionContractsSummaryModels.swift; sourceTree = "<group>"; };
-		9C3D55473049804100E07EB6 /* PensionContractsSummaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionContractsSummaryRepository.swift; sourceTree = "<group>"; };
-		9C3D55483049804100E07EB6 /* PolicyDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDependencies.swift; sourceTree = "<group>"; };
-		9C3D554F3049809C00E07EB6 /* DataPolicyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPolicyModule.swift; path = Feature/Home/Sources/Data/DataPolicyModule.swift; sourceTree = "<group>"; };
-		9C3D55503049809C00E07EB6 /* PensionContractsAndSummaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryApi.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryApi.swift; sourceTree = "<group>"; };
-		9C3D55513049809C00E07EB6 /* PensionContractsAndSummaryDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryDataDTO.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryDataDTO.swift; sourceTree = "<group>"; };
-		9C3D55523049809C00E07EB6 /* PensionContractsAndSummaryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryMapper.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryMapper.swift; sourceTree = "<group>"; };
-		9C3D55533049809C00E07EB6 /* PensionContractsAndSummaryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryRemoteDataSource.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryRemoteDataSource.swift; sourceTree = "<group>"; };
-		9C3D55543049809C00E07EB6 /* PensionContractsSummaryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsSummaryRepositoryImpl.swift; path = Feature/Home/Sources/Data/PensionContractsSummaryRepositoryImpl.swift; sourceTree = "<group>"; };
-		9C3D555B304980EE00E07EB6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = App/Sources/MainTabView.swift; sourceTree = "<group>"; };
-		9C3D556030498C4200E07EB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		9C3D556230498C5000E07EB6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		9C3D556430498C6C00E07EB6 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
-		9C3D55683049932100E07EB6 /* AppNavHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppNavHost.swift; path = App/Sources/AppNavHost.swift; sourceTree = "<group>"; };
-		9C3D55693049932100E07EB6 /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootTab.swift; path = App/Sources/RootTab.swift; sourceTree = "<group>"; };
-		9C3D556C304AAF0600E07EB6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = App/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C3D556D304AAF0600E07EB6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = App/Resources/Media.xcassets; sourceTree = "<group>"; };
+		00000000000000000000000D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = DesignSystem/Sources/Resources/Media.xcassets; sourceTree = "<group>"; };
+		000000000000000000000010 /* iOSTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000016 /* Prd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Prd.xcconfig; path = Config/Prd.xcconfig; sourceTree = "<group>"; };
+		000000000000000000000017 /* Preprod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Preprod.xcconfig; path = Config/Preprod.xcconfig; sourceTree = "<group>"; };
+		000000000000000000000018 /* Tst.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Tst.xcconfig; path = Config/Tst.xcconfig; sourceTree = "<group>"; };
+		000000000000000000000019 /* Pilot.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pilot.xcconfig; path = Config/Pilot.xcconfig; sourceTree = "<group>"; };
+		00000000000000000000001A /* Mock.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Mock.xcconfig; path = Config/Mock.xcconfig; sourceTree = "<group>"; };
+		00000000000000000000001B /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppEntry.swift; path = App/Sources/AppEntry.swift; sourceTree = "<group>"; };
+		00000000000000000000001C /* AppComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppComposition.swift; path = App/Sources/AppComposition.swift; sourceTree = "<group>"; };
+		00000000000000000000001D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = App/Sources/RootView.swift; sourceTree = "<group>"; };
+		00000000000000000000001E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = App/Sources/MainTabView.swift; sourceTree = "<group>"; };
+		00000000000000000000001F /* AppNavHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppNavHost.swift; path = App/Sources/AppNavHost.swift; sourceTree = "<group>"; };
+		000000000000000000000020 /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootTab.swift; path = App/Sources/RootTab.swift; sourceTree = "<group>"; };
+		000000000000000000000027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = App/Resources/Info.plist; sourceTree = "<group>"; };
+		00000000000000000000004A /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRepository.swift; path = Domain/Identity/Sources/AuthRepository.swift; sourceTree = "<group>"; };
+		00000000000000000000004B /* AuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationResult.swift; path = Domain/Identity/Sources/AuthenticationResult.swift; sourceTree = "<group>"; };
+		00000000000000000000004C /* ConfirmOtpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmOtpUseCase.swift; path = Domain/Identity/Sources/ConfirmOtpUseCase.swift; sourceTree = "<group>"; };
+		00000000000000000000004D /* IdentityDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdentityDependencies.swift; path = Domain/Identity/Sources/IdentityDependencies.swift; sourceTree = "<group>"; };
+		00000000000000000000004E /* LoginRegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRepository.swift; path = Domain/Identity/Sources/LoginRegistrationRepository.swift; sourceTree = "<group>"; };
+		00000000000000000000004F /* LoginRegistrationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationUseCase.swift; path = Domain/Identity/Sources/LoginRegistrationUseCase.swift; sourceTree = "<group>"; };
+		000000000000000000000050 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = Domain/Identity/Sources/LoginUseCase.swift; sourceTree = "<group>"; };
+		000000000000000000000051 /* OtpConfirmationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRepository.swift; path = Domain/Identity/Sources/OtpConfirmationRepository.swift; sourceTree = "<group>"; };
+		000000000000000000000052 /* StartLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRepository.swift; path = Domain/Identity/Sources/StartLoginRepository.swift; sourceTree = "<group>"; };
+		000000000000000000000053 /* StartLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginUseCase.swift; path = Domain/Identity/Sources/StartLoginUseCase.swift; sourceTree = "<group>"; };
+		000000000000000000000054 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSession.swift; path = Domain/Identity/Sources/UserSession.swift; sourceTree = "<group>"; };
+		00000000000000000000005B /* CheckVersionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckVersionUseCase.swift; path = Domain/Platform/Sources/CheckVersionUseCase.swift; sourceTree = "<group>"; };
+		00000000000000000000005C /* DomainPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DomainPlatform.swift; path = Domain/Platform/Sources/DomainPlatform.swift; sourceTree = "<group>"; };
+		00000000000000000000005D /* PlatformDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlatformDependencies.swift; path = Domain/Platform/Sources/PlatformDependencies.swift; sourceTree = "<group>"; };
+		00000000000000000000005E /* PlatformModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlatformModels.swift; path = Domain/Platform/Sources/PlatformModels.swift; sourceTree = "<group>"; };
+		00000000000000000000005F /* VersionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRepository.swift; path = Domain/Platform/Sources/VersionRepository.swift; sourceTree = "<group>"; };
+		000000000000000000000066 /* FetchPensionContractsSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchPensionContractsSummaryUseCase.swift; path = Domain/Policy/Sources/FetchPensionContractsSummaryUseCase.swift; sourceTree = "<group>"; };
+		000000000000000000000067 /* PensionContractsSummaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsSummaryModels.swift; path = Domain/Policy/Sources/PensionContractsSummaryModels.swift; sourceTree = "<group>"; };
+		000000000000000000000068 /* PensionContractsSummaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsSummaryRepository.swift; path = Domain/Policy/Sources/PensionContractsSummaryRepository.swift; sourceTree = "<group>"; };
+		000000000000000000000069 /* PolicyDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PolicyDependencies.swift; path = Domain/Policy/Sources/PolicyDependencies.swift; sourceTree = "<group>"; };
+		000000000000000000000078 /* DataPolicyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPolicyModule.swift; path = Feature/Home/Sources/Data/DataPolicyModule.swift; sourceTree = "<group>"; };
+		000000000000000000000079 /* PensionContractsAndSummaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryApi.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryApi.swift; sourceTree = "<group>"; };
+		00000000000000000000007A /* PensionContractsAndSummaryDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryDataDTO.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryDataDTO.swift; sourceTree = "<group>"; };
+		00000000000000000000007B /* PensionContractsAndSummaryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryMapper.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryMapper.swift; sourceTree = "<group>"; };
+		00000000000000000000007C /* PensionContractsAndSummaryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsAndSummaryRemoteDataSource.swift; path = Feature/Home/Sources/Data/PensionContractsAndSummaryRemoteDataSource.swift; sourceTree = "<group>"; };
+		00000000000000000000007D /* PensionContractsSummaryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PensionContractsSummaryRepositoryImpl.swift; path = Feature/Home/Sources/Data/PensionContractsSummaryRepositoryImpl.swift; sourceTree = "<group>"; };
+		000000000000000000000084 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Feature/Home/Sources/Presentation/HomeView.swift; sourceTree = "<group>"; };
+		000000000000000000000085 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Feature/Home/Sources/Presentation/HomeViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000092 /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthApi.swift; path = Feature/Login/Sources/Data/AuthApi.swift; sourceTree = "<group>"; };
+		000000000000000000000093 /* AuthDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthDTOs.swift; path = Feature/Login/Sources/Data/AuthDTOs.swift; sourceTree = "<group>"; };
+		000000000000000000000094 /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRemoteDataSource.swift; path = Feature/Login/Sources/Data/AuthRemoteDataSource.swift; sourceTree = "<group>"; };
+		000000000000000000000095 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthRepositoryImpl.swift; path = Feature/Login/Sources/Data/AuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		000000000000000000000096 /* AuthenticationCustomDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationCustomDataDTO.swift; path = Feature/Login/Sources/Data/AuthenticationCustomDataDTO.swift; sourceTree = "<group>"; };
+		000000000000000000000097 /* DataIdentityModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataIdentityModule.swift; path = Feature/Login/Sources/Data/DataIdentityModule.swift; sourceTree = "<group>"; };
+		000000000000000000000098 /* LoginRegistrationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationApi.swift; path = Feature/Login/Sources/Data/LoginRegistrationApi.swift; sourceTree = "<group>"; };
+		000000000000000000000099 /* LoginRegistrationRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRemoteDataSource.swift; path = Feature/Login/Sources/Data/LoginRegistrationRemoteDataSource.swift; sourceTree = "<group>"; };
+		00000000000000000000009A /* LoginRegistrationRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRepositoryImpl.swift; path = Feature/Login/Sources/Data/LoginRegistrationRepositoryImpl.swift; sourceTree = "<group>"; };
+		00000000000000000000009B /* LoginRegistrationRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRegistrationRequestDTO.swift; path = Feature/Login/Sources/Data/LoginRegistrationRequestDTO.swift; sourceTree = "<group>"; };
+		00000000000000000000009C /* OtpConfirmationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationApi.swift; path = Feature/Login/Sources/Data/OtpConfirmationApi.swift; sourceTree = "<group>"; };
+		00000000000000000000009D /* OtpConfirmationRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRemoteDataSource.swift; path = Feature/Login/Sources/Data/OtpConfirmationRemoteDataSource.swift; sourceTree = "<group>"; };
+		00000000000000000000009E /* OtpConfirmationRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRepositoryImpl.swift; path = Feature/Login/Sources/Data/OtpConfirmationRepositoryImpl.swift; sourceTree = "<group>"; };
+		00000000000000000000009F /* OtpConfirmationRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpConfirmationRequestDTO.swift; path = Feature/Login/Sources/Data/OtpConfirmationRequestDTO.swift; sourceTree = "<group>"; };
+		0000000000000000000000A0 /* StartLoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginApi.swift; path = Feature/Login/Sources/Data/StartLoginApi.swift; sourceTree = "<group>"; };
+		0000000000000000000000A1 /* StartLoginMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginMapper.swift; path = Feature/Login/Sources/Data/StartLoginMapper.swift; sourceTree = "<group>"; };
+		0000000000000000000000A2 /* StartLoginRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRemoteDataSource.swift; path = Feature/Login/Sources/Data/StartLoginRemoteDataSource.swift; sourceTree = "<group>"; };
+		0000000000000000000000A3 /* StartLoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRepositoryImpl.swift; path = Feature/Login/Sources/Data/StartLoginRepositoryImpl.swift; sourceTree = "<group>"; };
+		0000000000000000000000A4 /* StartLoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartLoginRequestDTO.swift; path = Feature/Login/Sources/Data/StartLoginRequestDTO.swift; sourceTree = "<group>"; };
+		0000000000000000000000AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Feature/Login/Sources/Presentation/LoginView.swift; sourceTree = "<group>"; };
+		0000000000000000000000AC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Feature/Login/Sources/Presentation/LoginViewModel.swift; sourceTree = "<group>"; };
+		0000000000000000000000AD /* OtpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpView.swift; path = Feature/Login/Sources/Presentation/OtpView.swift; sourceTree = "<group>"; };
+		0000000000000000000000AE /* OtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtpViewModel.swift; path = Feature/Login/Sources/Presentation/OtpViewModel.swift; sourceTree = "<group>"; };
+		0000000000000000000000BB /* ProfilePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilePhotoView.swift; path = Feature/Profile/Sources/Presentation/ProfilePhotoView.swift; sourceTree = "<group>"; };
+		0000000000000000000000BC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Feature/Profile/Sources/Presentation/ProfileView.swift; sourceTree = "<group>"; };
+		0000000000000000000000BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Feature/Profile/Sources/Presentation/SettingsView.swift; sourceTree = "<group>"; };
+		0000000000000000000000CA /* DataPlatformModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlatformModule.swift; path = Feature/Splash/Sources/Data/DataPlatformModule.swift; sourceTree = "<group>"; };
+		0000000000000000000000CB /* VersionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionApi.swift; path = Feature/Splash/Sources/Data/VersionApi.swift; sourceTree = "<group>"; };
+		0000000000000000000000CC /* VersionDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionDTOs.swift; path = Feature/Splash/Sources/Data/VersionDTOs.swift; sourceTree = "<group>"; };
+		0000000000000000000000CD /* VersionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionMapper.swift; path = Feature/Splash/Sources/Data/VersionMapper.swift; sourceTree = "<group>"; };
+		0000000000000000000000CE /* VersionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRemoteDataSource.swift; path = Feature/Splash/Sources/Data/VersionRemoteDataSource.swift; sourceTree = "<group>"; };
+		0000000000000000000000CF /* VersionRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRepositoryImpl.swift; path = Feature/Splash/Sources/Data/VersionRepositoryImpl.swift; sourceTree = "<group>"; };
+		0000000000000000000000D6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = Feature/Splash/Sources/Presentation/SplashView.swift; sourceTree = "<group>"; };
+		0000000000000000000000D7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewModel.swift; path = Feature/Splash/Sources/Presentation/SplashViewModel.swift; sourceTree = "<group>"; };
+		0000000000000000000000E0 /* SabancimError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimError.swift; path = Core/Common/Sources/SabancimError.swift; sourceTree = "<group>"; };
+		0000000000000000000000E1 /* SabancimResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimResult.swift; path = Core/Common/Sources/SabancimResult.swift; sourceTree = "<group>"; };
+		0000000000000000000000E8 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppNavigator.swift; path = Core/Navigation/Sources/AppNavigator.swift; sourceTree = "<group>"; };
+		0000000000000000000000E9 /* SabancimRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimRoute.swift; path = Core/Navigation/Sources/SabancimRoute.swift; sourceTree = "<group>"; };
+		0000000000000000000000F0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Core/Presentation/Sources/BaseView.swift; sourceTree = "<group>"; };
+		0000000000000000000000F1 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadableView.swift; path = Core/Presentation/Sources/LoadableView.swift; sourceTree = "<group>"; };
+		0000000000000000000000F8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Core/Session/Sources/SessionManager.swift; sourceTree = "<group>"; };
+		000000000000000000000101 /* APIEnvelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIEnvelope.swift; path = Data/Network/Sources/APIEnvelope.swift; sourceTree = "<group>"; };
+		000000000000000000000102 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = Data/Network/Sources/Endpoints.swift; sourceTree = "<group>"; };
+		000000000000000000000103 /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorMapper.swift; path = Data/Network/Sources/ErrorMapper.swift; sourceTree = "<group>"; };
+		000000000000000000000104 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = Data/Network/Sources/HTTPClient.swift; sourceTree = "<group>"; };
+		000000000000000000000105 /* Interceptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Interceptors.swift; path = Data/Network/Sources/Interceptors.swift; sourceTree = "<group>"; };
+		000000000000000000000106 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEnvironment.swift; path = Data/Network/Sources/NetworkEnvironment.swift; sourceTree = "<group>"; };
+		00000000000000000000010F /* BrandLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrandLogo.swift; path = DesignSystem/Sources/Atoms/BrandLogo.swift; sourceTree = "<group>"; };
+		000000000000000000000110 /* SabancimAmountText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimAmountText.swift; path = DesignSystem/Sources/Atoms/SabancimAmountText.swift; sourceTree = "<group>"; };
+		000000000000000000000111 /* SabancimCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimCard.swift; path = DesignSystem/Sources/Atoms/SabancimCard.swift; sourceTree = "<group>"; };
+		000000000000000000000112 /* SabancimCategoryTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimCategoryTile.swift; path = DesignSystem/Sources/Atoms/SabancimCategoryTile.swift; sourceTree = "<group>"; };
+		000000000000000000000113 /* SabancimCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimCheckbox.swift; path = DesignSystem/Sources/Atoms/SabancimCheckbox.swift; sourceTree = "<group>"; };
+		000000000000000000000114 /* SabancimCircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimCircularProgress.swift; path = DesignSystem/Sources/Atoms/SabancimCircularProgress.swift; sourceTree = "<group>"; };
+		000000000000000000000115 /* SabancimComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimComponents.swift; path = DesignSystem/Sources/Atoms/SabancimComponents.swift; sourceTree = "<group>"; };
+		000000000000000000000116 /* SabancimIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimIconButton.swift; path = DesignSystem/Sources/Atoms/SabancimIconButton.swift; sourceTree = "<group>"; };
+		000000000000000000000117 /* SabancimInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimInfoRow.swift; path = DesignSystem/Sources/Atoms/SabancimInfoRow.swift; sourceTree = "<group>"; };
+		000000000000000000000118 /* SabancimLinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimLinkButton.swift; path = DesignSystem/Sources/Atoms/SabancimLinkButton.swift; sourceTree = "<group>"; };
+		000000000000000000000119 /* SabancimNavListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimNavListRow.swift; path = DesignSystem/Sources/Atoms/SabancimNavListRow.swift; sourceTree = "<group>"; };
+		00000000000000000000011A /* SabancimPageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimPageIndicator.swift; path = DesignSystem/Sources/Atoms/SabancimPageIndicator.swift; sourceTree = "<group>"; };
+		00000000000000000000011B /* SabancimQuickActionChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimQuickActionChip.swift; path = DesignSystem/Sources/Atoms/SabancimQuickActionChip.swift; sourceTree = "<group>"; };
+		00000000000000000000011C /* SabancimSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSegmentedControl.swift; path = DesignSystem/Sources/Atoms/SabancimSegmentedControl.swift; sourceTree = "<group>"; };
+		00000000000000000000011D /* SabancimTrendBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTrendBadge.swift; path = DesignSystem/Sources/Atoms/SabancimTrendBadge.swift; sourceTree = "<group>"; };
+		000000000000000000000122 /* SabancimAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimAsyncImage.swift; path = DesignSystem/Sources/Molecules/SabancimAsyncImage.swift; sourceTree = "<group>"; };
+		000000000000000000000123 /* SabancimBrandCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimBrandCard.swift; path = DesignSystem/Sources/Molecules/SabancimBrandCard.swift; sourceTree = "<group>"; };
+		000000000000000000000124 /* SabancimCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimCategoryRow.swift; path = DesignSystem/Sources/Molecules/SabancimCategoryRow.swift; sourceTree = "<group>"; };
+		000000000000000000000125 /* SabancimContractsSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimContractsSummaryCard.swift; path = DesignSystem/Sources/Molecules/SabancimContractsSummaryCard.swift; sourceTree = "<group>"; };
+		000000000000000000000126 /* SabancimDetailBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimDetailBar.swift; path = DesignSystem/Sources/Molecules/SabancimDetailBar.swift; sourceTree = "<group>"; };
+		000000000000000000000127 /* SabancimDonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimDonutChart.swift; path = DesignSystem/Sources/Molecules/SabancimDonutChart.swift; sourceTree = "<group>"; };
+		000000000000000000000128 /* SabancimExpandableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimExpandableRow.swift; path = DesignSystem/Sources/Molecules/SabancimExpandableRow.swift; sourceTree = "<group>"; };
+		000000000000000000000129 /* SabancimGradientStatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimGradientStatCard.swift; path = DesignSystem/Sources/Molecules/SabancimGradientStatCard.swift; sourceTree = "<group>"; };
+		00000000000000000000012A /* SabancimGreetingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimGreetingHeader.swift; path = DesignSystem/Sources/Molecules/SabancimGreetingHeader.swift; sourceTree = "<group>"; };
+		00000000000000000000012B /* SabancimHeroBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimHeroBackground.swift; path = DesignSystem/Sources/Molecules/SabancimHeroBackground.swift; sourceTree = "<group>"; };
+		00000000000000000000012C /* SabancimLabeledCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimLabeledCheckbox.swift; path = DesignSystem/Sources/Molecules/SabancimLabeledCheckbox.swift; sourceTree = "<group>"; };
+		00000000000000000000012D /* SabancimNotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimNotificationRow.swift; path = DesignSystem/Sources/Molecules/SabancimNotificationRow.swift; sourceTree = "<group>"; };
+		00000000000000000000012E /* SabancimPolicyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimPolicyRow.swift; path = DesignSystem/Sources/Molecules/SabancimPolicyRow.swift; sourceTree = "<group>"; };
+		00000000000000000000012F /* SabancimProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimProductCard.swift; path = DesignSystem/Sources/Molecules/SabancimProductCard.swift; sourceTree = "<group>"; };
+		000000000000000000000130 /* SabancimPromoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimPromoBanner.swift; path = DesignSystem/Sources/Molecules/SabancimPromoBanner.swift; sourceTree = "<group>"; };
+		000000000000000000000131 /* SabancimQuickActionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimQuickActionsRow.swift; path = DesignSystem/Sources/Molecules/SabancimQuickActionsRow.swift; sourceTree = "<group>"; };
+		000000000000000000000132 /* SabancimSavingsOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSavingsOverviewCard.swift; path = DesignSystem/Sources/Molecules/SabancimSavingsOverviewCard.swift; sourceTree = "<group>"; };
+		000000000000000000000133 /* SabancimSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSectionHeader.swift; path = DesignSystem/Sources/Molecules/SabancimSectionHeader.swift; sourceTree = "<group>"; };
+		000000000000000000000134 /* SabancimSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSummaryCard.swift; path = DesignSystem/Sources/Molecules/SabancimSummaryCard.swift; sourceTree = "<group>"; };
+		000000000000000000000135 /* SabancimTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTabBar.swift; path = DesignSystem/Sources/Molecules/SabancimTabBar.swift; sourceTree = "<group>"; };
+		000000000000000000000136 /* SabancimTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTopBar.swift; path = DesignSystem/Sources/Molecules/SabancimTopBar.swift; sourceTree = "<group>"; };
+		00000000000000000000013F /* SabancimComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimComingSoonView.swift; path = DesignSystem/Sources/States/SabancimComingSoonView.swift; sourceTree = "<group>"; };
+		000000000000000000000140 /* StateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateViews.swift; path = DesignSystem/Sources/States/StateViews.swift; sourceTree = "<group>"; };
+		000000000000000000000145 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = DesignSystem/Sources/Theme/AppTheme.swift; sourceTree = "<group>"; };
+		000000000000000000000146 /* SabancimBrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimBrandColors.swift; path = DesignSystem/Sources/Theme/SabancimBrandColors.swift; sourceTree = "<group>"; };
+		000000000000000000000147 /* SabancimFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimFormat.swift; path = DesignSystem/Sources/Theme/SabancimFormat.swift; sourceTree = "<group>"; };
+		000000000000000000000148 /* SabancimTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTheme.swift; path = DesignSystem/Sources/Theme/SabancimTheme.swift; sourceTree = "<group>"; };
+		000000000000000000000149 /* SabancimThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimThemeTokens.swift; path = DesignSystem/Sources/Theme/SabancimThemeTokens.swift; sourceTree = "<group>"; };
+		9C3D5571304E92F100E07EB6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = App/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C3D5573304E930200E07EB6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = App/Resources/Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00000000000000000000000D /* Frameworks */ = {
+		000000000000000000000012 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000000000000000029 /* CoreCommon in Frameworks */,
-				00000000000000000000002A /* CoreNavigation in Frameworks */,
-				00000000000000000000002B /* CorePresentation in Frameworks */,
-				00000000000000000000002C /* CoreSession in Frameworks */,
-				00000000000000000000002D /* DesignSystem in Frameworks */,
-				00000000000000000000002E /* DataNetwork in Frameworks */,
-				000000000000000000000031 /* Dependencies in Frameworks */,
+				00000000000000000000002C /* Dependencies in Frameworks */,
+				00000000000000000000002D /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,20 +293,23 @@
 			children = (
 				000000000000000000000003 /* Config */,
 				000000000000000000000004 /* App */,
+				000000000000000000000009 /* Core */,
+				00000000000000000000000A /* Data */,
+				00000000000000000000000B /* DesignSystem */,
 				000000000000000000000007 /* Domain */,
 				000000000000000000000008 /* Feature */,
-				000000000000000000000009 /* Products */,
+				00000000000000000000000C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		000000000000000000000003 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000011 /* Prd.xcconfig */,
-				000000000000000000000012 /* Preprod.xcconfig */,
-				000000000000000000000013 /* Tst.xcconfig */,
-				000000000000000000000014 /* Pilot.xcconfig */,
-				000000000000000000000015 /* Mock.xcconfig */,
+				000000000000000000000016 /* Prd.xcconfig */,
+				000000000000000000000017 /* Preprod.xcconfig */,
+				000000000000000000000018 /* Tst.xcconfig */,
+				000000000000000000000019 /* Pilot.xcconfig */,
+				00000000000000000000001A /* Mock.xcconfig */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -219,12 +326,12 @@
 		000000000000000000000005 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000017 /* AppComposition.swift */,
-				000000000000000000000016 /* AppEntry.swift */,
-				9C3D55683049932100E07EB6 /* AppNavHost.swift */,
-				9C3D555B304980EE00E07EB6 /* MainTabView.swift */,
-				9C3D55693049932100E07EB6 /* RootTab.swift */,
-				000000000000000000000018 /* RootView.swift */,
+				00000000000000000000001B /* AppEntry.swift */,
+				00000000000000000000001C /* AppComposition.swift */,
+				00000000000000000000001D /* RootView.swift */,
+				00000000000000000000001E /* MainTabView.swift */,
+				00000000000000000000001F /* AppNavHost.swift */,
+				000000000000000000000020 /* RootTab.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -232,9 +339,9 @@
 		000000000000000000000006 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D556C304AAF0600E07EB6 /* LaunchScreen.storyboard */,
-				9C3D556D304AAF0600E07EB6 /* Media.xcassets */,
-				00000000000000000000001C /* Info.plist */,
+				000000000000000000000027 /* Info.plist */,
+				9C3D5571304E92F100E07EB6 /* LaunchScreen.storyboard */,
+				9C3D5573304E930200E07EB6 /* Media.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -242,9 +349,9 @@
 		000000000000000000000007 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000049 /* Identity */,
-				00000000000000000000005A /* Platform */,
-				9C3D554A3049804100E07EB6 /* Policy */,
+				000000000000000000000045 /* Identity */,
+				000000000000000000000056 /* Platform */,
+				000000000000000000000061 /* Policy */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -252,257 +359,461 @@
 		000000000000000000000008 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000067 /* Home */,
-				00000000000000000000007B /* Login */,
-				0000000000000000000000A4 /* Splash */,
-				9C3D555F30498C3700E07EB6 /* Profile */,
+				00000000000000000000006D /* Home */,
+				000000000000000000000087 /* Login */,
+				0000000000000000000000B0 /* Profile */,
+				0000000000000000000000BF /* Splash */,
 			);
 			name = Feature;
 			sourceTree = "<group>";
 		};
-		000000000000000000000009 /* Products */ = {
+		000000000000000000000009 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000000B /* iOSTemplate.app */,
+				0000000000000000000000DB /* Common */,
+				0000000000000000000000E3 /* Navigation */,
+				0000000000000000000000EB /* Presentation */,
+				0000000000000000000000F3 /* Session */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		00000000000000000000000A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000FC /* Network */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		00000000000000000000000B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000010A /* Sources */,
+				00000000000000000000000D /* Media.xcassets */,
+			);
+			name = DesignSystem;
+			sourceTree = "<group>";
+		};
+		00000000000000000000000C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000010 /* iOSTemplate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		000000000000000000000049 /* Identity */ = {
+		000000000000000000000045 /* Identity */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000004D /* Sources */,
+				000000000000000000000049 /* Sources */,
 			);
 			name = Identity;
 			sourceTree = "<group>";
 		};
-		00000000000000000000004D /* Sources */ = {
+		000000000000000000000049 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000004F /* AuthenticationResult.swift */,
-				00000000000000000000004E /* AuthRepository.swift */,
-				000000000000000000000050 /* ConfirmOtpUseCase.swift */,
-				000000000000000000000051 /* IdentityDependencies.swift */,
-				000000000000000000000052 /* LoginRegistrationRepository.swift */,
-				000000000000000000000053 /* LoginRegistrationUseCase.swift */,
-				000000000000000000000054 /* LoginUseCase.swift */,
-				000000000000000000000055 /* OtpConfirmationRepository.swift */,
-				000000000000000000000056 /* StartLoginRepository.swift */,
-				000000000000000000000057 /* StartLoginUseCase.swift */,
-				000000000000000000000058 /* UserSession.swift */,
+				00000000000000000000004A /* AuthRepository.swift */,
+				00000000000000000000004B /* AuthenticationResult.swift */,
+				00000000000000000000004C /* ConfirmOtpUseCase.swift */,
+				00000000000000000000004D /* IdentityDependencies.swift */,
+				00000000000000000000004E /* LoginRegistrationRepository.swift */,
+				00000000000000000000004F /* LoginRegistrationUseCase.swift */,
+				000000000000000000000050 /* LoginUseCase.swift */,
+				000000000000000000000051 /* OtpConfirmationRepository.swift */,
+				000000000000000000000052 /* StartLoginRepository.swift */,
+				000000000000000000000053 /* StartLoginUseCase.swift */,
+				000000000000000000000054 /* UserSession.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		00000000000000000000005A /* Platform */ = {
+		000000000000000000000056 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000005E /* Sources */,
+				00000000000000000000005A /* Sources */,
 			);
 			name = Platform;
 			sourceTree = "<group>";
 		};
-		00000000000000000000005E /* Sources */ = {
+		00000000000000000000005A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000005F /* CheckVersionUseCase.swift */,
-				000000000000000000000060 /* DomainPlatform.swift */,
-				000000000000000000000061 /* PlatformDependencies.swift */,
-				000000000000000000000062 /* PlatformModels.swift */,
-				000000000000000000000063 /* VersionRepository.swift */,
+				00000000000000000000005B /* CheckVersionUseCase.swift */,
+				00000000000000000000005C /* DomainPlatform.swift */,
+				00000000000000000000005D /* PlatformDependencies.swift */,
+				00000000000000000000005E /* PlatformModels.swift */,
+				00000000000000000000005F /* VersionRepository.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		000000000000000000000067 /* Home */ = {
+		000000000000000000000061 /* Policy */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000006B /* Sources */,
+				000000000000000000000065 /* Sources */,
+			);
+			name = Policy;
+			sourceTree = "<group>";
+		};
+		000000000000000000000065 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000066 /* FetchPensionContractsSummaryUseCase.swift */,
+				000000000000000000000067 /* PensionContractsSummaryModels.swift */,
+				000000000000000000000068 /* PensionContractsSummaryRepository.swift */,
+				000000000000000000000069 /* PolicyDependencies.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		00000000000000000000006D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000071 /* Sources */,
 			);
 			name = Home;
 			sourceTree = "<group>";
 		};
-		00000000000000000000006B /* Sources */ = {
+		000000000000000000000071 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000071 /* Data */,
-				000000000000000000000077 /* Presentation */,
+				000000000000000000000077 /* Data */,
+				000000000000000000000083 /* Presentation */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		000000000000000000000071 /* Data */ = {
+		000000000000000000000077 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D554F3049809C00E07EB6 /* DataPolicyModule.swift */,
-				9C3D55503049809C00E07EB6 /* PensionContractsAndSummaryApi.swift */,
-				9C3D55513049809C00E07EB6 /* PensionContractsAndSummaryDataDTO.swift */,
-				9C3D55523049809C00E07EB6 /* PensionContractsAndSummaryMapper.swift */,
-				9C3D55533049809C00E07EB6 /* PensionContractsAndSummaryRemoteDataSource.swift */,
-				9C3D55543049809C00E07EB6 /* PensionContractsSummaryRepositoryImpl.swift */,
+				000000000000000000000078 /* DataPolicyModule.swift */,
+				000000000000000000000079 /* PensionContractsAndSummaryApi.swift */,
+				00000000000000000000007A /* PensionContractsAndSummaryDataDTO.swift */,
+				00000000000000000000007B /* PensionContractsAndSummaryMapper.swift */,
+				00000000000000000000007C /* PensionContractsAndSummaryRemoteDataSource.swift */,
+				00000000000000000000007D /* PensionContractsSummaryRepositoryImpl.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
 		};
-		000000000000000000000077 /* Presentation */ = {
+		000000000000000000000083 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000078 /* HomeView.swift */,
-				000000000000000000000079 /* HomeViewModel.swift */,
+				000000000000000000000084 /* HomeView.swift */,
+				000000000000000000000085 /* HomeViewModel.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
 		};
-		00000000000000000000007B /* Login */ = {
+		000000000000000000000087 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000007F /* Sources */,
+				00000000000000000000008B /* Sources */,
 			);
 			name = Login;
 			sourceTree = "<group>";
 		};
-		00000000000000000000007F /* Sources */ = {
+		00000000000000000000008B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000085 /* Data */,
-				00000000000000000000009E /* Presentation */,
+				000000000000000000000091 /* Data */,
+				0000000000000000000000AA /* Presentation */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		000000000000000000000085 /* Data */ = {
+		000000000000000000000091 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000086 /* AuthApi.swift */,
-				000000000000000000000087 /* AuthDTOs.swift */,
-				000000000000000000000088 /* AuthRemoteDataSource.swift */,
-				000000000000000000000089 /* AuthRepositoryImpl.swift */,
-				00000000000000000000008A /* AuthenticationCustomDataDTO.swift */,
-				00000000000000000000008B /* DataIdentityModule.swift */,
-				00000000000000000000008C /* LoginRegistrationApi.swift */,
-				00000000000000000000008D /* LoginRegistrationRemoteDataSource.swift */,
-				00000000000000000000008E /* LoginRegistrationRepositoryImpl.swift */,
-				00000000000000000000008F /* LoginRegistrationRequestDTO.swift */,
-				000000000000000000000090 /* OtpConfirmationApi.swift */,
-				000000000000000000000091 /* OtpConfirmationRemoteDataSource.swift */,
-				000000000000000000000092 /* OtpConfirmationRepositoryImpl.swift */,
-				000000000000000000000093 /* OtpConfirmationRequestDTO.swift */,
-				000000000000000000000094 /* StartLoginApi.swift */,
-				000000000000000000000095 /* StartLoginMapper.swift */,
-				000000000000000000000096 /* StartLoginRemoteDataSource.swift */,
-				000000000000000000000097 /* StartLoginRepositoryImpl.swift */,
-				000000000000000000000098 /* StartLoginRequestDTO.swift */,
+				000000000000000000000092 /* AuthApi.swift */,
+				000000000000000000000093 /* AuthDTOs.swift */,
+				000000000000000000000094 /* AuthRemoteDataSource.swift */,
+				000000000000000000000095 /* AuthRepositoryImpl.swift */,
+				000000000000000000000096 /* AuthenticationCustomDataDTO.swift */,
+				000000000000000000000097 /* DataIdentityModule.swift */,
+				000000000000000000000098 /* LoginRegistrationApi.swift */,
+				000000000000000000000099 /* LoginRegistrationRemoteDataSource.swift */,
+				00000000000000000000009A /* LoginRegistrationRepositoryImpl.swift */,
+				00000000000000000000009B /* LoginRegistrationRequestDTO.swift */,
+				00000000000000000000009C /* OtpConfirmationApi.swift */,
+				00000000000000000000009D /* OtpConfirmationRemoteDataSource.swift */,
+				00000000000000000000009E /* OtpConfirmationRepositoryImpl.swift */,
+				00000000000000000000009F /* OtpConfirmationRequestDTO.swift */,
+				0000000000000000000000A0 /* StartLoginApi.swift */,
+				0000000000000000000000A1 /* StartLoginMapper.swift */,
+				0000000000000000000000A2 /* StartLoginRemoteDataSource.swift */,
+				0000000000000000000000A3 /* StartLoginRepositoryImpl.swift */,
+				0000000000000000000000A4 /* StartLoginRequestDTO.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
 		};
-		00000000000000000000009E /* Presentation */ = {
+		0000000000000000000000AA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000009F /* LoginView.swift */,
-				0000000000000000000000A0 /* LoginViewModel.swift */,
-				0000000000000000000000A1 /* OtpView.swift */,
-				0000000000000000000000A2 /* OtpViewModel.swift */,
+				0000000000000000000000AB /* LoginView.swift */,
+				0000000000000000000000AC /* LoginViewModel.swift */,
+				0000000000000000000000AD /* OtpView.swift */,
+				0000000000000000000000AE /* OtpViewModel.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
 		};
-		0000000000000000000000A4 /* Splash */ = {
+		0000000000000000000000B0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				0000000000000000000000A8 /* Sources */,
+				0000000000000000000000B4 /* Sources */,
 			);
-			name = Splash;
+			name = Profile;
 			sourceTree = "<group>";
 		};
-		0000000000000000000000A8 /* Sources */ = {
+		0000000000000000000000B4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0000000000000000000000AE /* Data */,
 				0000000000000000000000BA /* Presentation */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		0000000000000000000000AE /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				0000000000000000000000AF /* DataPlatformModule.swift */,
-				0000000000000000000000B0 /* VersionApi.swift */,
-				0000000000000000000000B1 /* VersionDTOs.swift */,
-				0000000000000000000000B2 /* VersionMapper.swift */,
-				0000000000000000000000B3 /* VersionRemoteDataSource.swift */,
-				0000000000000000000000B4 /* VersionRepositoryImpl.swift */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		0000000000000000000000BA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0000000000000000000000BB /* SplashView.swift */,
-				0000000000000000000000BC /* SplashViewModel.swift */,
+				0000000000000000000000BB /* ProfilePhotoView.swift */,
+				0000000000000000000000BC /* ProfileView.swift */,
+				0000000000000000000000BD /* SettingsView.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
 		};
-		9C3D55493049804100E07EB6 /* Sources */ = {
+		0000000000000000000000BF /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D55453049804100E07EB6 /* FetchPensionContractsSummaryUseCase.swift */,
-				9C3D55463049804100E07EB6 /* PensionContractsSummaryModels.swift */,
-				9C3D55473049804100E07EB6 /* PensionContractsSummaryRepository.swift */,
-				9C3D55483049804100E07EB6 /* PolicyDependencies.swift */,
+				0000000000000000000000C3 /* Sources */,
 			);
-			path = Sources;
+			name = Splash;
 			sourceTree = "<group>";
 		};
-		9C3D554A3049804100E07EB6 /* Policy */ = {
+		0000000000000000000000C3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D55493049804100E07EB6 /* Sources */,
+				0000000000000000000000C9 /* Data */,
+				0000000000000000000000D5 /* Presentation */,
 			);
-			name = Policy;
-			path = Domain/Policy;
+			name = Sources;
 			sourceTree = "<group>";
 		};
-		9C3D555D30498C3700E07EB6 /* Data */ = {
+		0000000000000000000000C9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0000000000000000000000CA /* DataPlatformModule.swift */,
+				0000000000000000000000CB /* VersionApi.swift */,
+				0000000000000000000000CC /* VersionDTOs.swift */,
+				0000000000000000000000CD /* VersionMapper.swift */,
+				0000000000000000000000CE /* VersionRemoteDataSource.swift */,
+				0000000000000000000000CF /* VersionRepositoryImpl.swift */,
 			);
-			path = Data;
+			name = Data;
 			sourceTree = "<group>";
 		};
-		9C3D555E30498C3700E07EB6 /* Presentation */ = {
+		0000000000000000000000D5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D556430498C6C00E07EB6 /* ProfilePhotoView.swift */,
-				9C3D556230498C5000E07EB6 /* SettingsView.swift */,
-				9C3D556030498C4200E07EB6 /* ProfileView.swift */,
+				0000000000000000000000D6 /* SplashView.swift */,
+				0000000000000000000000D7 /* SplashViewModel.swift */,
 			);
-			path = Presentation;
+			name = Presentation;
 			sourceTree = "<group>";
 		};
-		9C3D555F30498C3700E07EB6 /* Profile */ = {
+		0000000000000000000000DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9C3D555D30498C3700E07EB6 /* Data */,
-				9C3D555E30498C3700E07EB6 /* Presentation */,
+				0000000000000000000000DF /* Sources */,
 			);
-			name = Profile;
-			path = Feature/Profile;
+			name = Common;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000DF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000E0 /* SabancimError.swift */,
+				0000000000000000000000E1 /* SabancimResult.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000E3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000E7 /* Sources */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000E7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000E8 /* AppNavigator.swift */,
+				0000000000000000000000E9 /* SabancimRoute.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000EB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000EF /* Sources */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000EF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000F0 /* BaseView.swift */,
+				0000000000000000000000F1 /* LoadableView.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000F3 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000F7 /* Sources */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000F7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000000F8 /* SessionManager.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0000000000000000000000FC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000100 /* Sources */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		000000000000000000000100 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000101 /* APIEnvelope.swift */,
+				000000000000000000000102 /* Endpoints.swift */,
+				000000000000000000000103 /* ErrorMapper.swift */,
+				000000000000000000000104 /* HTTPClient.swift */,
+				000000000000000000000105 /* Interceptors.swift */,
+				000000000000000000000106 /* NetworkEnvironment.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		00000000000000000000010A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000010E /* Atoms */,
+				000000000000000000000121 /* Molecules */,
+				00000000000000000000013A /* Resources */,
+				00000000000000000000013E /* States */,
+				000000000000000000000144 /* Theme */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		00000000000000000000010E /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000010F /* BrandLogo.swift */,
+				000000000000000000000110 /* SabancimAmountText.swift */,
+				000000000000000000000111 /* SabancimCard.swift */,
+				000000000000000000000112 /* SabancimCategoryTile.swift */,
+				000000000000000000000113 /* SabancimCheckbox.swift */,
+				000000000000000000000114 /* SabancimCircularProgress.swift */,
+				000000000000000000000115 /* SabancimComponents.swift */,
+				000000000000000000000116 /* SabancimIconButton.swift */,
+				000000000000000000000117 /* SabancimInfoRow.swift */,
+				000000000000000000000118 /* SabancimLinkButton.swift */,
+				000000000000000000000119 /* SabancimNavListRow.swift */,
+				00000000000000000000011A /* SabancimPageIndicator.swift */,
+				00000000000000000000011B /* SabancimQuickActionChip.swift */,
+				00000000000000000000011C /* SabancimSegmentedControl.swift */,
+				00000000000000000000011D /* SabancimTrendBadge.swift */,
+			);
+			name = Atoms;
+			sourceTree = "<group>";
+		};
+		000000000000000000000121 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000122 /* SabancimAsyncImage.swift */,
+				000000000000000000000123 /* SabancimBrandCard.swift */,
+				000000000000000000000124 /* SabancimCategoryRow.swift */,
+				000000000000000000000125 /* SabancimContractsSummaryCard.swift */,
+				000000000000000000000126 /* SabancimDetailBar.swift */,
+				000000000000000000000127 /* SabancimDonutChart.swift */,
+				000000000000000000000128 /* SabancimExpandableRow.swift */,
+				000000000000000000000129 /* SabancimGradientStatCard.swift */,
+				00000000000000000000012A /* SabancimGreetingHeader.swift */,
+				00000000000000000000012B /* SabancimHeroBackground.swift */,
+				00000000000000000000012C /* SabancimLabeledCheckbox.swift */,
+				00000000000000000000012D /* SabancimNotificationRow.swift */,
+				00000000000000000000012E /* SabancimPolicyRow.swift */,
+				00000000000000000000012F /* SabancimProductCard.swift */,
+				000000000000000000000130 /* SabancimPromoBanner.swift */,
+				000000000000000000000131 /* SabancimQuickActionsRow.swift */,
+				000000000000000000000132 /* SabancimSavingsOverviewCard.swift */,
+				000000000000000000000133 /* SabancimSectionHeader.swift */,
+				000000000000000000000134 /* SabancimSummaryCard.swift */,
+				000000000000000000000135 /* SabancimTabBar.swift */,
+				000000000000000000000136 /* SabancimTopBar.swift */,
+			);
+			name = Molecules;
+			sourceTree = "<group>";
+		};
+		00000000000000000000013A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		00000000000000000000013E /* States */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000013F /* SabancimComingSoonView.swift */,
+				000000000000000000000140 /* StateViews.swift */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
+		000000000000000000000144 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000145 /* AppTheme.swift */,
+				000000000000000000000146 /* SabancimBrandColors.swift */,
+				000000000000000000000147 /* SabancimFormat.swift */,
+				000000000000000000000148 /* SabancimTheme.swift */,
+				000000000000000000000149 /* SabancimThemeTokens.swift */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00000000000000000000000A /* iOSTemplate */ = {
+		00000000000000000000000F /* iOSTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000000000000000010 /* Build configuration list for PBXNativeTarget "iOSTemplate" */;
+			buildConfigurationList = 000000000000000000000015 /* Build configuration list for PBXNativeTarget "iOSTemplate" */;
 			buildPhases = (
-				00000000000000000000000C /* Sources */,
-				00000000000000000000000D /* Frameworks */,
-				00000000000000000000000E /* Resources */,
+				000000000000000000000011 /* Sources */,
+				000000000000000000000012 /* Frameworks */,
+				000000000000000000000013 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -510,16 +821,11 @@
 			);
 			name = iOSTemplate;
 			packageProductDependencies = (
-				000000000000000000000023 /* CoreCommon */,
-				000000000000000000000024 /* CoreNavigation */,
-				000000000000000000000025 /* CorePresentation */,
-				000000000000000000000026 /* CoreSession */,
-				000000000000000000000027 /* DesignSystem */,
-				000000000000000000000028 /* DataNetwork */,
-				000000000000000000000030 /* Dependencies */,
+				00000000000000000000002A /* Dependencies */,
+				00000000000000000000002B /* NukeUI */,
 			);
 			productName = iOSTemplate;
-			productReference = 00000000000000000000000B /* iOSTemplate.app */;
+			productReference = 000000000000000000000010 /* iOSTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -532,12 +838,12 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					00000000000000000000000A = {
+					00000000000000000000000F = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 00000000000000000000000F /* Build configuration list for PBXProject "iOSTemplate" */;
+			buildConfigurationList = 000000000000000000000014 /* Build configuration list for PBXProject "iOSTemplate" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -547,117 +853,169 @@
 			);
 			mainGroup = 000000000000000000000002;
 			packageReferences = (
-				00000000000000000000001D /* XCLocalSwiftPackageReference "Modules/Core/Common" */,
-				00000000000000000000001E /* XCLocalSwiftPackageReference "Modules/Core/Navigation" */,
-				00000000000000000000001F /* XCLocalSwiftPackageReference "Modules/Core/Presentation" */,
-				000000000000000000000020 /* XCLocalSwiftPackageReference "Modules/Core/Session" */,
-				000000000000000000000021 /* XCLocalSwiftPackageReference "Modules/DesignSystem" */,
-				000000000000000000000022 /* XCLocalSwiftPackageReference "Modules/Data/Network" */,
-				00000000000000000000002F /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				000000000000000000000028 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				000000000000000000000029 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
-			productRefGroup = 000000000000000000000009 /* Products */;
+			productRefGroup = 00000000000000000000000C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00000000000000000000000A /* iOSTemplate */,
+				00000000000000000000000F /* iOSTemplate */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00000000000000000000000E /* Resources */ = {
+		000000000000000000000013 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3D556E304AAF0600E07EB6 /* Media.xcassets in Resources */,
-				9C3D556F304AAF0600E07EB6 /* LaunchScreen.storyboard in Resources */,
+				00000000000000000000000E /* Media.xcassets in Resources */,
+				9C3D5574304E930200E07EB6 /* Media.xcassets in Resources */,
+				9C3D5572304E92F100E07EB6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00000000000000000000000C /* Sources */ = {
+		000000000000000000000011 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000000000000000019 /* AppEntry.swift in Sources */,
-				00000000000000000000001A /* AppComposition.swift in Sources */,
-				00000000000000000000001B /* RootView.swift in Sources */,
-				0000000000000000000000BD /* AuthRepository.swift in Sources */,
-				0000000000000000000000BE /* AuthenticationResult.swift in Sources */,
-				0000000000000000000000BF /* ConfirmOtpUseCase.swift in Sources */,
-				0000000000000000000000C0 /* IdentityDependencies.swift in Sources */,
-				9C3D554B3049804100E07EB6 /* PensionContractsSummaryRepository.swift in Sources */,
-				9C3D554C3049804100E07EB6 /* FetchPensionContractsSummaryUseCase.swift in Sources */,
-				9C3D554D3049804100E07EB6 /* PensionContractsSummaryModels.swift in Sources */,
-				9C3D554E3049804100E07EB6 /* PolicyDependencies.swift in Sources */,
-				9C3D555C304980EE00E07EB6 /* MainTabView.swift in Sources */,
-				0000000000000000000000C1 /* LoginRegistrationRepository.swift in Sources */,
-				0000000000000000000000C2 /* LoginRegistrationUseCase.swift in Sources */,
-				9C3D556530498C6C00E07EB6 /* ProfilePhotoView.swift in Sources */,
-				0000000000000000000000C3 /* LoginUseCase.swift in Sources */,
-				0000000000000000000000C4 /* OtpConfirmationRepository.swift in Sources */,
-				0000000000000000000000C5 /* StartLoginRepository.swift in Sources */,
-				0000000000000000000000C6 /* StartLoginUseCase.swift in Sources */,
-				0000000000000000000000C7 /* UserSession.swift in Sources */,
-				0000000000000000000000C8 /* CheckVersionUseCase.swift in Sources */,
-				0000000000000000000000C9 /* DomainPlatform.swift in Sources */,
-				0000000000000000000000CA /* PlatformDependencies.swift in Sources */,
-				0000000000000000000000CB /* PlatformModels.swift in Sources */,
-				0000000000000000000000CC /* VersionRepository.swift in Sources */,
-				9C3D556130498C4200E07EB6 /* ProfileView.swift in Sources */,
-				9C3D556330498C5000E07EB6 /* SettingsView.swift in Sources */,
-				0000000000000000000000CD /* HomeView.swift in Sources */,
-				0000000000000000000000CE /* HomeViewModel.swift in Sources */,
-				0000000000000000000000CF /* AuthApi.swift in Sources */,
-				0000000000000000000000D0 /* AuthDTOs.swift in Sources */,
-				0000000000000000000000D1 /* AuthRemoteDataSource.swift in Sources */,
-				0000000000000000000000D2 /* AuthRepositoryImpl.swift in Sources */,
-				0000000000000000000000D3 /* AuthenticationCustomDataDTO.swift in Sources */,
-				9C3D55553049809C00E07EB6 /* PensionContractsAndSummaryMapper.swift in Sources */,
-				9C3D55563049809C00E07EB6 /* DataPolicyModule.swift in Sources */,
-				9C3D55573049809C00E07EB6 /* PensionContractsAndSummaryApi.swift in Sources */,
-				9C3D55583049809C00E07EB6 /* PensionContractsAndSummaryDataDTO.swift in Sources */,
-				9C3D55593049809C00E07EB6 /* PensionContractsAndSummaryRemoteDataSource.swift in Sources */,
-				9C3D555A3049809C00E07EB6 /* PensionContractsSummaryRepositoryImpl.swift in Sources */,
-				0000000000000000000000D4 /* DataIdentityModule.swift in Sources */,
-				0000000000000000000000D5 /* LoginRegistrationApi.swift in Sources */,
-				0000000000000000000000D6 /* LoginRegistrationRemoteDataSource.swift in Sources */,
-				0000000000000000000000D7 /* LoginRegistrationRepositoryImpl.swift in Sources */,
-				0000000000000000000000D8 /* LoginRegistrationRequestDTO.swift in Sources */,
-				0000000000000000000000D9 /* OtpConfirmationApi.swift in Sources */,
-				9C3D556A3049932100E07EB6 /* RootTab.swift in Sources */,
-				9C3D556B3049932100E07EB6 /* AppNavHost.swift in Sources */,
-				0000000000000000000000DA /* OtpConfirmationRemoteDataSource.swift in Sources */,
-				0000000000000000000000DB /* OtpConfirmationRepositoryImpl.swift in Sources */,
-				0000000000000000000000DC /* OtpConfirmationRequestDTO.swift in Sources */,
-				0000000000000000000000DD /* StartLoginApi.swift in Sources */,
-				0000000000000000000000DE /* StartLoginMapper.swift in Sources */,
-				0000000000000000000000DF /* StartLoginRemoteDataSource.swift in Sources */,
-				0000000000000000000000E0 /* StartLoginRepositoryImpl.swift in Sources */,
-				0000000000000000000000E1 /* StartLoginRequestDTO.swift in Sources */,
-				0000000000000000000000E2 /* LoginView.swift in Sources */,
-				0000000000000000000000E3 /* LoginViewModel.swift in Sources */,
-				0000000000000000000000E4 /* OtpView.swift in Sources */,
-				0000000000000000000000E5 /* OtpViewModel.swift in Sources */,
-				0000000000000000000000E6 /* DataPlatformModule.swift in Sources */,
-				0000000000000000000000E7 /* VersionApi.swift in Sources */,
-				0000000000000000000000E8 /* VersionDTOs.swift in Sources */,
-				0000000000000000000000E9 /* VersionMapper.swift in Sources */,
-				0000000000000000000000EA /* VersionRemoteDataSource.swift in Sources */,
-				0000000000000000000000EB /* VersionRepositoryImpl.swift in Sources */,
-				0000000000000000000000EC /* SplashView.swift in Sources */,
-				0000000000000000000000ED /* SplashViewModel.swift in Sources */,
+				000000000000000000000021 /* AppEntry.swift in Sources */,
+				000000000000000000000022 /* AppComposition.swift in Sources */,
+				000000000000000000000023 /* RootView.swift in Sources */,
+				000000000000000000000024 /* MainTabView.swift in Sources */,
+				000000000000000000000025 /* AppNavHost.swift in Sources */,
+				000000000000000000000026 /* RootTab.swift in Sources */,
+				00000000000000000000014A /* AuthRepository.swift in Sources */,
+				00000000000000000000014B /* AuthenticationResult.swift in Sources */,
+				00000000000000000000014C /* ConfirmOtpUseCase.swift in Sources */,
+				00000000000000000000014D /* IdentityDependencies.swift in Sources */,
+				00000000000000000000014E /* LoginRegistrationRepository.swift in Sources */,
+				00000000000000000000014F /* LoginRegistrationUseCase.swift in Sources */,
+				000000000000000000000150 /* LoginUseCase.swift in Sources */,
+				000000000000000000000151 /* OtpConfirmationRepository.swift in Sources */,
+				000000000000000000000152 /* StartLoginRepository.swift in Sources */,
+				000000000000000000000153 /* StartLoginUseCase.swift in Sources */,
+				000000000000000000000154 /* UserSession.swift in Sources */,
+				000000000000000000000155 /* CheckVersionUseCase.swift in Sources */,
+				000000000000000000000156 /* DomainPlatform.swift in Sources */,
+				000000000000000000000157 /* PlatformDependencies.swift in Sources */,
+				000000000000000000000158 /* PlatformModels.swift in Sources */,
+				000000000000000000000159 /* VersionRepository.swift in Sources */,
+				00000000000000000000015A /* FetchPensionContractsSummaryUseCase.swift in Sources */,
+				00000000000000000000015B /* PensionContractsSummaryModels.swift in Sources */,
+				00000000000000000000015C /* PensionContractsSummaryRepository.swift in Sources */,
+				00000000000000000000015D /* PolicyDependencies.swift in Sources */,
+				00000000000000000000015E /* DataPolicyModule.swift in Sources */,
+				00000000000000000000015F /* PensionContractsAndSummaryApi.swift in Sources */,
+				000000000000000000000160 /* PensionContractsAndSummaryDataDTO.swift in Sources */,
+				000000000000000000000161 /* PensionContractsAndSummaryMapper.swift in Sources */,
+				000000000000000000000162 /* PensionContractsAndSummaryRemoteDataSource.swift in Sources */,
+				000000000000000000000163 /* PensionContractsSummaryRepositoryImpl.swift in Sources */,
+				000000000000000000000164 /* HomeView.swift in Sources */,
+				000000000000000000000165 /* HomeViewModel.swift in Sources */,
+				000000000000000000000166 /* AuthApi.swift in Sources */,
+				000000000000000000000167 /* AuthDTOs.swift in Sources */,
+				000000000000000000000168 /* AuthRemoteDataSource.swift in Sources */,
+				000000000000000000000169 /* AuthRepositoryImpl.swift in Sources */,
+				00000000000000000000016A /* AuthenticationCustomDataDTO.swift in Sources */,
+				00000000000000000000016B /* DataIdentityModule.swift in Sources */,
+				00000000000000000000016C /* LoginRegistrationApi.swift in Sources */,
+				00000000000000000000016D /* LoginRegistrationRemoteDataSource.swift in Sources */,
+				00000000000000000000016E /* LoginRegistrationRepositoryImpl.swift in Sources */,
+				00000000000000000000016F /* LoginRegistrationRequestDTO.swift in Sources */,
+				000000000000000000000170 /* OtpConfirmationApi.swift in Sources */,
+				000000000000000000000171 /* OtpConfirmationRemoteDataSource.swift in Sources */,
+				000000000000000000000172 /* OtpConfirmationRepositoryImpl.swift in Sources */,
+				000000000000000000000173 /* OtpConfirmationRequestDTO.swift in Sources */,
+				000000000000000000000174 /* StartLoginApi.swift in Sources */,
+				000000000000000000000175 /* StartLoginMapper.swift in Sources */,
+				000000000000000000000176 /* StartLoginRemoteDataSource.swift in Sources */,
+				000000000000000000000177 /* StartLoginRepositoryImpl.swift in Sources */,
+				000000000000000000000178 /* StartLoginRequestDTO.swift in Sources */,
+				000000000000000000000179 /* LoginView.swift in Sources */,
+				00000000000000000000017A /* LoginViewModel.swift in Sources */,
+				00000000000000000000017B /* OtpView.swift in Sources */,
+				00000000000000000000017C /* OtpViewModel.swift in Sources */,
+				00000000000000000000017D /* ProfilePhotoView.swift in Sources */,
+				00000000000000000000017E /* ProfileView.swift in Sources */,
+				00000000000000000000017F /* SettingsView.swift in Sources */,
+				000000000000000000000180 /* DataPlatformModule.swift in Sources */,
+				000000000000000000000181 /* VersionApi.swift in Sources */,
+				000000000000000000000182 /* VersionDTOs.swift in Sources */,
+				000000000000000000000183 /* VersionMapper.swift in Sources */,
+				000000000000000000000184 /* VersionRemoteDataSource.swift in Sources */,
+				000000000000000000000185 /* VersionRepositoryImpl.swift in Sources */,
+				000000000000000000000186 /* SplashView.swift in Sources */,
+				000000000000000000000187 /* SplashViewModel.swift in Sources */,
+				000000000000000000000188 /* SabancimError.swift in Sources */,
+				000000000000000000000189 /* SabancimResult.swift in Sources */,
+				00000000000000000000018A /* AppNavigator.swift in Sources */,
+				00000000000000000000018B /* SabancimRoute.swift in Sources */,
+				00000000000000000000018C /* BaseView.swift in Sources */,
+				00000000000000000000018D /* LoadableView.swift in Sources */,
+				00000000000000000000018E /* SessionManager.swift in Sources */,
+				00000000000000000000018F /* APIEnvelope.swift in Sources */,
+				000000000000000000000190 /* Endpoints.swift in Sources */,
+				000000000000000000000191 /* ErrorMapper.swift in Sources */,
+				000000000000000000000192 /* HTTPClient.swift in Sources */,
+				000000000000000000000193 /* Interceptors.swift in Sources */,
+				000000000000000000000194 /* NetworkEnvironment.swift in Sources */,
+				000000000000000000000195 /* BrandLogo.swift in Sources */,
+				000000000000000000000196 /* SabancimAmountText.swift in Sources */,
+				000000000000000000000197 /* SabancimCard.swift in Sources */,
+				000000000000000000000198 /* SabancimCategoryTile.swift in Sources */,
+				000000000000000000000199 /* SabancimCheckbox.swift in Sources */,
+				00000000000000000000019A /* SabancimCircularProgress.swift in Sources */,
+				00000000000000000000019B /* SabancimComponents.swift in Sources */,
+				00000000000000000000019C /* SabancimIconButton.swift in Sources */,
+				00000000000000000000019D /* SabancimInfoRow.swift in Sources */,
+				00000000000000000000019E /* SabancimLinkButton.swift in Sources */,
+				00000000000000000000019F /* SabancimNavListRow.swift in Sources */,
+				0000000000000000000001A0 /* SabancimPageIndicator.swift in Sources */,
+				0000000000000000000001A1 /* SabancimQuickActionChip.swift in Sources */,
+				0000000000000000000001A2 /* SabancimSegmentedControl.swift in Sources */,
+				0000000000000000000001A3 /* SabancimTrendBadge.swift in Sources */,
+				0000000000000000000001A4 /* SabancimAsyncImage.swift in Sources */,
+				0000000000000000000001A5 /* SabancimBrandCard.swift in Sources */,
+				0000000000000000000001A6 /* SabancimCategoryRow.swift in Sources */,
+				0000000000000000000001A7 /* SabancimContractsSummaryCard.swift in Sources */,
+				0000000000000000000001A8 /* SabancimDetailBar.swift in Sources */,
+				0000000000000000000001A9 /* SabancimDonutChart.swift in Sources */,
+				0000000000000000000001AA /* SabancimExpandableRow.swift in Sources */,
+				0000000000000000000001AB /* SabancimGradientStatCard.swift in Sources */,
+				0000000000000000000001AC /* SabancimGreetingHeader.swift in Sources */,
+				0000000000000000000001AD /* SabancimHeroBackground.swift in Sources */,
+				0000000000000000000001AE /* SabancimLabeledCheckbox.swift in Sources */,
+				0000000000000000000001AF /* SabancimNotificationRow.swift in Sources */,
+				0000000000000000000001B0 /* SabancimPolicyRow.swift in Sources */,
+				0000000000000000000001B1 /* SabancimProductCard.swift in Sources */,
+				0000000000000000000001B2 /* SabancimPromoBanner.swift in Sources */,
+				0000000000000000000001B3 /* SabancimQuickActionsRow.swift in Sources */,
+				0000000000000000000001B4 /* SabancimSavingsOverviewCard.swift in Sources */,
+				0000000000000000000001B5 /* SabancimSectionHeader.swift in Sources */,
+				0000000000000000000001B6 /* SabancimSummaryCard.swift in Sources */,
+				0000000000000000000001B7 /* SabancimTabBar.swift in Sources */,
+				0000000000000000000001B8 /* SabancimTopBar.swift in Sources */,
+				0000000000000000000001B9 /* SabancimComingSoonView.swift in Sources */,
+				0000000000000000000001BA /* StateViews.swift in Sources */,
+				0000000000000000000001BB /* AppTheme.swift in Sources */,
+				0000000000000000000001BC /* SabancimBrandColors.swift in Sources */,
+				0000000000000000000001BD /* SabancimFormat.swift in Sources */,
+				0000000000000000000001BE /* SabancimTheme.swift in Sources */,
+				0000000000000000000001BF /* SabancimThemeTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		000000000000000000000032 /* PrdDebug */ = {
+		00000000000000000000002E /* PrdDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000011 /* Prd.xcconfig */;
+			baseConfigurationReference = 000000000000000000000016 /* Prd.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -678,9 +1036,9 @@
 			};
 			name = PrdDebug;
 		};
-		000000000000000000000033 /* PrdRelease */ = {
+		00000000000000000000002F /* PrdRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000011 /* Prd.xcconfig */;
+			baseConfigurationReference = 000000000000000000000016 /* Prd.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -700,13 +1058,12 @@
 			};
 			name = PrdRelease;
 		};
-		000000000000000000000034 /* PrdDebug */ = {
+		000000000000000000000030 /* PrdDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000011 /* Prd.xcconfig */;
+			baseConfigurationReference = 000000000000000000000016 /* Prd.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,19 +1072,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PrdDebug;
 		};
-		000000000000000000000035 /* PrdRelease */ = {
+		000000000000000000000031 /* PrdRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000011 /* Prd.xcconfig */;
+			baseConfigurationReference = 000000000000000000000016 /* Prd.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,15 +1091,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PrdRelease;
 		};
-		000000000000000000000036 /* PreprodDebug */ = {
+		000000000000000000000032 /* PreprodDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000012 /* Preprod.xcconfig */;
+			baseConfigurationReference = 000000000000000000000017 /* Preprod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -765,9 +1119,9 @@
 			};
 			name = PreprodDebug;
 		};
-		000000000000000000000037 /* PreprodRelease */ = {
+		000000000000000000000033 /* PreprodRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000012 /* Preprod.xcconfig */;
+			baseConfigurationReference = 000000000000000000000017 /* Preprod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -787,13 +1141,12 @@
 			};
 			name = PreprodRelease;
 		};
-		000000000000000000000038 /* PreprodDebug */ = {
+		000000000000000000000034 /* PreprodDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000012 /* Preprod.xcconfig */;
+			baseConfigurationReference = 000000000000000000000017 /* Preprod.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -802,19 +1155,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PreprodDebug;
 		};
-		000000000000000000000039 /* PreprodRelease */ = {
+		000000000000000000000035 /* PreprodRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000012 /* Preprod.xcconfig */;
+			baseConfigurationReference = 000000000000000000000017 /* Preprod.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -823,15 +1174,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PreprodRelease;
 		};
-		00000000000000000000003A /* TstDebug */ = {
+		000000000000000000000036 /* TstDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000013 /* Tst.xcconfig */;
+			baseConfigurationReference = 000000000000000000000018 /* Tst.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -852,9 +1202,9 @@
 			};
 			name = TstDebug;
 		};
-		00000000000000000000003B /* TstRelease */ = {
+		000000000000000000000037 /* TstRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000013 /* Tst.xcconfig */;
+			baseConfigurationReference = 000000000000000000000018 /* Tst.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -874,13 +1224,12 @@
 			};
 			name = TstRelease;
 		};
-		00000000000000000000003C /* TstDebug */ = {
+		000000000000000000000038 /* TstDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000013 /* Tst.xcconfig */;
+			baseConfigurationReference = 000000000000000000000018 /* Tst.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -889,19 +1238,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = TstDebug;
 		};
-		00000000000000000000003D /* TstRelease */ = {
+		000000000000000000000039 /* TstRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000013 /* Tst.xcconfig */;
+			baseConfigurationReference = 000000000000000000000018 /* Tst.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -910,15 +1257,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = TstRelease;
 		};
-		00000000000000000000003E /* PilotDebug */ = {
+		00000000000000000000003A /* PilotDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000014 /* Pilot.xcconfig */;
+			baseConfigurationReference = 000000000000000000000019 /* Pilot.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -939,9 +1285,9 @@
 			};
 			name = PilotDebug;
 		};
-		00000000000000000000003F /* PilotRelease */ = {
+		00000000000000000000003B /* PilotRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000014 /* Pilot.xcconfig */;
+			baseConfigurationReference = 000000000000000000000019 /* Pilot.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -961,13 +1307,12 @@
 			};
 			name = PilotRelease;
 		};
-		000000000000000000000040 /* PilotDebug */ = {
+		00000000000000000000003C /* PilotDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000014 /* Pilot.xcconfig */;
+			baseConfigurationReference = 000000000000000000000019 /* Pilot.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -976,19 +1321,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PilotDebug;
 		};
-		000000000000000000000041 /* PilotRelease */ = {
+		00000000000000000000003D /* PilotRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000014 /* Pilot.xcconfig */;
+			baseConfigurationReference = 000000000000000000000019 /* Pilot.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -997,15 +1340,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = PilotRelease;
 		};
-		000000000000000000000042 /* MockDebug */ = {
+		00000000000000000000003E /* MockDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000015 /* Mock.xcconfig */;
+			baseConfigurationReference = 00000000000000000000001A /* Mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -1026,9 +1368,9 @@
 			};
 			name = MockDebug;
 		};
-		000000000000000000000043 /* MockRelease */ = {
+		00000000000000000000003F /* MockRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000015 /* Mock.xcconfig */;
+			baseConfigurationReference = 00000000000000000000001A /* Mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -1048,13 +1390,12 @@
 			};
 			name = MockRelease;
 		};
-		000000000000000000000044 /* MockDebug */ = {
+		000000000000000000000040 /* MockDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000015 /* Mock.xcconfig */;
+			baseConfigurationReference = 00000000000000000000001A /* Mock.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1063,19 +1404,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = MockDebug;
 		};
-		000000000000000000000045 /* MockRelease */ = {
+		000000000000000000000041 /* MockRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000000000000000015 /* Mock.xcconfig */;
+			baseConfigurationReference = 00000000000000000000001A /* Mock.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1084,7 +1423,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1093,71 +1431,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00000000000000000000000F /* Build configuration list for PBXProject "iOSTemplate" */ = {
+		000000000000000000000014 /* Build configuration list for PBXProject "iOSTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000000000000000032 /* PrdDebug */,
-				000000000000000000000033 /* PrdRelease */,
-				000000000000000000000036 /* PreprodDebug */,
-				000000000000000000000037 /* PreprodRelease */,
-				00000000000000000000003A /* TstDebug */,
-				00000000000000000000003B /* TstRelease */,
-				00000000000000000000003E /* PilotDebug */,
-				00000000000000000000003F /* PilotRelease */,
-				000000000000000000000042 /* MockDebug */,
-				000000000000000000000043 /* MockRelease */,
+				00000000000000000000002E /* PrdDebug */,
+				00000000000000000000002F /* PrdRelease */,
+				000000000000000000000032 /* PreprodDebug */,
+				000000000000000000000033 /* PreprodRelease */,
+				000000000000000000000036 /* TstDebug */,
+				000000000000000000000037 /* TstRelease */,
+				00000000000000000000003A /* PilotDebug */,
+				00000000000000000000003B /* PilotRelease */,
+				00000000000000000000003E /* MockDebug */,
+				00000000000000000000003F /* MockRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = PrdRelease;
 		};
-		000000000000000000000010 /* Build configuration list for PBXNativeTarget "iOSTemplate" */ = {
+		000000000000000000000015 /* Build configuration list for PBXNativeTarget "iOSTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000000000000000034 /* PrdDebug */,
-				000000000000000000000035 /* PrdRelease */,
-				000000000000000000000038 /* PreprodDebug */,
-				000000000000000000000039 /* PreprodRelease */,
-				00000000000000000000003C /* TstDebug */,
-				00000000000000000000003D /* TstRelease */,
-				000000000000000000000040 /* PilotDebug */,
-				000000000000000000000041 /* PilotRelease */,
-				000000000000000000000044 /* MockDebug */,
-				000000000000000000000045 /* MockRelease */,
+				000000000000000000000030 /* PrdDebug */,
+				000000000000000000000031 /* PrdRelease */,
+				000000000000000000000034 /* PreprodDebug */,
+				000000000000000000000035 /* PreprodRelease */,
+				000000000000000000000038 /* TstDebug */,
+				000000000000000000000039 /* TstRelease */,
+				00000000000000000000003C /* PilotDebug */,
+				00000000000000000000003D /* PilotRelease */,
+				000000000000000000000040 /* MockDebug */,
+				000000000000000000000041 /* MockRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = PrdRelease;
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		00000000000000000000001D /* XCLocalSwiftPackageReference "Modules/Core/Common" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/Core/Common;
-		};
-		00000000000000000000001E /* XCLocalSwiftPackageReference "Modules/Core/Navigation" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/Core/Navigation;
-		};
-		00000000000000000000001F /* XCLocalSwiftPackageReference "Modules/Core/Presentation" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/Core/Presentation;
-		};
-		000000000000000000000020 /* XCLocalSwiftPackageReference "Modules/Core/Session" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/Core/Session;
-		};
-		000000000000000000000021 /* XCLocalSwiftPackageReference "Modules/DesignSystem" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/DesignSystem;
-		};
-		000000000000000000000022 /* XCLocalSwiftPackageReference "Modules/Data/Network" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/Data/Network;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
-		00000000000000000000002F /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+		000000000000000000000028 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
 			requirement = {
@@ -1165,43 +1476,26 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		000000000000000000000029 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		000000000000000000000023 /* CoreCommon */ = {
+		00000000000000000000002A /* Dependencies */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 00000000000000000000001D /* XCLocalSwiftPackageReference "Modules/Core/Common" */;
-			productName = CoreCommon;
-		};
-		000000000000000000000024 /* CoreNavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 00000000000000000000001E /* XCLocalSwiftPackageReference "Modules/Core/Navigation" */;
-			productName = CoreNavigation;
-		};
-		000000000000000000000025 /* CorePresentation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 00000000000000000000001F /* XCLocalSwiftPackageReference "Modules/Core/Presentation" */;
-			productName = CorePresentation;
-		};
-		000000000000000000000026 /* CoreSession */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 000000000000000000000020 /* XCLocalSwiftPackageReference "Modules/Core/Session" */;
-			productName = CoreSession;
-		};
-		000000000000000000000027 /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 000000000000000000000021 /* XCLocalSwiftPackageReference "Modules/DesignSystem" */;
-			productName = DesignSystem;
-		};
-		000000000000000000000028 /* DataNetwork */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 000000000000000000000022 /* XCLocalSwiftPackageReference "Modules/Data/Network" */;
-			productName = DataNetwork;
-		};
-		000000000000000000000030 /* Dependencies */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 00000000000000000000002F /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			package = 000000000000000000000028 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
 			productName = Dependencies;
+		};
+		00000000000000000000002B /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 000000000000000000000029 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

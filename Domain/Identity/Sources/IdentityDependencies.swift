@@ -1,6 +1,4 @@
 import Dependencies
-import CoreSession
-import CoreCommon
 
 /// swift-dependencies kayıtları — Android Hilt `@Module` / `@Provides` karşılığı.
 ///

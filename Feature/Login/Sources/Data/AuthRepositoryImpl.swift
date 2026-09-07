@@ -1,6 +1,4 @@
 import Foundation
-import CoreSession
-import CoreCommon
 
 /// Not: `login`'de token/session'ı elle yazmaya gerek yok — `Set-Cookie` header'ı
 /// HTTPClient'ın interceptor zincirinde otomatik yakalanıyor (bkz. OtpConfirmation

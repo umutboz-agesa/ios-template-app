@@ -1,8 +1,5 @@
 import Foundation
-import CoreSession
 import Dependencies
-import DataNetwork
-import CoreCommon
 
 /// Composition root — superapp'teki `AppComposition.swift`'in birebir aynısı,
 /// Policy/Pension'a ait satırlar çıkarılmış hali. swift-dependencies'in

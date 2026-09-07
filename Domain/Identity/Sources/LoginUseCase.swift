@@ -1,5 +1,4 @@
 import Foundation
-import CoreCommon
 
 /// Android `:domain:identity` `LoginUseCase` karşılığı.
 /// Not: `username` validation'ı kaldırıldı — `LoginCredentials`'ta artık yok.

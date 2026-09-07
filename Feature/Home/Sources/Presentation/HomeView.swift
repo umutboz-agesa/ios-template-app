@@ -1,7 +1,4 @@
 import SwiftUI
-import DesignSystem
-import CorePresentation
-import CoreNavigation
 
 /// Login/OTP sonrası düşülen ekran. `UserSession`'dan gelen gerçek profille
 /// karşılıyor, `SessionManaging.clear()` + `UserSession.signOut()` ile gerçek

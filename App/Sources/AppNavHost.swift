@@ -1,6 +1,4 @@
 import SwiftUI
-import DesignSystem
-import CoreNavigation
 
 /// Android `SabancimNavHost.kt` (Navigation Compose) karşılığı — Home tab'ının
 /// `NavigationStack`'i + route → screen eşlemesi. Superapp'ten birebir; sadece

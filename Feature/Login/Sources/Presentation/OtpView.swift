@@ -5,9 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import SwiftUI
-import DesignSystem
-import CorePresentation
-import CoreNavigation
 
 /// Android `OtpScreen.kt` (Compose) karşılığı. `LoginView` ile aynı DesignSystem
 /// component'lerini ve spacing/renk kurallarını kullanır.

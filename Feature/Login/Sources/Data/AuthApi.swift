@@ -1,5 +1,4 @@
 import Foundation
-import DataNetwork
  
 /// Not: `APIEnvelope<T>` DEĞİL — düz şema (`loginRegistration`/`otpConfirmation` gibi).
 struct AuthApi: Sendable {

@@ -1,12 +1,7 @@
 import SwiftUI
-import DesignSystem
-import CorePresentation
-import CoreNavigation
 import Foundation
 import SwiftUI
 import UIKit
-import DesignSystem
-import CoreNavigation
 
 /// Android `SplashScreen` / legacy `SplashViewController` karşılığı.
 public struct SplashView: BaseView {

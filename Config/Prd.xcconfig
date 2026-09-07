@@ -7,5 +7,8 @@ MARKETING_VERSION = 1.0.0
 CURRENT_PROJECT_VERSION = 1
 
 // Backend adresi — .xcconfig'ten okunur (bkz. NetworkEnvironment.swift).
-// xcconfig'te "//" yorum başlatabildiği için URL DAİMA tırnak içinde yazılır.
+// NOT: xcconfig'te "//" HER ZAMAN yorum başlatır — tırnak içine alsanız BİLE
+// (Xcode'un ayrıştırıcısı yorum şeridini tırnaktan önce keser). Çözüm: iki
+// slash'ın arasına boş bir makro (`$()`) koymak — genişleyince yine "//" olur
+// ama parse anında literal "//" görünmediği için yorum sanılmaz.
 API_BASE_URL = https:/$()/mobileapp.agesa.com.tr/maf-ui-bff-mobile/

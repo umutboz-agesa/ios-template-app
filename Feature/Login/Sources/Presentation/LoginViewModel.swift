@@ -1,10 +1,7 @@
 import Foundation
 import Observation
 import Dependencies
-import CoreCommon
-import CoreNavigation
 import UIKit   // UIDevice.identifierForVendor
-import DataNetwork
 
 /// Android `LoginViewModel` (@HiltViewModel + StateFlow) karşılığı.
 /// `@Observable` → StateFlow, `@Dependency` → Hilt inject.
@@ -63,7 +60,7 @@ public final class LoginViewModel {
             if case .success = result {
                 onFinished(.otp(identityNumber: username, password: password))
             }
-        case .login(let name):
+        case .login(_):
             let useCase = LoginUseCase(repository: repository, session: userSession)
             let credentials = LoginCredentials(
                 password: password,

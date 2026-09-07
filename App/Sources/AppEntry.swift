@@ -1,6 +1,4 @@
 import SwiftUI
-import CoreNavigation
-import DesignSystem
 
 @main
 struct iOSTemplateApp: App {

@@ -1,6 +1,4 @@
 import SwiftUI
-import DesignSystem
-import CoreNavigation
 
 /// Merkezi sekme navigasyon kabı — TÜM (Home dışı) sekmeler bunu kullanır (tek
 /// kaynak, kod tekrarı yok). Kendi `NavigationStack` + path'i vardır. Tıklamalar

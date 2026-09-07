@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 29.07.2026.
 //
 import Dependencies
-import CoreCommon
 
 /// `PensionContractsSummaryRepository` için DI anahtarı. `VersionCheckRepositoryKey`
 /// ile aynı desen — gerçek veri çeken kritik bir yol, bootstrap'ta bağlanmazsa

@@ -5,7 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import CoreCommon
 
 final class OtpConfirmationRepositoryImpl: OtpConfirmationRepository, @unchecked Sendable {
     /// TODO: gerçek değeri/anlamı netleşince adlandırılmış bir sabite/enum'a çevir.

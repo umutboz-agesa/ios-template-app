@@ -5,8 +5,6 @@
 //  Created by Hakan Uğraş on 4.08.2026.
 //
 import Foundation
-import CoreSession
-import DataNetwork
 
 public enum DataIdentityModule {
     public static func makeRepository(

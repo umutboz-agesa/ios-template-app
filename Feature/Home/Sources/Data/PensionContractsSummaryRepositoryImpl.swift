@@ -2,10 +2,9 @@
 //  PensionContractsSummaryRepositoryImpl.swift
 //  iOSTemplate
 //
-//  Created by Hakan Uğraş on 3.09.2026.
+//  Created by Hakan Uğraş on 29.07.2026.
 //
 import Foundation
-import CoreCommon
 
 final class PensionContractsSummaryRepositoryImpl: PensionContractsSummaryRepository, @unchecked Sendable {
     private let remote: PensionContractsAndSummaryRemoteDataSource

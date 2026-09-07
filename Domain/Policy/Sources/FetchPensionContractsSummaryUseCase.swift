@@ -2,10 +2,9 @@
 //  FetchPensionContractsSummaryUseCase.swift
 //  iOSTemplate
 //
-//  Created by Hakan Uğraş on 3.09.2026.
+//  Created by Hakan Uğraş on 29.07.2026.
 //
 import Foundation
-import CoreCommon
 
 /// Girdi/validation gerektirmiyor (GET, parametresiz) — yine de UseCase katmanı
 /// var, ileride bir iş kuralı (ör. cache-first davranışı) eklenirse buraya gider.

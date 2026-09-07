@@ -7,8 +7,6 @@
 import Foundation
 import Observation
 import Dependencies
-import CoreCommon
-import CoreNavigation
 import UIKit   // UIDevice.identifierForVendor
 
 /// Android `OtpViewModel` (@HiltViewModel + StateFlow) karşılığı.

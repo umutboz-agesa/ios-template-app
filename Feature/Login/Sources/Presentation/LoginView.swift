@@ -1,7 +1,4 @@
 import SwiftUI
-import DesignSystem
-import CorePresentation
-import CoreNavigation
 
 /// Android `LoginScreen.kt` (Compose) karşılığı. DesignSystem component'lerini kullanır.
 public struct LoginView: BaseView {

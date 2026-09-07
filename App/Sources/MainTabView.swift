@@ -1,6 +1,4 @@
 import SwiftUI
-import DesignSystem
-import CoreNavigation
 
 /// Ana tab bar shell'i. Her sekme merkezi `RootTab` kabını kullanır → navigasyon
 /// tek yerden yönetilir, kod tekrarı yok. (Home, derin link için global

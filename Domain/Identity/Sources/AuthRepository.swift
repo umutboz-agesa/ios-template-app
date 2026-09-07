@@ -1,5 +1,4 @@
 import Foundation
-import CoreCommon
 
 /// Domain model — kimliği doğrulanmış kullanıcı.
 /// Servisin `user` objesini birebir taşır (Android `login/UserModel`).

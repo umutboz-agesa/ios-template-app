@@ -5,8 +5,6 @@
 //  Created by Hakan Uğraş on 27.07.2026.
 //
 import Foundation
-import DataNetwork
-import CoreCommon
 
 final class OtpConfirmationRemoteDataSource: BaseRemoteDataSource, @unchecked Sendable {
     private let api: OtpConfirmationApi
