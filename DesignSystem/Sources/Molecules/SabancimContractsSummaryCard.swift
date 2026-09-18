@@ -42,31 +42,31 @@ public struct SabancimContractsSummaryCard: View {
 
     public var body: some View {
         Button(action: onTap) {
-            VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
                 HStack {
                     Text(title)
-                        .font(SabancimTheme.Typography.cardTitle)
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .font(AppTheme.Typography.cardTitle)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.footnote.bold())
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                 }
 
                 HStack(alignment: .firstTextBaseline, spacing: 6) {
                     Text("\(total)")
                         .font(.system(size: 24, weight: .bold, design: .rounded))
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                     Text(totalCaption)
                         .font(.subheadline)
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                 }
 
                 Divider()
 
-                LazyVGrid(columns: columns, spacing: SabancimTheme.Spacing.sm) {
+                LazyVGrid(columns: columns, spacing: AppTheme.Spacing.sm) {
                     ForEach(items) { item in
-                        HStack(spacing: SabancimTheme.Spacing.sm) {
+                        HStack(spacing: AppTheme.Spacing.sm) {
                             Image(systemName: item.icon)
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundStyle(item.color)
@@ -76,25 +76,25 @@ public struct SabancimContractsSummaryCard: View {
                             VStack(alignment: .leading, spacing: 0) {
                                 Text("\(item.count)")
                                     .font(.title3.bold())
-                                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                                    .foregroundStyle(AppTheme.Colors.onSurface)
                                 Text(item.title)
                                     .font(.caption)
-                                    .foregroundStyle(SabancimTheme.Colors.muted)
+                                    .foregroundStyle(AppTheme.Colors.muted)
                             }
                             Spacer(minLength: 0)
                         }
                     }
                 }
             }
-            .padding(SabancimTheme.Spacing.md)
+            .padding(AppTheme.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
-        .shadow(color: SabancimTheme.Shadow.cardColor,
-                radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
+        .shadow(color: AppTheme.Shadow.cardColor,
+                radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 }
 
@@ -103,10 +103,10 @@ public struct SabancimContractsSummaryCard: View {
         title: "Sözleşmelerim",
         total: 5,
         items: [
-            .init(title: "BES", count: 2, color: SabancimTheme.Brand.blue, icon: "banknote.fill"),
-            .init(title: "Hayat", count: 1, color: SabancimTheme.Brand.orange, icon: "heart.fill"),
-            .init(title: "Sağlık", count: 1, color: SabancimTheme.Brand.green, icon: "cross.case.fill"),
-            .init(title: "Sigorta", count: 1, color: SabancimTheme.Brand.red, icon: "shield.lefthalf.filled"),
+            .init(title: "BES", count: 2, color: AppTheme.Brand.blue, icon: "banknote.fill"),
+            .init(title: "Hayat", count: 1, color: AppTheme.Brand.orange, icon: "heart.fill"),
+            .init(title: "Sağlık", count: 1, color: AppTheme.Brand.green, icon: "cross.case.fill"),
+            .init(title: "Sigorta", count: 1, color: AppTheme.Brand.red, icon: "shield.lefthalf.filled"),
         ]
     )
     .padding()

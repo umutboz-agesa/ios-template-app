@@ -2,7 +2,7 @@ import Foundation
 
 /// Ekranda gösterim formatları (para, yüzde). DesignSystem saf kalır — bu bir util, view değil.
 /// Component'ler ham `Decimal`/`Double` alır ama metni buradan üretir → tek kaynak, tekrar yok.
-public enum SabancimFormat {
+public enum AppFormat {
 
     private static let trLocale = Locale(identifier: "tr_TR")
 

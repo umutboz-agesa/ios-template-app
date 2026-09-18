@@ -46,22 +46,22 @@ public struct SabancimSavingsOverviewCard: View {
     private var oddSlices: [Slice] { slices.enumerated().filter { $0.offset % 2 == 1 }.map(\.element) }
 
     private func legendColumn(_ items: [Slice]) -> some View {
-        VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
             ForEach(items) { legendItem($0) }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func legendItem(_ slice: Slice) -> some View {
-        HStack(alignment: .top, spacing: SabancimTheme.Spacing.sm) {
+        HStack(alignment: .top, spacing: AppTheme.Spacing.sm) {
             Circle().fill(slice.color).frame(width: 9, height: 9).padding(.top, 4)
             VStack(alignment: .leading, spacing: 1) {
                 Text(slice.label)
                     .font(.caption)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
-                Text(SabancimFormat.currencyTRY(slice.value))
+                    .foregroundStyle(AppTheme.Colors.muted)
+                Text(AppFormat.currencyTRY(slice.value))
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
             }
         }
     }
@@ -75,68 +75,68 @@ public struct SabancimSavingsOverviewCard: View {
     }
 
     private var card: some View {
-        VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
-            HStack(spacing: SabancimTheme.Spacing.sm) {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
+            HStack(spacing: AppTheme.Spacing.sm) {
                 Text(title)
                     .font(.headline)
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
-                Spacer(minLength: SabancimTheme.Spacing.sm)
+                Spacer(minLength: AppTheme.Spacing.sm)
                 if let activeCount, activeCount > 0 {
                     HStack(spacing: 5) {
                         Image(systemName: "checkmark.seal.fill")
                             .font(.footnote)
-                            .foregroundStyle(SabancimTheme.Colors.success)
+                            .foregroundStyle(AppTheme.Colors.success)
                         HStack(alignment: .firstTextBaseline, spacing: 4) {
                             Text("Aktif")
                                 .font(.caption.weight(.semibold))
-                                .foregroundStyle(SabancimTheme.Colors.muted)
+                                .foregroundStyle(AppTheme.Colors.muted)
                             Text("\(activeCount)")
                                 .font(.subheadline.bold())
-                                .foregroundStyle(SabancimTheme.Colors.success)
+                                .foregroundStyle(AppTheme.Colors.success)
                             Text("sözleşme")
                                 .font(.caption.weight(.semibold))
-                                .foregroundStyle(SabancimTheme.Colors.muted)
+                                .foregroundStyle(AppTheme.Colors.muted)
                         }
                     }
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
-                    .background(SabancimTheme.Colors.success.opacity(0.12))
+                    .background(AppTheme.Colors.success.opacity(0.12))
                     .clipShape(Capsule())
-                    .overlay(Capsule().stroke(SabancimTheme.Colors.success.opacity(0.28), lineWidth: 1))
+                    .overlay(Capsule().stroke(AppTheme.Colors.success.opacity(0.28), lineWidth: 1))
                     .fixedSize()
                     .layoutPriority(1)
                 }
                 if onTap != nil {
                     Image(systemName: "chevron.right")
                         .font(.footnote.bold())
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                 }
             }
 
-            HStack(spacing: SabancimTheme.Spacing.lg) {
+            HStack(spacing: AppTheme.Spacing.lg) {
                 SabancimDonutChart(segments: slices.map {
                     .init(value: NSDecimalNumber(decimal: $0.value).doubleValue, color: $0.color)
                 }, ringWidth: 18)
                 .frame(width: 90, height: 90)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(SabancimFormat.currencyTRY(total))
+                    Text(AppFormat.currencyTRY(total))
                         .font(.system(size: 22, weight: .bold, design: .rounded))
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                         .minimumScaleFactor(0.7)
                         .lineLimit(1)
                     Text(totalCaption)
                         .font(.footnote)
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                 }
                 Spacer(minLength: 0)
             }
 
             Divider()
 
-            HStack(alignment: .top, spacing: SabancimTheme.Spacing.md) {
+            HStack(alignment: .top, spacing: AppTheme.Spacing.md) {
                 legendColumn(evenSlices)
                 if slices.count > 1 {
                     Divider()
@@ -144,12 +144,12 @@ public struct SabancimSavingsOverviewCard: View {
                 legendColumn(oddSlices)
             }
         }
-        .padding(SabancimTheme.Spacing.md)
+        .padding(AppTheme.Spacing.md)
         .frame(maxWidth: .infinity, maxHeight: fillHeight ? .infinity : nil, alignment: .topLeading)
         .contentShape(Rectangle())
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
-        .shadow(color: SabancimTheme.Shadow.cardColor,
-                radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
+        .shadow(color: AppTheme.Shadow.cardColor,
+                radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 }

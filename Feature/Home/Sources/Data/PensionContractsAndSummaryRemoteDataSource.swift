@@ -10,7 +10,7 @@ final class PensionContractsAndSummaryRemoteDataSource: BaseRemoteDataSource, @u
     private let api: PensionContractsAndSummaryApi
     init(api: PensionContractsAndSummaryApi) { self.api = api }
 
-    func fetchSummary() async -> SabancimResult<PensionContractsSummary> {
+    func fetchSummary() async -> AppResult<PensionContractsSummary> {
         await apiCall {
             try await api.fetch().unwrap().toDomain()
         }

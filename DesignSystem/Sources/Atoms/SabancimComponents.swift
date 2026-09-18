@@ -21,9 +21,9 @@ public struct SabancimButton: View {
         Button(action: action) {
             ZStack {
                 if isLoading {
-                    ProgressView().tint(SabancimTheme.Colors.onPrimary)
+                    ProgressView().tint(AppTheme.Colors.onPrimary)
                 } else {
-                    HStack(spacing: SabancimTheme.Spacing.sm) {
+                    HStack(spacing: AppTheme.Spacing.sm) {
                         if let systemImage {
                             Image(systemName: systemImage).fontWeight(.semibold)
                         }
@@ -33,9 +33,9 @@ public struct SabancimButton: View {
             }
             .frame(maxWidth: .infinity, minHeight: 50)
         }
-        .foregroundStyle(SabancimTheme.Colors.onPrimary)
-        .background(isEnabled ? SabancimTheme.Colors.primary : SabancimTheme.Colors.primary.opacity(0.4))
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.button))
+        .foregroundStyle(AppTheme.Colors.onPrimary)
+        .background(isEnabled ? AppTheme.Colors.primary : AppTheme.Colors.primary.opacity(0.4))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.button))
         .disabled(isLoading)
     }
 }
@@ -80,14 +80,14 @@ public struct SabancimTextField: View {
                 let filtered = newValue.filter { $0.isNumber }
                 if filtered != newValue { text = filtered }
             }
-            .padding(SabancimTheme.Spacing.md)
-            .background(SabancimTheme.Colors.surface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.button))
+            .padding(AppTheme.Spacing.md)
+            .background(AppTheme.Colors.surface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.button))
 
             if let warning {
                 Text(warning)
                     .font(.caption)
-                    .foregroundStyle(SabancimTheme.Colors.error)
+                    .foregroundStyle(AppTheme.Colors.error)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }

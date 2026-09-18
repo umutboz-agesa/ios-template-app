@@ -14,16 +14,16 @@ public struct SabancimComingSoonView: View {
     }
 
     public var body: some View {
-        VStack(spacing: SabancimTheme.Spacing.md) {
+        VStack(spacing: AppTheme.Spacing.md) {
             Image(systemName: systemImage)
                 .font(.system(size: 52))
-                .foregroundStyle(SabancimTheme.Colors.primary)
+                .foregroundStyle(AppTheme.Colors.primary)
             Text(title)
-                .font(SabancimTheme.Typography.sectionTitle)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .font(AppTheme.Typography.sectionTitle)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Text(subtitle)
                 .font(.subheadline)
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(.secondarySystemBackground))

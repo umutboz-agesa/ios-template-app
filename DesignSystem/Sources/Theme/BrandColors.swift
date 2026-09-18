@@ -9,7 +9,7 @@ import SwiftUI
 /// markanın hex kodları değil, jenerik bir başlangıç noktası. Kendi
 /// marka renklerinizi uygularken sadece bu dosyadaki değerleri değiştirin;
 /// aşağıdaki isimler (API) sabit kalsın ki tüketen kod hiç değişmesin.
-public extension SabancimTheme {
+public extension AppTheme {
     enum Brand {
         // MARK: - Solid accent'ler (ikon/rozet/buton/chip) — marka kimliği, iki temada da aynı
         // TODO: Kendi marka renklerinizle değiştirin.
@@ -17,7 +17,7 @@ public extension SabancimTheme {
         public static let green  = Color.green
         public static let red    = Color.red
         public static let purple = Color.purple
-        public static let orange = SabancimTheme.Colors.notification
+        public static let orange = AppTheme.Colors.notification
         public static let indigo = Color.indigo
 
         // MARK: - Marka gradyanları (promo banner / renkli kart)

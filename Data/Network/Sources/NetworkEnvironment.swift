@@ -2,7 +2,7 @@ import Foundation
 
 /// Android **product flavor** sisteminin karşılığı (preprod / tst / prd / pilot / mock).
 ///
-/// Android'de bu, `build-logic/.../SabancimFlavors.kt` + BuildConfig field'larıyla
+/// Android'de bu, `build-logic/.../AppFlavor.kt` + BuildConfig field'larıyla
 /// derleme zamanında geliyordu. iOS'ta karşılığı **Xcode scheme + .xcconfig** ile
 /// üretilen `Info.plist` değerleri; burada tip-güvenli enum olarak modellenir.
 /// Tuist tarafında her flavor bir `scheme` + `configuration` olur.
@@ -30,12 +30,12 @@ public enum NetworkEnvironment: String, Sendable, CaseIterable {
     }
 
     /// Aktif flavor — Tuist scheme/xcconfig ile app Info.plist'e yazılan
-    /// `SabancimFlavor` anahtarından okunur (DEĞER katmanı → tip-güvenli enum köprüsü).
+    /// `AppFlavor` anahtarından okunur (DEĞER katmanı → tip-güvenli enum köprüsü).
     /// Android `BuildConfig.FLAVOR` okuma karşılığı. Anahtar yoksa (ör. saf test
     /// bundle) güvenli varsayılana düşer.
     public static var current: NetworkEnvironment {
         guard
-            let raw = Bundle.main.object(forInfoDictionaryKey: "SabancimFlavor") as? String,
+            let raw = Bundle.main.object(forInfoDictionaryKey: "AppFlavor") as? String,
             let env = NetworkEnvironment(rawValue: raw)
         else {
             #if DEBUG

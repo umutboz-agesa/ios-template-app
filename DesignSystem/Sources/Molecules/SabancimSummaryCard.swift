@@ -37,25 +37,25 @@ public struct SabancimSummaryCard: View {
 
     public var body: some View {
         SabancimCard {
-            VStack(alignment: .leading, spacing: SabancimTheme.Spacing.md) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.md) {
                 Button(action: onDetails) {
                     HStack {
-                        Text(title).font(SabancimTheme.Typography.cardTitle)
-                            .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        Text(title).font(AppTheme.Typography.cardTitle)
+                            .foregroundStyle(AppTheme.Colors.onSurface)
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(.footnote.bold())
-                            .foregroundStyle(SabancimTheme.Colors.muted)
+                            .foregroundStyle(AppTheme.Colors.muted)
                     }
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
 
-                HStack(alignment: .center, spacing: SabancimTheme.Spacing.md) {
+                HStack(alignment: .center, spacing: AppTheme.Spacing.md) {
                     VStack(alignment: .leading, spacing: 6) {
                         Text(amountCaption)
-                            .font(SabancimTheme.Typography.caption)
-                            .foregroundStyle(SabancimTheme.Colors.muted)
+                            .font(AppTheme.Typography.caption)
+                            .foregroundStyle(AppTheme.Colors.muted)
                         SabancimAmountText(amount)
                         SabancimTrendBadge(percent: trendPercent, suffix: trendSuffix)
                     }

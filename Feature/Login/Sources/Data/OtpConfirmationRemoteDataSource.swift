@@ -10,11 +10,11 @@ final class OtpConfirmationRemoteDataSource: BaseRemoteDataSource, @unchecked Se
     private let api: OtpConfirmationApi
     init(api: OtpConfirmationApi) { self.api = api }
 
-    func confirmOtp(_ request: OtpConfirmationRequestDTO) async -> SabancimResult<AuthenticationResult> {
+    func confirmOtp(_ request: OtpConfirmationRequestDTO) async -> AppResult<AuthenticationResult> {
         await apiCall {
             let response = try await api.confirmOtp(request)
             guard response.success, let customData = response.customData else {
-                throw SabancimError.unknown(message: response.message ?? response.error ?? "Doğrulama başarısız.")
+                throw AppError.unknown(message: response.message ?? response.error ?? "Doğrulama başarısız.")
             }
             return customData.toDomain()
         }

@@ -38,9 +38,9 @@ public final class LoginViewModel {
 
     /// Login başarılı olduğunda App katmanına haber vermek için callback
     /// (feature → feature coupling yok; navigasyonu App yönetir).
-    private let onFinished: (SabancimRoute) -> Void
+    private let onFinished: (AppRoute) -> Void
 
-    public init(prefillUsername: String? = nil, onFinished: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(prefillUsername: String? = nil, onFinished: @escaping (AppRoute) -> Void = { _ in }) {
         if let prefillUsername {
             self.loginType = .login(name: prefillUsername)
         }
@@ -71,7 +71,7 @@ public final class LoginViewModel {
             // Loadable<AuthenticationResult> → Loadable<Void> dönüşümü Loadable'ın
             // kendi case'lerine dokunmadan yapılıyor — sadece AgesaResult'ın bilinen
             // .success/.failure'ı üzerinden, sonra zaten çalışan .toLoadable() ile.
-            let voidResult: SabancimResult<Void>
+            let voidResult: AppResult<Void>
             switch result {
             case .success:
                 voidResult = .success(())

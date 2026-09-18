@@ -12,7 +12,7 @@ final class VersionRemoteDataSource: BaseRemoteDataSource, @unchecked Sendable {
     private let api: VersionApi
     init(api: VersionApi) { self.api = api }
 
-    func check(_ input: VersionCheckInput) async -> SabancimResult<AppVersionInfo> {
+    func check(_ input: VersionCheckInput) async -> AppResult<AppVersionInfo> {
         await apiCall {
             try await api
                 .check(VersionRequestDTO(

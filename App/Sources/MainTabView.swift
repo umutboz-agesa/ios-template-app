@@ -10,21 +10,21 @@ struct MainTabView: View {
 
     var body: some View {
         @Bindable var nav = navigator
-        // Native tab bar gizli; altta özel SabancimTabBar (redesign) kullanılıyor.
+        // Native tab bar gizli; altta özel AppTabBar (redesign) kullanılıyor.
         TabView(selection: $nav.selectedTab) {
             AppNavHost()
                 .tag(AppTab.home.rawValue)
                 .toolbar(.hidden, for: .tabBar)
 
-            RootTab { _ in EmptyFeaturePlaceholder(title: "Birikimlerim") }
+            RootTab { _ in EmptyFeaturePlaceholder(title: "Ürünler") }
                 .tag(AppTab.savings.rawValue)
                 .toolbar(.hidden, for: .tabBar)
 
-            RootTab { _ in EmptyFeaturePlaceholder(title: "Sağlığım") }
+            RootTab { _ in EmptyFeaturePlaceholder(title: "Kampanyalar") }
                 .tag(AppTab.health.rawValue)
                 .toolbar(.hidden, for: .tabBar)
 
-            RootTab { _ in EmptyFeaturePlaceholder(title: "Aracım") }
+            RootTab { _ in EmptyFeaturePlaceholder(title: "Fırsatlar") }
                 .tag(AppTab.vehicle.rawValue)
                 .toolbar(.hidden, for: .tabBar)
         }
@@ -39,18 +39,18 @@ private struct EmptyFeaturePlaceholder: View {
     let title: String
 
     var body: some View {
-        VStack(spacing: SabancimTheme.Spacing.md) {
+        VStack(spacing: AppTheme.Spacing.md) {
             Image(systemName: "hammer")
                 .font(.system(size: 40))
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
             Text(title)
                 .font(.title3.bold())
             Text("Bu sekme henüz eklenmedi.")
                 .font(.footnote)
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(SabancimTheme.Colors.background)
+        .background(AppTheme.Colors.background)
     }
 }
 

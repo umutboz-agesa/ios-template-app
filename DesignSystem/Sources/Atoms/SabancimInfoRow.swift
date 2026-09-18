@@ -14,25 +14,25 @@ public struct SabancimInfoRow: View {
     }
 
     public var body: some View {
-        HStack(spacing: SabancimTheme.Spacing.md) {
+        HStack(spacing: AppTheme.Spacing.md) {
             if let systemImage {
                 Image(systemName: systemImage)
                     .font(.system(size: 17, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.primary)
+                    .foregroundStyle(AppTheme.Colors.primary)
                     .frame(width: 26)
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
                     .font(.caption)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .foregroundStyle(AppTheme.Colors.muted)
                 Text(value)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }
-        .padding(.vertical, SabancimTheme.Spacing.sm)
+        .padding(.vertical, AppTheme.Spacing.sm)
     }
 }
 

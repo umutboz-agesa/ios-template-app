@@ -1,9 +1,8 @@
 import Foundation
 
-/// Android `:core:navigation` `SabancimRoute` (type-safe routes) karşılığı.
 /// SwiftUI `NavigationStack` + `NavigationPath` ile type-safe yönlendirme için
 /// `Hashable` enum. Feature'lar buraya bağımlıdır, birbirine değil.
-public enum SabancimRoute: Hashable, Sendable {
+public enum AppRoute: Hashable, Sendable {
     case splash
     case onboarding
     case login(name: String?)
@@ -32,9 +31,9 @@ public enum SabancimRoute: Hashable, Sendable {
     case support
 }
 
-/// Hangi route'ların authentication gerektirdiği (Android `RouteSecurity.requiresAuth`).
+/// Hangi route'ların authentication gerektirdiği
 public enum RouteSecurity {
-    public static func requiresAuth(_ route: SabancimRoute) -> Bool {
+    public static func requiresAuth(_ route: AppRoute) -> Bool {
         switch route {
         case .splash, .onboarding, .login, .otp:
             false
@@ -54,7 +53,7 @@ public enum AppTab: Int, Sendable, CaseIterable {
     case vehicle
     case explore
 
-    public init?(route: SabancimRoute) {
+    public init?(route: AppRoute) {
         switch route {
         case .home:    self = .home
         case .savings: self = .savings

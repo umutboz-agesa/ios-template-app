@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct iOSTemplateApp: App {
     @State private var navigator = AppNavigator()
-    @AppStorage(AppThemeStorage.key) private var appTheme: AppTheme = .dark
+    @AppStorage(ThemeStorage.key) private var appTheme: Theme = .dark
 
     init() {
         AppComposition.bootstrap()

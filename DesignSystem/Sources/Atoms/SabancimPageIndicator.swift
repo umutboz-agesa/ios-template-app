@@ -14,7 +14,7 @@ public struct SabancimPageIndicator: View {
         HStack(spacing: 6) {
             ForEach(0..<max(count, 0), id: \.self) { i in
                 Capsule()
-                    .fill(i == index ? SabancimTheme.Colors.primary : SabancimTheme.Colors.tabInactive)
+                    .fill(i == index ? AppTheme.Colors.primary : AppTheme.Colors.tabInactive)
                     .frame(width: i == index ? 18 : 6, height: 6)
             }
         }

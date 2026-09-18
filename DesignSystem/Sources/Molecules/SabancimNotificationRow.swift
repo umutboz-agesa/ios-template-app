@@ -13,7 +13,7 @@ public struct SabancimNotificationRow: View {
 
     public init(
         icon: String,
-        iconColor: Color = SabancimTheme.Colors.primary,
+        iconColor: Color = AppTheme.Colors.primary,
         title: String,
         message: String,
         time: String,
@@ -31,7 +31,7 @@ public struct SabancimNotificationRow: View {
 
     public var body: some View {
         Button(action: onTap) {
-            HStack(alignment: .top, spacing: SabancimTheme.Spacing.md) {
+            HStack(alignment: .top, spacing: AppTheme.Spacing.md) {
                 Image(systemName: icon)
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundStyle(iconColor)
@@ -40,36 +40,36 @@ public struct SabancimNotificationRow: View {
                     .clipShape(Circle())
 
                 VStack(alignment: .leading, spacing: 3) {
-                    HStack(alignment: .firstTextBaseline, spacing: SabancimTheme.Spacing.sm) {
+                    HStack(alignment: .firstTextBaseline, spacing: AppTheme.Spacing.sm) {
                         Text(title)
                             .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(SabancimTheme.Colors.onSurface)
+                            .foregroundStyle(AppTheme.Colors.onSurface)
                         Spacer(minLength: 0)
                         if isUnread {
                             Circle()
-                                .fill(SabancimTheme.Colors.notification)
+                                .fill(AppTheme.Colors.notification)
                                 .frame(width: 8, height: 8)
                         }
                     }
                     Text(message)
                         .font(.footnote)
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                         .fixedSize(horizontal: false, vertical: true)
                     Text(time)
                         .font(.caption2)
-                        .foregroundStyle(SabancimTheme.Colors.tabInactive)
+                        .foregroundStyle(AppTheme.Colors.tabInactive)
                         .padding(.top, 1)
                 }
             }
-            .padding(SabancimTheme.Spacing.md)
+            .padding(AppTheme.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
-        .shadow(color: SabancimTheme.Shadow.cardColor,
-                radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
+        .shadow(color: AppTheme.Shadow.cardColor,
+                radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 }
 

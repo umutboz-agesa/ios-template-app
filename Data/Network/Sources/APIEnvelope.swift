@@ -18,21 +18,21 @@ public struct APIEnvelope<T: Decodable & Sendable>: Decodable, Sendable {
         public let message: String?
     }
 
-    /// `ApiEnvelope<T> → T` (Android `.unwrap()`). success=false ise SabancimError fırlatır.
+    /// `ApiEnvelope<T> → T` (Android `.unwrap()`). success=false ise AppError fırlatır.
     public func unwrap() throws -> T {
         guard success else {
             if let validations, !validations.isEmpty {
-                throw SabancimError.validation(
+                throw AppError.validation(
                     validations.map { ValidationItem(field: $0.field ?? "", message: $0.message ?? "") }
                 )
             }
             if error?.errorCode == "warning_token_expire" {
-                throw SabancimError.tokenExpired
+                throw AppError.tokenExpired
             }
-            throw SabancimError.unknown(message: error?.message ?? "İşlem başarısız.")
+            throw AppError.unknown(message: error?.message ?? "İşlem başarısız.")
         }
         guard let data else {
-            throw SabancimError.unknown(message: "Boş yanıt.")
+            throw AppError.unknown(message: "Boş yanıt.")
         }
         return data
     }

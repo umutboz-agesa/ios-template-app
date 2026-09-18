@@ -16,7 +16,7 @@ final class OtpConfirmationRepositoryImpl: OtpConfirmationRepository, @unchecked
         self.remote = remote
     }
 
-    func confirmOtp(_ request: OtpConfirmationRequest) async -> SabancimResult<AuthenticationResult> {
+    func confirmOtp(_ request: OtpConfirmationRequest) async -> AppResult<AuthenticationResult> {
         let dto = OtpConfirmationRequestDTO(
             uuid: request.deviceUUID,
             confirmationCode: request.confirmationCode,

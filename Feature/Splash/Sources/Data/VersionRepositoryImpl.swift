@@ -12,7 +12,7 @@ final class VersionRepositoryImpl: VersionRepository, @unchecked Sendable {
     private let remote: VersionRemoteDataSource
     init(remote: VersionRemoteDataSource) { self.remote = remote }
 
-    func check(_ input: VersionCheckInput) async -> SabancimResult<AppVersionInfo> {
+    func check(_ input: VersionCheckInput) async -> AppResult<AppVersionInfo> {
         await remote.check(input)
     }
 }

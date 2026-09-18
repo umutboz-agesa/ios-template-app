@@ -6,14 +6,14 @@ import SwiftUI
 /// route → bu stack'e push. Superapp'ten birebir.
 struct RootTab<Root: View>: View {
     @Environment(AppNavigator.self) private var navigator
-    private let root: (@escaping (SabancimRoute) -> Void) -> Root
+    private let root: (@escaping (AppRoute) -> Void) -> Root
     @State private var path = NavigationPath()
 
-    init(@ViewBuilder root: @escaping (@escaping (SabancimRoute) -> Void) -> Root) {
+    init(@ViewBuilder root: @escaping (@escaping (AppRoute) -> Void) -> Root) {
         self.root = root
     }
 
-    private func go(_ route: SabancimRoute) {
+    private func go(_ route: AppRoute) {
         appNavigate(route, navigator: navigator, push: { path.append($0) })
     }
 
@@ -23,13 +23,13 @@ struct RootTab<Root: View>: View {
             root(go)
                 .toolbar(.hidden, for: .navigationBar)
                 .safeAreaInset(edge: .bottom, spacing: 0) {
-                    SabancimTabBar(selection: $nav.selectedTab,
+                    AppTabBar(selection: $nav.selectedTab,
                                    menuItemID: AppTab.explore.rawValue,
                                    menuActive: nav.showExplore,
                                    onMenuTap: { nav.showExplore = true })
                 }
                 .gesture(tabSwipeGesture(navigator))
-                .navigationDestination(for: SabancimRoute.self) { route in
+                .navigationDestination(for: AppRoute.self) { route in
                     appRouteScreen(for: route, onRoute: go)
                 }
         }

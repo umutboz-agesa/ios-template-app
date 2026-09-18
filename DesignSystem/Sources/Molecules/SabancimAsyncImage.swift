@@ -13,7 +13,7 @@ public struct SabancimAsyncImage: View {
 
     public init(
         url: URL?,
-        cornerRadius: CGFloat = SabancimTheme.Radius.button,
+        cornerRadius: CGFloat = AppTheme.Radius.button,
         contentMode: ContentMode = .fill
     ) {
         self.url = url
@@ -23,7 +23,7 @@ public struct SabancimAsyncImage: View {
 
     public init(
         urlString: String?,
-        cornerRadius: CGFloat = SabancimTheme.Radius.button,
+        cornerRadius: CGFloat = AppTheme.Radius.button,
         contentMode: ContentMode = .fill
     ) {
         self.init(url: urlString.flatMap(URL.init(string:)), cornerRadius: cornerRadius, contentMode: contentMode)
@@ -44,12 +44,12 @@ public struct SabancimAsyncImage: View {
 
     @ViewBuilder private func placeholder(systemName: String?) -> some View {
         ZStack {
-            SabancimTheme.Colors.surface
+            AppTheme.Colors.surface
             if let systemName {
                 Image(systemName: systemName)
-                    .foregroundStyle(SabancimTheme.Colors.primary.opacity(0.4))
+                    .foregroundStyle(AppTheme.Colors.primary.opacity(0.4))
             } else {
-                ProgressView().tint(SabancimTheme.Colors.primary)
+                ProgressView().tint(AppTheme.Colors.primary)
             }
         }
     }

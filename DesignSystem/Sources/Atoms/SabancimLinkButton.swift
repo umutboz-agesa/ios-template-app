@@ -16,7 +16,7 @@ public struct SabancimLinkButton: View {
                 Text(title).font(.subheadline.weight(.semibold))
                 Image(systemName: "chevron.right").font(.caption.bold())
             }
-            .foregroundStyle(SabancimTheme.Colors.primary)
+            .foregroundStyle(AppTheme.Colors.primary)
         }
         .buttonStyle(.plain)
     }

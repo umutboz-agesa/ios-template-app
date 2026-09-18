@@ -23,7 +23,7 @@ public extension DependencyValues {
 }
 
 struct UnimplementedPensionContractsSummaryRepository: PensionContractsSummaryRepository {
-    func fetchSummary() async -> SabancimResult<PensionContractsSummary> {
+    func fetchSummary() async -> AppResult<PensionContractsSummary> {
         .failure(.unknown(message: "PensionContractsSummaryRepository bağlanmadı."))
     }
 }
@@ -31,7 +31,7 @@ struct UnimplementedPensionContractsSummaryRepository: PensionContractsSummaryRe
 /// Mock flavor / bootstrap'ta gerçek implementasyon bağlanmazsa kullanılan
 /// varsayılan — superapp'teki gerçek "SavingsMock" ile birebir tutarlı sayılar.
 struct DefaultPensionContractsSummaryRepository: PensionContractsSummaryRepository {
-    func fetchSummary() async -> SabancimResult<PensionContractsSummary> {
+    func fetchSummary() async -> AppResult<PensionContractsSummary> {
         // Toplam = Katkı + Devlet + Getiri + İşveren = 52.500 + 13.750 + 44.233,37 + 52.500 = 162.983,37
         .success(.init(totalAmount: .init(amount: "162983.37", currency: "TL"),
                        youAmount: .init(amount: "52500.00", currency: "TL"),

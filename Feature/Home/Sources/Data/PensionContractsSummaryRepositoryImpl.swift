@@ -13,7 +13,7 @@ final class PensionContractsSummaryRepositoryImpl: PensionContractsSummaryReposi
         self.remote = remote
     }
 
-    func fetchSummary() async -> SabancimResult<PensionContractsSummary> {
+    func fetchSummary() async -> AppResult<PensionContractsSummary> {
         await remote.fetchSummary()
     }
 }

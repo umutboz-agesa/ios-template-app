@@ -17,15 +17,15 @@ public struct SabancimTrendBadge: View {
         HStack(spacing: 4) {
             Image(systemName: isUp ? "arrow.up" : "arrow.down")
                 .font(.caption2.bold())
-            Text(SabancimFormat.percent(abs(percent)))
+            Text(AppFormat.percent(abs(percent)))
                 .font(.caption.bold())
             if let suffix {
                 Text(suffix)
-                    .font(SabancimTheme.Typography.caption)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .font(AppTheme.Typography.caption)
+                    .foregroundStyle(AppTheme.Colors.muted)
             }
         }
-        .foregroundStyle(isUp ? SabancimTheme.Colors.success : SabancimTheme.Colors.error)
+        .foregroundStyle(isUp ? AppTheme.Colors.success : AppTheme.Colors.error)
     }
 }
 

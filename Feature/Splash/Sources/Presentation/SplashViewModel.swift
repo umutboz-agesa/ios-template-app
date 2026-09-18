@@ -31,11 +31,11 @@ public final class SplashViewModel {
     @ObservationIgnored @Dependency(\.startLoginRepository) private var startLoginRepository
 
     /// Route'u App'e verir (feature→feature coupling yok).
-    private let onFinished: (SabancimRoute) -> Void
+    private let onFinished: (AppRoute) -> Void
     
     private var user: RecognizedUser?
 
-    public init(onFinished: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onFinished: @escaping (AppRoute) -> Void = { _ in }) {
         self.onFinished = onFinished
         self.user = nil
     }
@@ -80,7 +80,7 @@ public final class SplashViewModel {
 
     /// Oturum durumuna göre yönlendir (Auth'taki `AuthGate` mantığının taşınmış hali).
     private func route(user: RecognizedUser?) async {
-        let target: SabancimRoute = await session.isAuthenticated ? .home : .login(name: user?.firstName)
+        let target: AppRoute = await session.isAuthenticated ? .home : .login(name: user?.firstName)
         // İlk açılışta .onboarding kuralı istenirse buraya eklenir.
         state = .finished
         onFinished(target)

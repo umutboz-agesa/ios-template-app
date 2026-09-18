@@ -1,10 +1,10 @@
 import SwiftUI
 
-/// Sabancım özel alt tab bar (redesign).
+/// Template özel alt tab bar (redesign).
 /// - Seçili sekme: mavi ikon+yazı + açık mavi zemin pill; ikon FILLED.
 /// - Pasif sekme: mavi-gri ikon+yazı; ikon OUTLINE. Tüm ikonlar aynı boyut/ağırlık.
 /// - Renkler spec paletinden; dark tema için ayrı varyant.
-public struct SabancimTabBar: View {
+public struct AppTabBar: View {
     public struct Item: Identifiable {
         public let id: Int
         public let title: String
@@ -24,7 +24,7 @@ public struct SabancimTabBar: View {
     private let onMenuTap: (() -> Void)?
 
     public init(selection: Binding<Int>,
-                items: [Item] = SabancimTabBar.defaultItems,
+                items: [Item] = AppTabBar.defaultItems,
                 menuItemID: Int? = nil,
                 menuActive: Bool = false,
                 onMenuTap: (() -> Void)? = nil) {
@@ -36,10 +36,10 @@ public struct SabancimTabBar: View {
     }
 
     public static let defaultItems: [Item] = [
-        .init(id: 0, title: "Sabancım", outline: "house",           filled: "house.fill"),
-        .init(id: 1, title: "BES",       outline: "banknote",       filled: "banknote.fill"),
-        .init(id: 2, title: "Sağlık",   outline: "heart",           filled: "heart.fill"),
-        .init(id: 3, title: "Araba",    outline: "car",             filled: "car.fill"),
+        .init(id: 0, title: "Ana Sayfa", outline: "house",           filled: "house.fill"),
+        .init(id: 1, title: "Ürünler",       outline: "banknote",       filled: "banknote.fill"),
+        .init(id: 2, title: "Kampanyalar",   outline: "heart",           filled: "heart.fill"),
+        .init(id: 3, title: "Fırsatlar",    outline: "car",             filled: "car.fill"),
         .init(id: 4, title: "Keşfet",   outline: "safari",          filled: "safari.fill"),
     ]
 
@@ -71,7 +71,7 @@ public struct SabancimTabBar: View {
 
 /// Tek sekme — seçili/pressed durumuna göre renk + pill zemin.
 private struct TabItemStyle: ButtonStyle {
-    let item: SabancimTabBar.Item
+    let item: AppTabBar.Item
     let selected: Bool
     let c: Palette
 
@@ -140,7 +140,7 @@ private struct Palette {
         var body: some View {
             VStack {
                 Spacer()
-                SabancimTabBar(selection: $sel)
+                AppTabBar(selection: $sel)
             }
             .background(Color(red: 0.89, green: 0.93, blue: 1.0))
         }

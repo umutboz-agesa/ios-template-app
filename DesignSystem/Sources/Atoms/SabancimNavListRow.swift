@@ -10,7 +10,7 @@ public struct SabancimNavListRow: View {
 
     public init(
         icon: String,
-        iconColor: Color = SabancimTheme.Colors.primary,
+        iconColor: Color = AppTheme.Colors.primary,
         title: String,
         onTap: @escaping () -> Void = {}
     ) {
@@ -22,26 +22,26 @@ public struct SabancimNavListRow: View {
 
     public var body: some View {
         Button(action: onTap) {
-            HStack(spacing: SabancimTheme.Spacing.sm + 4) {
+            HStack(spacing: AppTheme.Spacing.sm + 4) {
                 Image(systemName: icon)
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundStyle(iconColor)
                     .frame(width: 26)
                 Text(title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.tabInactive)
+                    .foregroundStyle(AppTheme.Colors.tabInactive)
             }
-            .padding(.horizontal, SabancimTheme.Spacing.md)
-            .padding(.vertical, SabancimTheme.Spacing.md)
+            .padding(.horizontal, AppTheme.Spacing.md)
+            .padding(.vertical, AppTheme.Spacing.md)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
     }
 }
 

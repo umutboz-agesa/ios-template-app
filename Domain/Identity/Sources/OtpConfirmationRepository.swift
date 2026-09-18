@@ -21,5 +21,5 @@ public struct OtpConfirmationRequest: Sendable, Equatable {
 /// Not: dönüş tipi artık `OtpConfirmationResult` DEĞİL, paylaşılan `AuthenticationResult`
 /// (login ile aynı şekilde sonuç dönüyorlar) — bkz. AuthenticationResult.swift.
 public protocol OtpConfirmationRepository: Sendable {
-    func confirmOtp(_ request: OtpConfirmationRequest) async -> SabancimResult<AuthenticationResult>
+    func confirmOtp(_ request: OtpConfirmationRequest) async -> AppResult<AuthenticationResult>
 }

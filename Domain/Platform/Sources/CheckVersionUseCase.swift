@@ -15,7 +15,7 @@ public struct CheckVersionUseCase: Sendable {
         self.repository = repository
     }
 
-    public func callAsFunction(_ input: VersionCheckInput) async -> SabancimResult<VersionCheckResult> {
+    public func callAsFunction(_ input: VersionCheckInput) async -> AppResult<VersionCheckResult> {
         // Önce ham sonucu al — tipi net olsun (SabancimResult<AppVersionInfo>).
         let raw = await repository.check(input)
         // Sonra kararı ver: AppVersionInfo -> VersionCheckResult.

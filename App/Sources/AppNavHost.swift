@@ -1,9 +1,5 @@
 import SwiftUI
 
-/// Android `SabancimNavHost.kt` (Navigation Compose) karşılığı — Home tab'ının
-/// `NavigationStack`'i + route → screen eşlemesi. Superapp'ten birebir; sadece
-/// bu template'te olmayan feature'lara ait case'ler `appRouteScreen`'in
-/// `default` dalına düşüyor (bkz. orada not).
 struct AppNavHost: View {
     @Environment(AppNavigator.self) private var navigator
 
@@ -12,13 +8,13 @@ struct AppNavHost: View {
         NavigationStack(path: $nav.path) {
             home
                 .safeAreaInset(edge: .bottom, spacing: 0) {
-                    SabancimTabBar(selection: $nav.selectedTab,
+                    AppTabBar(selection: $nav.selectedTab,
                                    menuItemID: AppTab.explore.rawValue,
                                    menuActive: nav.showExplore,
                                    onMenuTap: { nav.showExplore = true })
                 }
                 .gesture(tabSwipeGesture(nav))
-                .navigationDestination(for: SabancimRoute.self) { route in
+                .navigationDestination(for: AppRoute.self) { route in
                     if route == .home {
                         home
                     } else {
@@ -34,7 +30,7 @@ struct AppNavHost: View {
             .toolbar(.hidden, for: .navigationBar)   // HomeView kendi üst bar'ına sahip
     }
 
-    private func go(_ route: SabancimRoute) {
+    private func go(_ route: AppRoute) {
         appNavigate(route, navigator: navigator, push: { navigator.push($0) })
     }
 }
@@ -43,7 +39,7 @@ struct AppNavHost: View {
 /// Route bir tab'a aitse (Birikimlerim/Sağlığım/Aracım) **sekme değiştirir**;
 /// değilse (detay ekranı, ör. Profil/Ayarlar) mevcut stack'e push eder.
 @MainActor
-func appNavigate(_ route: SabancimRoute, navigator: AppNavigator, push: (SabancimRoute) -> Void) {
+func appNavigate(_ route: AppRoute, navigator: AppNavigator, push: (AppRoute) -> Void) {
     if let tab = AppTab(route: route) {
         navigator.selectedTab = tab.rawValue
     } else {
@@ -79,7 +75,7 @@ func tabSwipeGesture(_ navigator: AppNavigator) -> some Gesture {
 /// gerçek feature. Kendi feature'ınızı eklerken buraya bir case daha ekleyin.
 @MainActor
 @ViewBuilder
-func appRouteScreen(for route: SabancimRoute, onRoute: @escaping (SabancimRoute) -> Void) -> some View {
+func appRouteScreen(for route: AppRoute, onRoute: @escaping (AppRoute) -> Void) -> some View {
     switch route {
     case .profile:
         ProfileView(onRoute: onRoute)

@@ -9,7 +9,7 @@ public struct SabancimCategoryItem: Identifiable {
     public let action: () -> Void
 
     public init(systemName: String, title: String,
-                tint: Color = SabancimTheme.Colors.primary, action: @escaping () -> Void) {
+                tint: Color = AppTheme.Colors.primary, action: @escaping () -> Void) {
         self.systemName = systemName
         self.title = title
         self.tint = tint
@@ -27,7 +27,7 @@ public struct SabancimCategoryRow: View {
     }
 
     public var body: some View {
-        HStack(alignment: .top, spacing: SabancimTheme.Spacing.sm) {
+        HStack(alignment: .top, spacing: AppTheme.Spacing.sm) {
             ForEach(items) { item in
                 SabancimCategoryTile(systemName: item.systemName, title: item.title,
                                   tint: item.tint, action: item.action)

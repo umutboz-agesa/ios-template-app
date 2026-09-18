@@ -44,7 +44,7 @@ enum AppComposition {
 /// Yalnızca Mock flavor için — login'i başarılı sayan sahte repo (dev convenience).
 /// Prod/Tst/Preprod/Pilot bu satıra hiç girmez (baseURL != nil).
 private struct MockAuthRepository: AuthRepository {
-    func login(_ credentials: LoginCredentials) async -> SabancimResult<AuthenticationResult> {
+    func login(_ credentials: LoginCredentials) async -> AppResult<AuthenticationResult> {
         .success(AuthenticationResult(
             user: AuthenticatedUser(customerNumber: 10023456, name: "Test", surname: "Kullanıcı", birthdate: ""),
             userAnalyticId: "",

@@ -13,7 +13,7 @@ public struct StartLoginUseCase: Sendable {
         self.repository = repository
     }
     
-    public func callAsFunction(_ input: StartLoginRequest) async throws -> SabancimResult<RecognizedUser?> {
+    public func callAsFunction(_ input: StartLoginRequest) async throws -> AppResult<RecognizedUser?> {
         return await repository.startLogin(input)
     }
 }

@@ -12,7 +12,7 @@ public struct SabancimExpandableRow<Content: View>: View {
 
     public init(
         icon: String,
-        iconColor: Color = SabancimTheme.Colors.primary,
+        iconColor: Color = AppTheme.Colors.primary,
         title: String,
         initiallyExpanded: Bool = false,
         @ViewBuilder content: () -> Content
@@ -29,34 +29,34 @@ public struct SabancimExpandableRow<Content: View>: View {
             Button {
                 withAnimation(.easeInOut(duration: 0.22)) { expanded.toggle() }
             } label: {
-                HStack(spacing: SabancimTheme.Spacing.sm) {
+                HStack(spacing: AppTheme.Spacing.sm) {
                     Image(systemName: icon)
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundStyle(iconColor)
                         .frame(width: 24)
                     Text(title)
                         .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                     Spacer(minLength: 0)
                     Image(systemName: "chevron.down")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                         .rotationEffect(.degrees(expanded ? 180 : 0))
                 }
-                .padding(.horizontal, SabancimTheme.Spacing.md)
-                .padding(.vertical, SabancimTheme.Spacing.sm + 4)
+                .padding(.horizontal, AppTheme.Spacing.md)
+                .padding(.vertical, AppTheme.Spacing.sm + 4)
                 .contentShape(Rectangle())   // tüm satır tıklanabilir (sadece ikon/ok değil)
             }
             .buttonStyle(.plain)
 
             if expanded {
                 VStack(spacing: 0) { content }
-                    .padding(.bottom, SabancimTheme.Spacing.xs)
+                    .padding(.bottom, AppTheme.Spacing.xs)
                     .transition(.opacity.combined(with: .move(edge: .top)))
             }
         }
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
     }
 }
 
@@ -72,19 +72,19 @@ public struct SabancimProductSubRow: View {
 
     public var body: some View {
         VStack(spacing: 0) {
-            Divider().padding(.leading, SabancimTheme.Spacing.md)
+            Divider().padding(.leading, AppTheme.Spacing.md)
             Button(action: onTap) {
                 HStack {
                     Text(title)
                         .font(.subheadline)
-                        .foregroundStyle(SabancimTheme.Colors.onSurface.opacity(0.85))
+                        .foregroundStyle(AppTheme.Colors.onSurface.opacity(0.85))
                     Spacer(minLength: 0)
                     Image(systemName: "chevron.right")
                         .font(.system(size: 12, weight: .semibold))
-                        .foregroundStyle(SabancimTheme.Colors.tabInactive)
+                        .foregroundStyle(AppTheme.Colors.tabInactive)
                 }
-                .padding(.horizontal, SabancimTheme.Spacing.md)
-                .padding(.vertical, SabancimTheme.Spacing.sm + 2)
+                .padding(.horizontal, AppTheme.Spacing.md)
+                .padding(.vertical, AppTheme.Spacing.sm + 2)
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)

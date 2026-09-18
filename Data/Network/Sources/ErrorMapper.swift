@@ -1,11 +1,11 @@
 import Foundation
 
 /// Android `:data` `ErrorMapper` karşılığı.
-/// HTTP status / URLError / Swift error → `SabancimError`. README'deki hata zinciri tablosu birebir.
+/// HTTP status / URLError / Swift error → `AppError`. README'deki hata zinciri tablosu birebir.
 public enum ErrorMapper {
 
     /// HTTP status koduna göre eşleme (Android `HttpException` dalı).
-    public static func map(statusCode: Int) -> SabancimError {
+    public static func map(statusCode: Int) -> AppError {
         switch statusCode {
         case 401, 403: .auth
         case 404: .notFound
@@ -16,8 +16,8 @@ public enum ErrorMapper {
     }
 
     /// Yakalanan Swift hatasından eşleme (Android `IOException`/`SSLException` dalları).
-    public static func map(error: Error) -> SabancimError {
-        if let agesa = error as? SabancimError { return agesa }
+    public static func map(error: Error) -> AppError {
+        if let agesa = error as? AppError { return agesa }
         let nsError = error as NSError
         switch nsError.domain {
         case NSURLErrorDomain:

@@ -20,7 +20,7 @@ public struct SabancimCheckbox: View {
             isChecked.toggle()
         } label: {
             Image(systemName: isChecked ? "checkmark.square.fill" : "square")
-                .foregroundStyle(isChecked ? SabancimTheme.Colors.primary : SabancimTheme.Colors.muted)
+                .foregroundStyle(isChecked ? AppTheme.Colors.primary : AppTheme.Colors.muted)
         }
         .buttonStyle(.plain)
     }

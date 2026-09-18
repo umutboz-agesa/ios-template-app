@@ -9,7 +9,7 @@ public struct LoginView: BaseView {
 
     public init(
         userName: String? = nil,
-        onFinished: @escaping (SabancimRoute) -> Void = { _ in },
+        onFinished: @escaping (AppRoute) -> Void = { _ in },
         onHelpTapped: @escaping () -> Void = {},
         onContractTapped: @escaping () -> Void = {},
         onBiometricLoginTapped: @escaping () -> Void = {}
@@ -21,7 +21,7 @@ public struct LoginView: BaseView {
     }
 
     public var screenBody: some View {
-        VStack(spacing: SabancimTheme.Spacing.lg) {
+        VStack(spacing: AppTheme.Spacing.lg) {
             header
 
             switch viewModel.loginType {
@@ -42,7 +42,7 @@ public struct LoginView: BaseView {
             if let error = viewModel.state.error {
                 Text(error.userMessage)
                     .font(.footnote)
-                    .foregroundStyle(SabancimTheme.Colors.error)
+                    .foregroundStyle(AppTheme.Colors.error)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
 
@@ -62,11 +62,11 @@ public struct LoginView: BaseView {
                     Text("Face ID ile Gir")
                 }
                 .font(.footnote.weight(.semibold))
-                .foregroundStyle(SabancimTheme.Colors.primary)
+                .foregroundStyle(AppTheme.Colors.primary)
             }
         }
-        .padding(SabancimTheme.Spacing.lg)
-        .background(SabancimTheme.Colors.background)
+        .padding(AppTheme.Spacing.lg)
+        .background(AppTheme.Colors.background)
     }
 
     private var header: some View {
@@ -84,11 +84,11 @@ public struct LoginView: BaseView {
             // login'e özel olduğu için DesignSystem'e değil burada kalıyor.
             (
                 Text("SabancıM Müşteri Mobil Uygulama ")
-                + Text("Kullanıcı Sözleşmesi").underline().foregroundStyle(SabancimTheme.Colors.primary)
+                + Text("Kullanıcı Sözleşmesi").underline().foregroundStyle(AppTheme.Colors.primary)
                 + Text("'ni okudum, anladım.")
             )
             .font(.footnote)
-            .foregroundStyle(SabancimTheme.Colors.muted)
+            .foregroundStyle(AppTheme.Colors.muted)
             .onTapGesture(perform: onContractTapped)
         }
     }

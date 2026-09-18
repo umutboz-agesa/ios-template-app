@@ -49,7 +49,7 @@ public actor HTTPClient {
 
         let (data, response) = try await session.data(for: request)
         guard let http = response as? HTTPURLResponse else {
-            throw SabancimError.unknown(message: "Geçersiz yanıt.")
+            throw AppError.unknown(message: "Geçersiz yanıt.")
         }
 
         #if DEBUG
@@ -87,12 +87,12 @@ public actor HTTPClient {
 }
 
 /// Android `BaseRemoteDataSource` (`apiCall { }`) karşılığı.
-/// Tüm RemoteDataSource'lar bunu extend eder; try/catch + SabancimError eşlemesini merkezîleştirir.
+/// Tüm RemoteDataSource'lar bunu extend eder; try/catch + AppError eşlemesini merkezîleştirir.
 open class BaseRemoteDataSource: @unchecked Sendable {
     public init() {}
 
     /// `apiCall { api.x().unwrap().map { it.toDomain() } }`
-    public func apiCall<T: Sendable>(_ block: () async throws -> T) async -> SabancimResult<T> {
+    public func apiCall<T: Sendable>(_ block: () async throws -> T) async -> AppResult<T> {
         do {
             return .success(try await block())
         } catch {

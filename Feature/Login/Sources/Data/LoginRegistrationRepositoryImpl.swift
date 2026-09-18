@@ -13,7 +13,7 @@ final class LoginRegistrationRepositoryImpl: LoginRegistrationRepository, @unche
         self.remote = remote
     }
 
-    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> SabancimResult<Void> {
+    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> AppResult<Void> {
         let request = LoginRegistrationRequestDTO(
             uuid: credentials.deviceUUID,
             identityNo: credentials.identityNumber,

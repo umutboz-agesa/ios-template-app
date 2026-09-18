@@ -1,21 +1,21 @@
 import SwiftUI
 
-/// Para tutarı metni (₺125.750,00). Ham `Decimal` alır, formatı SabancimFormat'tan üretir.
+/// Para tutarı metni (₺125.750,00). Ham `Decimal` alır, formatı AppFormat'tan üretir.
 public struct SabancimAmountText: View {
     private let amount: Decimal
     private let font: Font
     private let color: Color
 
     public init(_ amount: Decimal,
-                font: Font = SabancimTheme.Typography.amount,
-                color: Color = SabancimTheme.Colors.onSurface) {
+                font: Font = AppTheme.Typography.amount,
+                color: Color = AppTheme.Colors.onSurface) {
         self.amount = amount
         self.font = font
         self.color = color
     }
 
     public var body: some View {
-        Text(SabancimFormat.currencyTRY(amount))
+        Text(AppFormat.currencyTRY(amount))
             .font(font)
             .foregroundStyle(color)
     }

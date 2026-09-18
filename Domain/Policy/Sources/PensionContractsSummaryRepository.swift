@@ -7,5 +7,5 @@
 import Foundation
 
 public protocol PensionContractsSummaryRepository: Sendable {
-    func fetchSummary() async -> SabancimResult<PensionContractsSummary>
+    func fetchSummary() async -> AppResult<PensionContractsSummary>
 }

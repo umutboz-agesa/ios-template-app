@@ -10,7 +10,7 @@ public struct SabancimQuickActionItem: Identifiable {
 
     public init(systemName: String,
                 title: String,
-                tint: Color = SabancimTheme.Colors.primary,
+                tint: Color = AppTheme.Colors.primary,
                 action: @escaping () -> Void) {
         self.systemName = systemName
         self.title = title
@@ -29,7 +29,7 @@ public struct SabancimQuickActionsRow: View {
     }
 
     public var body: some View {
-        HStack(alignment: .top, spacing: SabancimTheme.Spacing.sm) {
+        HStack(alignment: .top, spacing: AppTheme.Spacing.sm) {
             ForEach(items) { item in
                 SabancimQuickActionChip(systemName: item.systemName, title: item.title,
                                         tint: item.tint, action: item.action)
@@ -42,8 +42,8 @@ public struct SabancimQuickActionsRow: View {
 #Preview {
     SabancimQuickActionsRow(items: [
         .init(systemName: "doc.text", title: "Poliçelerim / Sözleşmelerim") {},
-        .init(systemName: "exclamationmark.triangle", title: "Hasar İhbarı", tint: SabancimTheme.Colors.notification) {},
-        .init(systemName: "creditcard", title: "Ödeme Yap", tint: SabancimTheme.Colors.success) {},
+        .init(systemName: "exclamationmark.triangle", title: "Hasar İhbarı", tint: AppTheme.Colors.notification) {},
+        .init(systemName: "creditcard", title: "Ödeme Yap", tint: AppTheme.Colors.success) {},
     ])
     .padding()
     .background(Color(.secondarySystemBackground))

@@ -15,8 +15,8 @@ public struct SabancimSectionHeader: View {
     public var body: some View {
         HStack {
             Text(title)
-                .font(SabancimTheme.Typography.sectionTitle)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .font(AppTheme.Typography.sectionTitle)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer()
             if let actionTitle, let onAction {
                 SabancimLinkButton(actionTitle, action: onAction)

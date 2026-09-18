@@ -6,7 +6,7 @@ import Foundation
 /// Swift'in stdlib `Result`'ı kullanılır; `Loading` ayrı bir UI-state tipidir
 /// (`Loadable`), çünkü Swift `async` fonksiyonları zaten "tamamlanınca sonuç döner"
 /// semantiğinde — loading bir ara durum değil, çağıranın state'i.
-public typealias SabancimResult<T: Sendable> = Result<T, SabancimError>
+public typealias AppResult<T: Sendable> = Result<T, AppError>
 
 /// UI state için yükleme sarmalayıcı (Android'de `Result.Loading` + StateFlow
 /// kombinasyonunun SwiftUI `@Observable` karşılığı).
@@ -14,7 +14,7 @@ public enum Loadable<Value: Sendable>: Sendable {
     case idle
     case loading
     case loaded(Value)
-    case failed(SabancimError)
+    case failed(AppError)
 
     public var value: Value? {
         if case let .loaded(v) = self { return v }
@@ -26,7 +26,7 @@ public enum Loadable<Value: Sendable>: Sendable {
         return false
     }
 
-    public var error: SabancimError? {
+    public var error: AppError? {
         if case let .failed(e) = self { return e }
         return nil
     }
@@ -35,7 +35,7 @@ public enum Loadable<Value: Sendable>: Sendable {
 // `Loadable<Value>` `Value: Sendable` ister; bu yüzden extension'ı Sendable
 // Success'e kısıtlıyoruz (Swift 6 strict concurrency). Domain sonuçları zaten
 // Sendable olduğundan çağıranlar etkilenmez.
-public extension Result where Failure == SabancimError, Success: Sendable {
+public extension Result where Failure == AppError, Success: Sendable {
     /// `when(success:error:)` Kotlin pattern'inin kısa karşılığı.
     func toLoadable() -> Loadable<Success> {
         switch self {

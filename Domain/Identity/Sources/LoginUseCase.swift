@@ -15,7 +15,7 @@ public struct LoginUseCase: Sendable {
         self.session = session
     }
 
-    public func callAsFunction(_ credentials: LoginCredentials) async -> SabancimResult<AuthenticationResult> {
+    public func callAsFunction(_ credentials: LoginCredentials) async -> AppResult<AuthenticationResult> {
         guard credentials.password.count >= 6 else {
             return .failure(.validation([
                 ValidationItem(field: "password", message: "Şifre en az 6 karakter olmalı.")

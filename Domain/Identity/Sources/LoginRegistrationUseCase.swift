@@ -15,7 +15,7 @@ public struct LoginRegistrationUseCase: Sendable {
         self.repository = repository
     }
  
-    public func callAsFunction(_ credentials: LoginRegistrationCredentials) async -> SabancimResult<Void> {
+    public func callAsFunction(_ credentials: LoginRegistrationCredentials) async -> AppResult<Void> {
         guard !credentials.identityNumber.trimmingCharacters(in: .whitespaces).isEmpty else {
             return .failure(.validation([
                 ValidationItem(field: "identityNumber", message: "TC kimlik numarası boş olamaz.")

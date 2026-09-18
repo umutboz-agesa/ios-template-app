@@ -2,9 +2,9 @@ import SwiftUI
 
 /// `Loadable<T>` → görünüm tutkalı.
 ///
-/// DesignSystem saf (sıfır iç bağımlılık) kaldığı için `Loadable`/`SabancimError`'ı
+/// DesignSystem saf (sıfır iç bağımlılık) kaldığı için `Loadable`/`AppError`'ı
 /// bilemez. Bu generic sarmalayıcı o tutkalı tek yerde toplar: `CoreUI`, hem
-/// `CoreCommon` (Loadable, SabancimError) hem `DesignSystem` (saf state görünümleri)
+/// `CoreCommon` (Loadable, AppError) hem `DesignSystem` (saf state görünümleri)
 /// üzerine kuruludur. Feature'lar her ekranda switch yazmak yerine bunu kullanır.
 ///
 /// Kullanım:
@@ -34,12 +34,12 @@ public struct LoadableView<Value: Sendable, Content: View>: View {
     public var body: some View {
         switch state {
         case .idle, .loading:
-            SabancimLoadingView()
+            LoadingView()
         case .failed(let error):
-            SabancimErrorView(message: error.userMessage, onRetry: onRetry)
+            ErrorView(message: error.userMessage, onRetry: onRetry)
         case .loaded(let value):
             if let emptyText, isEmptyCollection(value) {
-                SabancimEmptyStateView(text: emptyText)
+                EmptyStateView(text: emptyText)
             } else {
                 content(value)
             }

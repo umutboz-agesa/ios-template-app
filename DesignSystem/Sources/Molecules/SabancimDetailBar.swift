@@ -12,22 +12,22 @@ public struct SabancimDetailBar: View {
     }
 
     public var body: some View {
-        HStack(spacing: SabancimTheme.Spacing.md) {
+        HStack(spacing: AppTheme.Spacing.md) {
             Button(action: onBack) {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Geri")
 
             Text(title)
-                .font(SabancimTheme.Typography.sectionTitle)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .font(AppTheme.Typography.sectionTitle)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer(minLength: 0)
         }
-        .padding(.horizontal, SabancimTheme.Spacing.md)
-        .padding(.vertical, SabancimTheme.Spacing.sm)
+        .padding(.horizontal, AppTheme.Spacing.md)
+        .padding(.vertical, AppTheme.Spacing.sm)
     }
 }

@@ -9,20 +9,20 @@ public struct HomeView: BaseView {
     @State private var viewModel: HomeViewModel
     @Environment(AppNavigator.self) private var navigator
 
-    public init(onFinished: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onFinished: @escaping (AppRoute) -> Void = { _ in }) {
         _viewModel = State(initialValue: HomeViewModel(onFinished: onFinished))
     }
 
     public var screenBody: some View {
         ScrollView {
-            VStack(spacing: SabancimTheme.Spacing.lg) {
+            VStack(spacing: AppTheme.Spacing.lg) {
                 header
 
                 savingsCard
             }
-            .padding(SabancimTheme.Spacing.lg)
+            .padding(AppTheme.Spacing.lg)
         }
-        .background(SabancimTheme.Colors.background)
+        .background(AppTheme.Colors.background)
         .task { await viewModel.loadSummary() }
     }
 
@@ -34,7 +34,7 @@ public struct HomeView: BaseView {
                 title: "Merhaba, \(viewModel.profile.firstName)",
                 subtitle: "Oturumunuz açık — buraya kendi feature'larınızı ekleyin."
             )
-            Spacer(minLength: SabancimTheme.Spacing.sm)
+            Spacer(minLength: AppTheme.Spacing.sm)
             SabancimIconButton(systemName: "person") {
                 navigator.push(.profile)
             }
@@ -46,10 +46,10 @@ public struct HomeView: BaseView {
     private var savingsCard: some View {
         switch viewModel.summaryState {
         case .idle, .loading:
-            SabancimLoadingView()
+            LoadingView()
                 .frame(height: 220)
         case .failed(let error):
-            SabancimErrorView(message: error.userMessage, onRetry: { Task { await viewModel.loadSummary() } })
+            ErrorView(message: error.userMessage, onRetry: { Task { await viewModel.loadSummary() } })
                 .frame(height: 220)
         case .loaded:
             SabancimSavingsOverviewCard(

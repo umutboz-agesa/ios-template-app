@@ -16,12 +16,12 @@ public struct SabancimIconButton: View {
         Button(action: action) {
             Image(systemName: systemName)
                 .font(.system(size: 20, weight: .regular))
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .foregroundStyle(AppTheme.Colors.onSurface)
                 .frame(width: 40, height: 40)
                 .overlay(alignment: .topTrailing) {
                     if hasBadge {
                         Circle()
-                            .fill(SabancimTheme.Colors.notification)
+                            .fill(AppTheme.Colors.notification)
                             .frame(width: 8, height: 8)
                             .offset(x: -8, y: 8)
                     }

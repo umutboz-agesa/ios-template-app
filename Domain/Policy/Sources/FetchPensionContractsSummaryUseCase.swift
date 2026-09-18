@@ -15,7 +15,7 @@ public struct FetchPensionContractsSummaryUseCase: Sendable {
         self.repository = repository
     }
 
-    public func callAsFunction() async -> SabancimResult<PensionContractsSummary> {
+    public func callAsFunction() async -> AppResult<PensionContractsSummary> {
         await repository.fetchSummary()
     }
 }

@@ -10,7 +10,7 @@ public struct SabancimCategoryTile: View {
 
     public init(systemName: String,
                 title: String,
-                tint: Color = SabancimTheme.Colors.primary,
+                tint: Color = AppTheme.Colors.primary,
                 action: @escaping () -> Void) {
         self.systemName = systemName
         self.title = title
@@ -20,7 +20,7 @@ public struct SabancimCategoryTile: View {
 
     public var body: some View {
         Button(action: action) {
-            VStack(spacing: SabancimTheme.Spacing.sm) {
+            VStack(spacing: AppTheme.Spacing.sm) {
                 ZStack {
                     Circle()
                         .fill(tint.opacity(0.12))
@@ -30,8 +30,8 @@ public struct SabancimCategoryTile: View {
                         .foregroundStyle(tint)
                 }
                 Text(title)
-                    .font(SabancimTheme.Typography.tileLabel)
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .font(AppTheme.Typography.tileLabel)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .lineLimit(1)
             }
         }

@@ -14,9 +14,9 @@ public final class HomeViewModel {
     public private(set) var savingsSlices: [SabancimSavingsOverviewCard.Slice] = []
     public private(set) var savingsActiveCount: Int = 0
 
-    private let onFinished: (SabancimRoute) -> Void
+    private let onFinished: (AppRoute) -> Void
 
-    public init(onFinished: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onFinished: @escaping (AppRoute) -> Void = { _ in }) {
         self.onFinished = onFinished
     }
 
@@ -32,10 +32,10 @@ public final class HomeViewModel {
         }
         savingsTotal = Self.decimal(summary.totalAmount)
         savingsSlices = [
-            .init(label: "Katkı payım", value: Self.decimal(summary.youAmount), color: SabancimTheme.Brand.blue),
-            .init(label: "Devlet katkısı", value: Self.decimal(summary.governmentAmount), color: SabancimTheme.Brand.purple),
-            .init(label: "Getirilerim", value: Self.decimal(summary.investmentAmount), color: SabancimTheme.Colors.success),
-            .init(label: "İşveren katkısı", value: Self.decimal(summary.companyAmount), color: SabancimTheme.Brand.indigo),
+            .init(label: "Katkı payım", value: Self.decimal(summary.youAmount), color: AppTheme.Brand.blue),
+            .init(label: "Devlet katkısı", value: Self.decimal(summary.governmentAmount), color: AppTheme.Brand.purple),
+            .init(label: "Getirilerim", value: Self.decimal(summary.investmentAmount), color: AppTheme.Colors.success),
+            .init(label: "İşveren katkısı", value: Self.decimal(summary.companyAmount), color: AppTheme.Brand.indigo),
         ]
         savingsActiveCount = summary.activeContractCount
         summaryState = .loaded(())

@@ -10,9 +10,9 @@ public struct ProfileView: BaseView {
     @State private var segment = 0
     @State private var showLogoutConfirm = false
     @Environment(AppNavigator.self) private var navigator
-    private let onRoute: (SabancimRoute) -> Void
+    private let onRoute: (AppRoute) -> Void
 
-    public init(onRoute: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onRoute: @escaping (AppRoute) -> Void = { _ in }) {
         self.onRoute = onRoute
     }
 
@@ -58,19 +58,19 @@ public struct ProfileView: BaseView {
         VStack(spacing: 0) {
             topBar
             ScrollView {
-                VStack(spacing: SabancimTheme.Spacing.md) {
+                VStack(spacing: AppTheme.Spacing.md) {
                     userHeader
                     SabancimSegmentedControl(["İletişim Bilgileri", "Adres Bilgilerim"], selection: $segment)
                     if segment == 0 { contactCard } else { addressCard }
                     SabancimButton("Bilgilerimi Güncelle", systemImage: "pencil") { }
                     Text("Son güncelleme: 20.07.2026")
                         .font(.caption)
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                         .frame(maxWidth: .infinity, alignment: .center)
 
                     applicationsSection
                 }
-                .padding(SabancimTheme.Spacing.md)
+                .padding(AppTheme.Spacing.md)
             }
         }
         .background { SabancimHeroBackground() }
@@ -84,17 +84,17 @@ public struct ProfileView: BaseView {
 
     // MARK: - Üst bar (geri + başlık + ayarlar dişli)
     private var topBar: some View {
-        HStack(spacing: SabancimTheme.Spacing.md) {
+        HStack(spacing: AppTheme.Spacing.md) {
             Button { dismiss() } label: {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.plain)
             Text("Profilim")
-                .font(SabancimTheme.Typography.sectionTitle)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .font(AppTheme.Typography.sectionTitle)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer(minLength: 0)
             Button { showLogoutConfirm = true } label: {
                 HStack(spacing: 6) {
@@ -103,30 +103,30 @@ public struct ProfileView: BaseView {
                     Text("Çıkış")
                         .font(.subheadline.weight(.semibold))
                 }
-                .foregroundStyle(SabancimTheme.Brand.red)
+                .foregroundStyle(AppTheme.Brand.red)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
-                .background(SabancimTheme.Brand.red.opacity(0.08))
+                .background(AppTheme.Brand.red.opacity(0.08))
                 .clipShape(Capsule())
-                .overlay(Capsule().stroke(SabancimTheme.Brand.red.opacity(0.5), lineWidth: 1.2))
+                .overlay(Capsule().stroke(AppTheme.Brand.red.opacity(0.5), lineWidth: 1.2))
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Çıkış Yap")
             Button { onRoute(.settings) } label: {
                 Image(systemName: "gearshape.fill")
                     .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .frame(width: 38, height: 38)
-                    .background(SabancimTheme.Colors.cardSurface)
+                    .background(AppTheme.Colors.cardSurface)
                     .clipShape(Circle())
-                    .shadow(color: SabancimTheme.Shadow.cardColor,
-                            radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+                    .shadow(color: AppTheme.Shadow.cardColor,
+                            radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Ayarlar")
         }
-        .padding(.horizontal, SabancimTheme.Spacing.md)
-        .padding(.vertical, SabancimTheme.Spacing.sm)
+        .padding(.horizontal, AppTheme.Spacing.md)
+        .padding(.vertical, AppTheme.Spacing.sm)
     }
 
     // MARK: - Başvurularım
@@ -141,41 +141,41 @@ public struct ProfileView: BaseView {
 
     private let applications: [AppItem] = [
         .init(title: "Bireysel Emeklilik (BES)", subtitle: "Kendim • 27.07.2026",
-              status: "İnceleniyor", statusColor: SabancimTheme.Colors.notification, icon: "banknote.fill"),
+              status: "İnceleniyor", statusColor: AppTheme.Colors.notification, icon: "banknote.fill"),
         .init(title: "Tamamlayıcı Sağlık Sigortası", subtitle: "12.05.2026",
-              status: "Onaylandı", statusColor: SabancimTheme.Colors.success, icon: "cross.case.fill"),
+              status: "Onaylandı", statusColor: AppTheme.Colors.success, icon: "cross.case.fill"),
         .init(title: "Kasko Sigortası", subtitle: "02.01.2026",
-              status: "Onaylandı", statusColor: SabancimTheme.Colors.success, icon: "shield.lefthalf.filled"),
+              status: "Onaylandı", statusColor: AppTheme.Colors.success, icon: "shield.lefthalf.filled"),
     ]
 
     private var applicationsSection: some View {
-        VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
             Text("Başvurularım")
                 .font(.footnote.weight(.semibold))
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
                 .frame(maxWidth: .infinity, alignment: .leading)
             ForEach(applications) { app in
                 applicationRow(app)
             }
         }
-        .padding(.top, SabancimTheme.Spacing.sm)
+        .padding(.top, AppTheme.Spacing.sm)
     }
 
     private func applicationRow(_ app: AppItem) -> some View {
-        HStack(spacing: SabancimTheme.Spacing.md) {
+        HStack(spacing: AppTheme.Spacing.md) {
             Image(systemName: app.icon)
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(SabancimTheme.Colors.primary)
+                .foregroundStyle(AppTheme.Colors.primary)
                 .frame(width: 38, height: 38)
-                .background(SabancimTheme.Colors.primary.opacity(0.12))
+                .background(AppTheme.Colors.primary.opacity(0.12))
                 .clipShape(Circle())
             VStack(alignment: .leading, spacing: 2) {
                 Text(app.title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                 Text(app.subtitle)
                     .font(.caption)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .foregroundStyle(AppTheme.Colors.muted)
             }
             Spacer(minLength: 0)
             Text(app.status)
@@ -185,27 +185,27 @@ public struct ProfileView: BaseView {
                 .background(app.statusColor.opacity(0.14))
                 .clipShape(Capsule())
         }
-        .padding(SabancimTheme.Spacing.md)
+        .padding(AppTheme.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
-        .shadow(color: SabancimTheme.Shadow.cardColor,
-                radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
+        .shadow(color: AppTheme.Shadow.cardColor,
+                radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 
     // MARK: - Kullanıcı başlığı
     private var userHeader: some View {
-        VStack(spacing: SabancimTheme.Spacing.sm) {
+        VStack(spacing: AppTheme.Spacing.sm) {
             ProfileAvatarButton(size: 88)
             Text(userSession.profile.fullName)
                 .font(.title3.bold())
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Text("Müşteri No: \(customerNo)")
                 .font(.footnote)
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
         }
         .frame(maxWidth: .infinity)
-        .padding(.top, SabancimTheme.Spacing.sm)
+        .padding(.top, AppTheme.Spacing.sm)
     }
 
     // MARK: - İletişim / Adres kartları
@@ -231,13 +231,13 @@ public struct ProfileView: BaseView {
 
     private func infoCard<Content: View>(@ViewBuilder content: () -> Content) -> some View {
         VStack(spacing: 0) { content() }
-            .padding(.horizontal, SabancimTheme.Spacing.md)
-            .padding(.vertical, SabancimTheme.Spacing.xs)
+            .padding(.horizontal, AppTheme.Spacing.md)
+            .padding(.vertical, AppTheme.Spacing.xs)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(SabancimTheme.Colors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
-            .shadow(color: SabancimTheme.Shadow.cardColor,
-                    radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+            .background(AppTheme.Colors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
+            .shadow(color: AppTheme.Shadow.cardColor,
+                    radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 }
 

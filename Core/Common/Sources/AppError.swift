@@ -1,12 +1,6 @@
 import Foundation
 
-/// Android `:data` içindeki `SabancimError` sealed hierarchy'sinin karşılığı.
-///
-/// > Not: Android'de bu tip `:data` modülünde yaşıyordu; iOS'ta domain katmanı
-/// > `:data`'yı göremediği için (bağımlılık yönü) hata tipini `CoreCommon`'a
-/// > taşıdık. Böylece hem `Domain*` hem `Data` aynı `SabancimError`'ı kullanır,
-/// > `any Error` existential'ı yerine `Sendable` somut tip elde ederiz.
-public enum SabancimError: Error, Equatable, Sendable {
+public enum AppError: Error, Equatable, Sendable {
     /// 401 / 403 → Session expired → Login'e dön
     case auth
     /// 404 → "İçerik bulunamadı"

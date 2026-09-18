@@ -31,5 +31,5 @@ public struct RecognizedUser: Sendable, Equatable {
 }
 
 public protocol StartLoginRepository: Sendable {
-    func startLogin(_ request: StartLoginRequest) async -> SabancimResult<RecognizedUser?>
+    func startLogin(_ request: StartLoginRequest) async -> AppResult<RecognizedUser?>
 }

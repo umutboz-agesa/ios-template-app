@@ -10,7 +10,7 @@ final class StartLoginRemoteDataSource: BaseRemoteDataSource, @unchecked Sendabl
     private let api: StartLoginApi
     init(api: StartLoginApi) { self.api = api }
  
-    func startLogin(_ request: StartLoginRequest) async -> SabancimResult<RecognizedUser?> {
+    func startLogin(_ request: StartLoginRequest) async -> AppResult<RecognizedUser?> {
         await apiCall {
             try await api
                 .startLogin(StartLoginRequestDTO(

@@ -27,19 +27,19 @@ public struct SabancimTopBar<Leading: View>: View {
     }
 
     public var body: some View {
-        HStack(spacing: SabancimTheme.Spacing.sm) {
+        HStack(spacing: AppTheme.Spacing.sm) {
             if let onBack {
                 Button(action: onBack) {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 18, weight: .semibold))
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                         .frame(width: 28, height: 28)
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Geri")
             }
             leading
-            Spacer(minLength: SabancimTheme.Spacing.md)
+            Spacer(minLength: AppTheme.Spacing.md)
             if let onNotifications {
                 SabancimIconButton(systemName: "bell", hasBadge: hasNotificationBadge, action: onNotifications)
             }
@@ -47,11 +47,11 @@ public struct SabancimTopBar<Leading: View>: View {
                 Button(action: onAssistant) {
                     Image(systemName: "ellipsis.message.fill")
                         .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(SabancimTheme.Colors.primary)
+                        .foregroundStyle(AppTheme.Colors.primary)
                         .frame(width: 38, height: 38)
-                        .background(SabancimTheme.Colors.cardSurface)
+                        .background(AppTheme.Colors.cardSurface)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(SabancimTheme.Colors.primary, lineWidth: 2))
+                        .overlay(Circle().stroke(AppTheme.Colors.primary, lineWidth: 2))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Sabancım Asistan")
@@ -65,7 +65,7 @@ public struct SabancimTopBar<Leading: View>: View {
 
 #Preview {
     SabancimTopBar(hasNotificationBadge: true, onNotifications: {}, onProfile: {}) {
-        Text("SABANCIm").font(.title3.bold()).foregroundStyle(SabancimTheme.Colors.primary)
+        Text("SABANCIm").font(.title3.bold()).foregroundStyle(AppTheme.Colors.primary)
     }
     .padding()
 }

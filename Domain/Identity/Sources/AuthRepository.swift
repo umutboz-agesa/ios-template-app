@@ -61,6 +61,6 @@ public struct LoginCredentials: Sendable, Equatable {
 
 /// Android `:domain:identity` `AuthRepository` contract'ı karşılığı.
 public protocol AuthRepository: Sendable {
-    func login(_ credentials: LoginCredentials) async -> SabancimResult<AuthenticationResult>
+    func login(_ credentials: LoginCredentials) async -> AppResult<AuthenticationResult>
     func logout() async
 }

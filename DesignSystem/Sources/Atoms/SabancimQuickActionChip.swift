@@ -10,7 +10,7 @@ public struct SabancimQuickActionChip: View {
 
     public init(systemName: String,
                 title: String,
-                tint: Color = SabancimTheme.Colors.primary,
+                tint: Color = AppTheme.Colors.primary,
                 action: @escaping () -> Void) {
         self.systemName = systemName
         self.title = title
@@ -20,7 +20,7 @@ public struct SabancimQuickActionChip: View {
 
     public var body: some View {
         Button(action: action) {
-            VStack(spacing: SabancimTheme.Spacing.md) {
+            VStack(spacing: AppTheme.Spacing.md) {
                 ZStack {
                     Circle()
                         .fill(tint.opacity(0.12))
@@ -31,20 +31,20 @@ public struct SabancimQuickActionChip: View {
                 }
                 Text(title)
                     .font(.footnote.weight(.regular))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, SabancimTheme.Spacing.md)
-            .padding(.horizontal, SabancimTheme.Spacing.sm)
+            .padding(.vertical, AppTheme.Spacing.md)
+            .padding(.horizontal, AppTheme.Spacing.sm)
             .frame(minHeight: 128)
-            .background(SabancimTheme.Colors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
-            .shadow(color: SabancimTheme.Shadow.cardColor,
-                    radius: SabancimTheme.Shadow.cardRadius,
-                    x: 0, y: SabancimTheme.Shadow.cardY)
+            .background(AppTheme.Colors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
+            .shadow(color: AppTheme.Shadow.cardColor,
+                    radius: AppTheme.Shadow.cardRadius,
+                    x: 0, y: AppTheme.Shadow.cardY)
         }
         .buttonStyle(.plain)
     }
@@ -53,8 +53,8 @@ public struct SabancimQuickActionChip: View {
 #Preview {
     HStack(spacing: 12) {
         SabancimQuickActionChip(systemName: "doc.text", title: "Poliçelerim / Sözleşmelerim") {}
-        SabancimQuickActionChip(systemName: "exclamationmark.triangle", title: "Hasar İhbarı", tint: SabancimTheme.Colors.notification) {}
-        SabancimQuickActionChip(systemName: "creditcard", title: "Ödeme Yap", tint: SabancimTheme.Colors.success) {}
+        SabancimQuickActionChip(systemName: "exclamationmark.triangle", title: "Hasar İhbarı", tint: AppTheme.Colors.notification) {}
+        SabancimQuickActionChip(systemName: "creditcard", title: "Ödeme Yap", tint: AppTheme.Colors.success) {}
     }
     .padding()
     .background(Color(.secondarySystemBackground))

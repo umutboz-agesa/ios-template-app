@@ -21,8 +21,8 @@ public struct SabancimBrandCard<Content: View>: View {
         title: String,
         subtitle: String? = nil,
         background: AnyShapeStyle,
-        foreground: Color = SabancimTheme.Colors.onSurface,
-        accent: Color = SabancimTheme.Colors.primary,
+        foreground: Color = AppTheme.Colors.onSurface,
+        accent: Color = AppTheme.Colors.primary,
         watermark: String? = nil,
         onDark: Bool = false,
         @ViewBuilder content: () -> Content = { EmptyView() }
@@ -48,7 +48,7 @@ public struct SabancimBrandCard<Content: View>: View {
                     .allowsHitTesting(false)
             }
 
-            VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
                 if let badge { badgeChip(badge) }
 
                 Text(title)
@@ -59,18 +59,18 @@ public struct SabancimBrandCard<Content: View>: View {
                 if let subtitle {
                     Text(subtitle)
                         .font(.footnote)
-                        .foregroundStyle(onDark ? Color.white.opacity(0.9) : SabancimTheme.Colors.muted)
+                        .foregroundStyle(onDark ? Color.white.opacity(0.9) : AppTheme.Colors.muted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
                 content
-                    .padding(.top, SabancimTheme.Spacing.xs)
+                    .padding(.top, AppTheme.Spacing.xs)
             }
-            .padding(SabancimTheme.Spacing.md)
+            .padding(AppTheme.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(background)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
     }
 
     private func badgeChip(_ text: String) -> some View {

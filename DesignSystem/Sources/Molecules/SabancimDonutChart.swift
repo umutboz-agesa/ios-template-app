@@ -42,7 +42,7 @@ public struct SabancimDonutChart: View {
     public var body: some View {
         ZStack {
             Circle()
-                .stroke(SabancimTheme.Colors.surface, lineWidth: ringWidth)
+                .stroke(AppTheme.Colors.surface, lineWidth: ringWidth)
             ForEach(Array(arcs.enumerated()), id: \.offset) { _, arc in
                 Circle()
                     .trim(from: arc.start + gap,
@@ -68,10 +68,10 @@ public struct SabancimDonutChart: View {
 
 #Preview {
     SabancimDonutChart(segments: [
-        .init(value: 52500, color: SabancimTheme.Brand.blue),
-        .init(value: 13750, color: SabancimTheme.Brand.purple),
-        .init(value: 44233, color: SabancimTheme.Colors.success),
-        .init(value: 52500, color: SabancimTheme.Brand.indigo),
+        .init(value: 52500, color: AppTheme.Brand.blue),
+        .init(value: 13750, color: AppTheme.Brand.purple),
+        .init(value: 44233, color: AppTheme.Colors.success),
+        .init(value: 52500, color: AppTheme.Brand.indigo),
     ])
     .frame(width: 140, height: 140)
     .padding()

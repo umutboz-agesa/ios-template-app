@@ -34,7 +34,7 @@ public extension DependencyValues {
 
 /// Test/placeholder repo — gerçek impl bağlanmazsa kullanılır.
 struct UnimplementedAuthRepository: AuthRepository {
-    func login(_ credentials: LoginCredentials) async -> SabancimResult<AuthenticationResult> {
+    func login(_ credentials: LoginCredentials) async -> AppResult<AuthenticationResult> {
         .failure(.unknown(message: "AuthRepository bağlanmadı."))
     }
     func logout() async {}
@@ -58,14 +58,14 @@ public extension DependencyValues {
 }
  
 struct NotYetImplementedStartLoginRepository: StartLoginRepository {
-    func startLogin(_ request: StartLoginRequest) async -> SabancimResult<RecognizedUser?> {
+    func startLogin(_ request: StartLoginRequest) async -> AppResult<RecognizedUser?> {
 //        .success(RecognizedUser(firstName: "Hakan", lastName: "Uğraş"))
         .failure(.unknown(message: "StartLoginRepository test'te override edilmedi."))
     }
 }
  
 struct UnimplementedStartLoginRepository: StartLoginRepository {
-    func startLogin(_ request: StartLoginRequest) async -> SabancimResult<RecognizedUser?> {
+    func startLogin(_ request: StartLoginRequest) async -> AppResult<RecognizedUser?> {
         .failure(.unknown(message: "StartLoginRepository test'te override edilmedi."))
     }
 }
@@ -90,13 +90,13 @@ public extension DependencyValues {
 }
  
 struct UnimplementedLoginRegistrationRepository: LoginRegistrationRepository {
-    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> SabancimResult<Void> {
+    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> AppResult<Void> {
         .failure(.unknown(message: "LoginRegistrationRepository bağlanmadı."))
     }
 }
 
 struct NotYetImplementedLoginRegistrationRepository: LoginRegistrationRepository {
-    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> SabancimResult<Void> {
+    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> AppResult<Void> {
         .success(Void())
     }
 }
@@ -119,13 +119,13 @@ public extension DependencyValues {
 }
  
 struct UnimplementedOtpConfirmationRepository: OtpConfirmationRepository {
-    func confirmOtp(_ request: OtpConfirmationRequest) async -> SabancimResult<AuthenticationResult> {
+    func confirmOtp(_ request: OtpConfirmationRequest) async -> AppResult<AuthenticationResult> {
         .failure(.unknown(message: "OtpConfirmationRepository bağlanmadı."))
     }
 }
 
 struct NotYetImplementedOtpConfirmationRepository: OtpConfirmationRepository {
-    func confirmOtp(_ request: OtpConfirmationRequest) async -> SabancimResult<AuthenticationResult> {
+    func confirmOtp(_ request: OtpConfirmationRequest) async -> AppResult<AuthenticationResult> {
         .success(AuthenticationResult(user: .init(customerNumber: 0, name: "", surname: "", birthdate: ""), userAnalyticId: "", needsPasswordChange: false, needsDisclaimer: false, lastLoggedInTime: "", lastWrongLoginTime: ""))
     }
 }

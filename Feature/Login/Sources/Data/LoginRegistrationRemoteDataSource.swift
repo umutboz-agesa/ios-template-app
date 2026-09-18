@@ -10,11 +10,11 @@ final class LoginRegistrationRemoteDataSource: BaseRemoteDataSource, @unchecked 
     private let api: LoginRegistrationApi
     init(api: LoginRegistrationApi) { self.api = api }
  
-    func loginRegistration(_ request: LoginRegistrationRequestDTO) async -> SabancimResult<Void> {
+    func loginRegistration(_ request: LoginRegistrationRequestDTO) async -> AppResult<Void> {
         await apiCall {
             let response = try await api.loginRegistration(request)
             guard response.success else {
-                throw SabancimError.unknown(message: response.message ?? response.error ?? "Giriş başarısız.")
+                throw AppError.unknown(message: response.message ?? response.error ?? "Giriş başarısız.")
             }
         }
     }

@@ -1,9 +1,9 @@
 import SwiftUI
 
-// Home ekranı için SabancimTheme genişletmeleri.
+// Home ekranı için AppTheme genişletmeleri.
 // Mevcut SabancimTheme.swift'e dokunmadan, extension'larla eklenir (tek kaynak, tekrar yok).
 
-public extension SabancimTheme.Colors {
+public extension AppTheme.Colors {
     /// Trend artışı / pozitif (↑ %12,4).
     static let success = Color(red: 0.13, green: 0.70, blue: 0.42)
     /// Gradyan/renkli zemin üstünde ikincil beyaz metin.
@@ -16,18 +16,18 @@ public extension SabancimTheme.Colors {
     static let notification = Color(red: 0.98, green: 0.53, blue: 0.11)
 }
 
-public extension SabancimTheme.Spacing {
+public extension AppTheme.Spacing {
     static let xl: CGFloat = 32
 }
 
-public extension SabancimTheme.Radius {
+public extension AppTheme.Radius {
     /// Chip / pill.
     static let pill: CGFloat = 999
     /// Kategori tile / büyük kart.
     static let tile: CGFloat = 20
 }
 
-public extension SabancimTheme {
+public extension AppTheme {
 
     /// Gradyan token'ları (promo banner vb.).
     enum Gradients {

@@ -14,20 +14,20 @@ public final class AppNavigator {
     // gittiğinde path'i kendisi günceller. Bu yüzden setter public olmalı
     // (private(set) olsa `$nav.path` binding'i "setter inaccessible" verir).
     // Uygulama içi mutation yine push/pop/replaceStack üzerinden yapılır.
-    public var path: [SabancimRoute] = []
+    public var path: [AppRoute] = []
 
     /// Seçili alt tab (TabView selection). Tab'a ait route'lar buraya yazılır → sekme switch.
     public var selectedTab: Int = AppTab.home.rawValue
 
     /// Login sonrası devam edilecek bekleyen deep-link hedefi (Android `PendingDeepLink`).
-    public var pendingTarget: SabancimRoute?
+    public var pendingTarget: AppRoute?
 
     /// Keşfet menüsü (alt sheet) açık mı — tab yerine sheet gösterilir.
     public var showExplore = false
 
     public init() {}
 
-    public func push(_ route: SabancimRoute) { path.append(route) }
+    public func push(_ route: AppRoute) { path.append(route) }
     public func pop() { _ = path.popLast() }
     public func popToRoot() { path.removeAll() }
 
@@ -35,16 +35,16 @@ public final class AppNavigator {
     public var logoutRequested = false
     public func requestLogout() { logoutRequested = true }
 
-    public func replaceStack(with route: SabancimRoute) {
+    public func replaceStack(with route: AppRoute) {
         path = [route]
     }
 
     /// Deep-link geldiğinde auth gate çözene kadar tut.
-    public func setPendingDeepLink(_ route: SabancimRoute) {
+    public func setPendingDeepLink(_ route: AppRoute) {
         pendingTarget = route
     }
 
-    public func consumePendingDeepLink() -> SabancimRoute? {
+    public func consumePendingDeepLink() -> AppRoute? {
         defer { pendingTarget = nil }
         return pendingTarget
     }

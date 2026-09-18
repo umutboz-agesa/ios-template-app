@@ -32,7 +32,7 @@ public final class OtpViewModel {
     private let identityNumber: String
     private let password: String
     nonisolated(unsafe) private var countdownTask: Task<Void, Never>?
-    private let onFinished: (SabancimRoute) -> Void
+    private let onFinished: (AppRoute) -> Void
 
     @ObservationIgnored @Dependency(\.otpConfirmationRepository) private var repository
     @ObservationIgnored @Dependency(\.userSession) private var userSession
@@ -40,7 +40,7 @@ public final class OtpViewModel {
     public init(
         identityNumber: String,
         password: String,
-        onFinished: @escaping (SabancimRoute) -> Void = { _ in }
+        onFinished: @escaping (AppRoute) -> Void = { _ in }
     ) {
         self.identityNumber = identityNumber
         self.password = password

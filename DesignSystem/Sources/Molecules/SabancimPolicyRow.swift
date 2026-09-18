@@ -11,7 +11,7 @@ public struct SabancimPolicyRow: View {
 
     public init(
         badge: String,
-        accent: Color = SabancimTheme.Colors.primary,
+        accent: Color = AppTheme.Colors.primary,
         title: String,
         meta: String,
         onTap: @escaping () -> Void = {}
@@ -25,7 +25,7 @@ public struct SabancimPolicyRow: View {
 
     public var body: some View {
         Button(action: onTap) {
-            HStack(spacing: SabancimTheme.Spacing.md) {
+            HStack(spacing: AppTheme.Spacing.md) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(badge)
                         .font(.caption2.weight(.bold))
@@ -37,26 +37,26 @@ public struct SabancimPolicyRow: View {
                         .clipShape(Capsule())
                     Text(title)
                         .font(.headline)
-                        .foregroundStyle(SabancimTheme.Colors.onSurface)
+                        .foregroundStyle(AppTheme.Colors.onSurface)
                         .fixedSize(horizontal: false, vertical: true)
                     Text(meta)
                         .font(.footnote)
-                        .foregroundStyle(SabancimTheme.Colors.muted)
+                        .foregroundStyle(AppTheme.Colors.muted)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.tabInactive)
+                    .foregroundStyle(AppTheme.Colors.tabInactive)
             }
-            .padding(SabancimTheme.Spacing.md)
+            .padding(AppTheme.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
-        .shadow(color: SabancimTheme.Shadow.cardColor,
-                radius: SabancimTheme.Shadow.cardRadius, y: SabancimTheme.Shadow.cardY)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
+        .shadow(color: AppTheme.Shadow.cardColor,
+                radius: AppTheme.Shadow.cardRadius, y: AppTheme.Shadow.cardY)
     }
 }
 

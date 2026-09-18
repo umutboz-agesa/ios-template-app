@@ -4,13 +4,13 @@ import SwiftUI
 /// Başlangıç sürümü: hesap, tercih (toggle'lar), uygulama ve çıkış. Fontlar DS standardında.
 public struct SettingsView: BaseView {
     @Environment(\.dismiss) private var dismiss
-    private let onRoute: (SabancimRoute) -> Void
+    private let onRoute: (AppRoute) -> Void
 
     @State private var pushEnabled = true
     @State private var faceIDEnabled = false
-    @AppStorage(AppThemeStorage.key) private var appTheme: AppTheme = .dark
+    @AppStorage(ThemeStorage.key) private var appTheme: Theme = .dark
 
-    public init(onRoute: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onRoute: @escaping (AppRoute) -> Void = { _ in }) {
         self.onRoute = onRoute
     }
 
@@ -18,7 +18,7 @@ public struct SettingsView: BaseView {
         VStack(spacing: 0) {
             topBar
             ScrollView {
-                VStack(alignment: .leading, spacing: SabancimTheme.Spacing.lg) {
+                VStack(alignment: .leading, spacing: AppTheme.Spacing.lg) {
                     section("Hesap") {
                         SabancimNavListRow(icon: "person.text.rectangle.fill", title: "Profil Bilgileri") { onRoute(.profile) }
                         SabancimNavListRow(icon: "lock.fill", title: "Şifre Değiştir")
@@ -38,7 +38,7 @@ public struct SettingsView: BaseView {
                     }
                     logoutButton
                 }
-                .padding(SabancimTheme.Spacing.md)
+                .padding(AppTheme.Spacing.md)
             }
         }
         .background { SabancimHeroBackground() }
@@ -46,29 +46,29 @@ public struct SettingsView: BaseView {
 
     // MARK: - Üst bar (geri + başlık)
     private var topBar: some View {
-        HStack(spacing: SabancimTheme.Spacing.md) {
+        HStack(spacing: AppTheme.Spacing.md) {
             Button { dismiss() } label: {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                     .frame(width: 28, height: 28)
             }
             .buttonStyle(.plain)
             Text("Ayarlar")
-                .font(SabancimTheme.Typography.sectionTitle)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .font(AppTheme.Typography.sectionTitle)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer(minLength: 0)
         }
-        .padding(.horizontal, SabancimTheme.Spacing.md)
-        .padding(.vertical, SabancimTheme.Spacing.sm)
+        .padding(.horizontal, AppTheme.Spacing.md)
+        .padding(.vertical, AppTheme.Spacing.sm)
     }
 
     // MARK: - Parçalar
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
-        VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
             Text(title)
                 .font(.footnote.weight(.semibold))
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
                 .padding(.leading, 4)
             content()
         }
@@ -78,72 +78,72 @@ public struct SettingsView: BaseView {
     private var themeRow: some View {
         Menu {
             Picker("Tema", selection: $appTheme) {
-                ForEach(AppTheme.allCases) { theme in
+                ForEach(Theme.allCases) { theme in
                     Text(theme.title).tag(theme)
                 }
             }
         } label: {
-            HStack(spacing: SabancimTheme.Spacing.sm + 4) {
+            HStack(spacing: AppTheme.Spacing.sm + 4) {
                 Image(systemName: "paintbrush.fill")
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.primary)
+                    .foregroundStyle(AppTheme.Colors.primary)
                     .frame(width: 26)
                 Text("Tema")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
                 Spacer(minLength: 0)
                 Text(appTheme.title)
                     .font(.subheadline)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .foregroundStyle(AppTheme.Colors.muted)
                 Image(systemName: "chevron.up.chevron.down")
                     .font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(SabancimTheme.Colors.tabInactive)
+                    .foregroundStyle(AppTheme.Colors.tabInactive)
             }
-            .padding(.horizontal, SabancimTheme.Spacing.md)
-            .padding(.vertical, SabancimTheme.Spacing.md)
-            .background(SabancimTheme.Colors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
+            .padding(.horizontal, AppTheme.Spacing.md)
+            .padding(.vertical, AppTheme.Spacing.md)
+            .background(AppTheme.Colors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
 
     private func toggleRow(icon: String, title: String, isOn: Binding<Bool>) -> some View {
-        HStack(spacing: SabancimTheme.Spacing.sm + 4) {
+        HStack(spacing: AppTheme.Spacing.sm + 4) {
             Image(systemName: icon)
                 .font(.system(size: 18, weight: .semibold))
-                .foregroundStyle(SabancimTheme.Colors.primary)
+                .foregroundStyle(AppTheme.Colors.primary)
                 .frame(width: 26)
             Text(title)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer(minLength: 0)
             Toggle("", isOn: isOn)
                 .labelsHidden()
-                .tint(SabancimTheme.Colors.primary)
+                .tint(AppTheme.Colors.primary)
         }
-        .padding(.horizontal, SabancimTheme.Spacing.md)
-        .padding(.vertical, SabancimTheme.Spacing.md)
-        .background(SabancimTheme.Colors.cardSurface)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
+        .padding(.horizontal, AppTheme.Spacing.md)
+        .padding(.vertical, AppTheme.Spacing.md)
+        .background(AppTheme.Colors.cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
     }
 
     private var logoutButton: some View {
         Button {
             // Çıkış akışı ileride oturum yönetimine bağlanacak.
         } label: {
-            HStack(spacing: SabancimTheme.Spacing.sm) {
+            HStack(spacing: AppTheme.Spacing.sm) {
                 Image(systemName: "rectangle.portrait.and.arrow.right")
                 Text("Çıkış Yap").font(.subheadline.weight(.semibold))
             }
-            .foregroundStyle(SabancimTheme.Colors.error)
+            .foregroundStyle(AppTheme.Colors.error)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, SabancimTheme.Spacing.md)
-            .background(SabancimTheme.Colors.cardSurface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card, style: .continuous))
+            .padding(.vertical, AppTheme.Spacing.md)
+            .background(AppTheme.Colors.cardSurface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
         }
         .buttonStyle(.plain)
-        .padding(.top, SabancimTheme.Spacing.sm)
+        .padding(.top, AppTheme.Spacing.sm)
     }
 }
 

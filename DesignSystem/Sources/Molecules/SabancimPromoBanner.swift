@@ -19,7 +19,7 @@ public struct SabancimPromoBanner: View {
         subtitle: String,
         ctaTitle: String,
         gradient: LinearGradient,
-        accent: Color = SabancimTheme.Colors.primary,
+        accent: Color = AppTheme.Colors.primary,
         imageName: String? = nil,
         onCTA: @escaping () -> Void
     ) {
@@ -38,11 +38,11 @@ public struct SabancimPromoBanner: View {
             decoration
             content
         }
-        .padding(.horizontal, SabancimTheme.Spacing.lg)
-        .padding(.vertical, SabancimTheme.Spacing.md)
+        .padding(.horizontal, AppTheme.Spacing.lg)
+        .padding(.vertical, AppTheme.Spacing.md)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(gradient)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
     }
 
     // MARK: - Metin + CTA
@@ -79,8 +79,8 @@ public struct SabancimPromoBanner: View {
         Button(action: onCTA) {
             Text(ctaTitle)
                 .font(.subheadline.weight(.semibold))
-                .padding(.horizontal, SabancimTheme.Spacing.md)
-                .padding(.vertical, SabancimTheme.Spacing.sm + 2)
+                .padding(.horizontal, AppTheme.Spacing.md)
+                .padding(.vertical, AppTheme.Spacing.sm + 2)
                 .background(.white)
                 .foregroundStyle(accent)
                 .clipShape(Capsule())
@@ -118,7 +118,7 @@ public struct SabancimPromoBanner: View {
             title: "Size özel Kampanyalar",
             subtitle: "Kaçırılmayacak fırsatlar sizi bekliyor!",
             ctaTitle: "Hemen Keşfet",
-            gradient: SabancimTheme.Gradients.promo,
+            gradient: AppTheme.Gradients.promo,
             imageName: "CampaignGift",
             onCTA: {}
         )

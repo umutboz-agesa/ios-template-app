@@ -8,7 +8,7 @@ public struct SplashView: BaseView {
     @State private var viewModel: SplashViewModel
     @Environment(\.openURL) private var openURL
 
-    public init(onFinished: @escaping (SabancimRoute) -> Void = { _ in }) {
+    public init(onFinished: @escaping (AppRoute) -> Void = { _ in }) {
         _viewModel = State(initialValue: SplashViewModel(onFinished: onFinished))
     }
 
@@ -48,16 +48,16 @@ public struct SplashView: BaseView {
     }
 
     private var splashOverlay: some View {
-        VStack(spacing: SabancimTheme.Spacing.lg) {
+        VStack(spacing: AppTheme.Spacing.lg) {
             Spacer()
             ProgressView()
-                .tint(SabancimTheme.Colors.primary)
-                .padding(.bottom, SabancimTheme.Spacing.lg)
+                .tint(AppTheme.Colors.primary)
+                .padding(.bottom, AppTheme.Spacing.lg)
         }
     }
 
     private func forceUpdateView(storeURL: URL, message: String) -> some View {
-        VStack(spacing: SabancimTheme.Spacing.md) {
+        VStack(spacing: AppTheme.Spacing.md) {
             Spacer()
             Image(systemName: "arrow.down.circle.fill")
                 .font(.system(size: 56))
@@ -71,7 +71,7 @@ public struct SplashView: BaseView {
             Spacer()
             SabancimButton("App Store'a Git") { openURL(storeURL) }
         }
-        .padding(SabancimTheme.Spacing.lg)
+        .padding(AppTheme.Spacing.lg)
         .background(.black.opacity(0.35))   // metin okunurluğu için
     }
 

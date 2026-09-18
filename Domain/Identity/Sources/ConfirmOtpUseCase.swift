@@ -19,7 +19,7 @@ public struct ConfirmOtpUseCase: Sendable {
         self.session = session
     }
 
-    public func callAsFunction(_ request: OtpConfirmationRequest) async -> SabancimResult<AuthenticationResult> {
+    public func callAsFunction(_ request: OtpConfirmationRequest) async -> AppResult<AuthenticationResult> {
         guard !request.confirmationCode.trimmingCharacters(in: .whitespaces).isEmpty else {
             return .failure(.validation([
                 ValidationItem(field: "confirmationCode", message: "Doğrulama kodu boş olamaz.")

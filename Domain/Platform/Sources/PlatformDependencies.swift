@@ -30,7 +30,7 @@ public extension DependencyValues {
 /// (Eski ad `UnimplementedVersionRepository`; artık gerçek bir liveValue olduğu için
 /// `DefaultVersionRepository` daha doğru.)
 struct DefaultVersionRepository: VersionRepository {
-    func check(_ input: VersionCheckInput) async -> SabancimResult<AppVersionInfo> {
+    func check(_ input: VersionCheckInput) async -> AppResult<AppVersionInfo> {
         .success(AppVersionInfo(
             latestVersion: input.applicationVersion,
             minSupportedVersion: "0.0.0",

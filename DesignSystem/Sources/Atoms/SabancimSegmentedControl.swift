@@ -30,11 +30,11 @@ public struct SabancimSegmentedControl: View {
                             .minimumScaleFactor(0.8)
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, SabancimTheme.Spacing.sm - 1)
-                    .foregroundStyle(i == selection ? SabancimTheme.Colors.primary : SabancimTheme.Colors.muted)
+                    .padding(.vertical, AppTheme.Spacing.sm - 1)
+                    .foregroundStyle(i == selection ? AppTheme.Colors.primary : AppTheme.Colors.muted)
                     .background(
                         Capsule()
-                            .fill(i == selection ? SabancimTheme.Colors.cardSurface : Color.clear)
+                            .fill(i == selection ? AppTheme.Colors.cardSurface : Color.clear)
                             .shadow(color: i == selection ? .black.opacity(0.08) : .clear,
                                     radius: 3, y: 1)
                     )
@@ -43,7 +43,7 @@ public struct SabancimSegmentedControl: View {
             }
         }
         .padding(3)
-        .background(SabancimTheme.Colors.surface)
+        .background(AppTheme.Colors.surface)
         .clipShape(Capsule())
     }
 }

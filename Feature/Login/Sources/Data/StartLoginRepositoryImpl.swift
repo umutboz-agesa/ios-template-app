@@ -13,7 +13,7 @@ final class StartLoginRepositoryImpl: StartLoginRepository, @unchecked Sendable 
         self.remote = remote
     }
  
-    func startLogin(_ request: StartLoginRequest) async -> SabancimResult<RecognizedUser?> {
+    func startLogin(_ request: StartLoginRequest) async -> AppResult<RecognizedUser?> {
         await remote.startLogin(request)
     }
 }

@@ -11,5 +11,5 @@ import Foundation
 /// Implementasyon `Feature:Splash` içinde (`VersionRepositoryImpl`),
 /// swift-dependencies ile bağlanır (Android `@Binds`).
 public protocol VersionRepository: Sendable {
-    func check(_ input: VersionCheckInput) async -> SabancimResult<AppVersionInfo>
+    func check(_ input: VersionCheckInput) async -> AppResult<AppVersionInfo>
 }

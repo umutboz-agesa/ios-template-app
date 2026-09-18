@@ -78,10 +78,10 @@
 		000000000000000000000185 /* VersionRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000CF /* VersionRepositoryImpl.swift */; };
 		000000000000000000000186 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000D6 /* SplashView.swift */; };
 		000000000000000000000187 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000D7 /* SplashViewModel.swift */; };
-		000000000000000000000188 /* SabancimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E0 /* SabancimError.swift */; };
-		000000000000000000000189 /* SabancimResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E1 /* SabancimResult.swift */; };
+		000000000000000000000188 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E0 /* AppError.swift */; };
+		000000000000000000000189 /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E1 /* AppResult.swift */; };
 		00000000000000000000018A /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E8 /* AppNavigator.swift */; };
-		00000000000000000000018B /* SabancimRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E9 /* SabancimRoute.swift */; };
+		00000000000000000000018B /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000E9 /* AppRoute.swift */; };
 		00000000000000000000018C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F0 /* BaseView.swift */; };
 		00000000000000000000018D /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F1 /* LoadableView.swift */; };
 		00000000000000000000018E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000000000000000F8 /* SessionManager.swift */; };
@@ -125,15 +125,15 @@
 		0000000000000000000001B4 /* SabancimSavingsOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000132 /* SabancimSavingsOverviewCard.swift */; };
 		0000000000000000000001B5 /* SabancimSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000133 /* SabancimSectionHeader.swift */; };
 		0000000000000000000001B6 /* SabancimSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000134 /* SabancimSummaryCard.swift */; };
-		0000000000000000000001B7 /* SabancimTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000135 /* SabancimTabBar.swift */; };
+		0000000000000000000001B7 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000135 /* AppTabBar.swift */; };
 		0000000000000000000001B8 /* SabancimTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000136 /* SabancimTopBar.swift */; };
 		0000000000000000000001B9 /* SabancimComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000013F /* SabancimComingSoonView.swift */; };
 		0000000000000000000001BA /* StateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000140 /* StateViews.swift */; };
-		0000000000000000000001BB /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000145 /* AppTheme.swift */; };
-		0000000000000000000001BC /* SabancimBrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000146 /* SabancimBrandColors.swift */; };
-		0000000000000000000001BD /* SabancimFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000147 /* SabancimFormat.swift */; };
-		0000000000000000000001BE /* SabancimTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000148 /* SabancimTheme.swift */; };
-		0000000000000000000001BF /* SabancimThemeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000149 /* SabancimThemeTokens.swift */; };
+		0000000000000000000001BB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000145 /* Theme.swift */; };
+		0000000000000000000001BC /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000146 /* BrandColors.swift */; };
+		0000000000000000000001BD /* AppFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000147 /* AppFormat.swift */; };
+		0000000000000000000001BE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000148 /* AppTheme.swift */; };
+		0000000000000000000001BF /* AppThemeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000149 /* AppThemeTokens.swift */; };
 		9C3D5572304E92F100E07EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D5571304E92F100E07EB6 /* LaunchScreen.storyboard */; };
 		9C3D5574304E930200E07EB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3D5573304E930200E07EB6 /* Media.xcassets */; };
 /* End PBXBuildFile section */
@@ -215,10 +215,10 @@
 		0000000000000000000000CF /* VersionRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VersionRepositoryImpl.swift; path = Feature/Splash/Sources/Data/VersionRepositoryImpl.swift; sourceTree = "<group>"; };
 		0000000000000000000000D6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = Feature/Splash/Sources/Presentation/SplashView.swift; sourceTree = "<group>"; };
 		0000000000000000000000D7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewModel.swift; path = Feature/Splash/Sources/Presentation/SplashViewModel.swift; sourceTree = "<group>"; };
-		0000000000000000000000E0 /* SabancimError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimError.swift; path = Core/Common/Sources/SabancimError.swift; sourceTree = "<group>"; };
-		0000000000000000000000E1 /* SabancimResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimResult.swift; path = Core/Common/Sources/SabancimResult.swift; sourceTree = "<group>"; };
+		0000000000000000000000E0 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppError.swift; path = Core/Common/Sources/AppError.swift; sourceTree = "<group>"; };
+		0000000000000000000000E1 /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppResult.swift; path = Core/Common/Sources/AppResult.swift; sourceTree = "<group>"; };
 		0000000000000000000000E8 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppNavigator.swift; path = Core/Navigation/Sources/AppNavigator.swift; sourceTree = "<group>"; };
-		0000000000000000000000E9 /* SabancimRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimRoute.swift; path = Core/Navigation/Sources/SabancimRoute.swift; sourceTree = "<group>"; };
+		0000000000000000000000E9 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppRoute.swift; path = Core/Navigation/Sources/AppRoute.swift; sourceTree = "<group>"; };
 		0000000000000000000000F0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Core/Presentation/Sources/BaseView.swift; sourceTree = "<group>"; };
 		0000000000000000000000F1 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadableView.swift; path = Core/Presentation/Sources/LoadableView.swift; sourceTree = "<group>"; };
 		0000000000000000000000F8 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Core/Session/Sources/SessionManager.swift; sourceTree = "<group>"; };
@@ -262,15 +262,15 @@
 		000000000000000000000132 /* SabancimSavingsOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSavingsOverviewCard.swift; path = DesignSystem/Sources/Molecules/SabancimSavingsOverviewCard.swift; sourceTree = "<group>"; };
 		000000000000000000000133 /* SabancimSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSectionHeader.swift; path = DesignSystem/Sources/Molecules/SabancimSectionHeader.swift; sourceTree = "<group>"; };
 		000000000000000000000134 /* SabancimSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimSummaryCard.swift; path = DesignSystem/Sources/Molecules/SabancimSummaryCard.swift; sourceTree = "<group>"; };
-		000000000000000000000135 /* SabancimTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTabBar.swift; path = DesignSystem/Sources/Molecules/SabancimTabBar.swift; sourceTree = "<group>"; };
+		000000000000000000000135 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTabBar.swift; path = DesignSystem/Sources/Molecules/AppTabBar.swift; sourceTree = "<group>"; };
 		000000000000000000000136 /* SabancimTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTopBar.swift; path = DesignSystem/Sources/Molecules/SabancimTopBar.swift; sourceTree = "<group>"; };
 		00000000000000000000013F /* SabancimComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimComingSoonView.swift; path = DesignSystem/Sources/States/SabancimComingSoonView.swift; sourceTree = "<group>"; };
 		000000000000000000000140 /* StateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateViews.swift; path = DesignSystem/Sources/States/StateViews.swift; sourceTree = "<group>"; };
-		000000000000000000000145 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = DesignSystem/Sources/Theme/AppTheme.swift; sourceTree = "<group>"; };
-		000000000000000000000146 /* SabancimBrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimBrandColors.swift; path = DesignSystem/Sources/Theme/SabancimBrandColors.swift; sourceTree = "<group>"; };
-		000000000000000000000147 /* SabancimFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimFormat.swift; path = DesignSystem/Sources/Theme/SabancimFormat.swift; sourceTree = "<group>"; };
-		000000000000000000000148 /* SabancimTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimTheme.swift; path = DesignSystem/Sources/Theme/SabancimTheme.swift; sourceTree = "<group>"; };
-		000000000000000000000149 /* SabancimThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SabancimThemeTokens.swift; path = DesignSystem/Sources/Theme/SabancimThemeTokens.swift; sourceTree = "<group>"; };
+		000000000000000000000145 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = DesignSystem/Sources/Theme/Theme.swift; sourceTree = "<group>"; };
+		000000000000000000000146 /* BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrandColors.swift; path = DesignSystem/Sources/Theme/BrandColors.swift; sourceTree = "<group>"; };
+		000000000000000000000147 /* AppFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppFormat.swift; path = DesignSystem/Sources/Theme/AppFormat.swift; sourceTree = "<group>"; };
+		000000000000000000000148 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = DesignSystem/Sources/Theme/AppTheme.swift; sourceTree = "<group>"; };
+		000000000000000000000149 /* AppThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppThemeTokens.swift; path = DesignSystem/Sources/Theme/AppThemeTokens.swift; sourceTree = "<group>"; };
 		9C3D5571304E92F100E07EB6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = App/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3D5573304E930200E07EB6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = App/Resources/Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -637,8 +637,8 @@
 		0000000000000000000000DF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0000000000000000000000E0 /* SabancimError.swift */,
-				0000000000000000000000E1 /* SabancimResult.swift */,
+				0000000000000000000000E0 /* AppError.swift */,
+				0000000000000000000000E1 /* AppResult.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				0000000000000000000000E8 /* AppNavigator.swift */,
-				0000000000000000000000E9 /* SabancimRoute.swift */,
+				0000000000000000000000E9 /* AppRoute.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -770,7 +770,7 @@
 				000000000000000000000132 /* SabancimSavingsOverviewCard.swift */,
 				000000000000000000000133 /* SabancimSectionHeader.swift */,
 				000000000000000000000134 /* SabancimSummaryCard.swift */,
-				000000000000000000000135 /* SabancimTabBar.swift */,
+				000000000000000000000135 /* AppTabBar.swift */,
 				000000000000000000000136 /* SabancimTopBar.swift */,
 			);
 			name = Molecules;
@@ -795,11 +795,11 @@
 		000000000000000000000144 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000145 /* AppTheme.swift */,
-				000000000000000000000146 /* SabancimBrandColors.swift */,
-				000000000000000000000147 /* SabancimFormat.swift */,
-				000000000000000000000148 /* SabancimTheme.swift */,
-				000000000000000000000149 /* SabancimThemeTokens.swift */,
+				000000000000000000000145 /* Theme.swift */,
+				000000000000000000000146 /* BrandColors.swift */,
+				000000000000000000000147 /* AppFormat.swift */,
+				000000000000000000000148 /* AppTheme.swift */,
+				000000000000000000000149 /* AppThemeTokens.swift */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -951,10 +951,10 @@
 				000000000000000000000185 /* VersionRepositoryImpl.swift in Sources */,
 				000000000000000000000186 /* SplashView.swift in Sources */,
 				000000000000000000000187 /* SplashViewModel.swift in Sources */,
-				000000000000000000000188 /* SabancimError.swift in Sources */,
-				000000000000000000000189 /* SabancimResult.swift in Sources */,
+				000000000000000000000188 /* AppError.swift in Sources */,
+				000000000000000000000189 /* AppResult.swift in Sources */,
 				00000000000000000000018A /* AppNavigator.swift in Sources */,
-				00000000000000000000018B /* SabancimRoute.swift in Sources */,
+				00000000000000000000018B /* AppRoute.swift in Sources */,
 				00000000000000000000018C /* BaseView.swift in Sources */,
 				00000000000000000000018D /* LoadableView.swift in Sources */,
 				00000000000000000000018E /* SessionManager.swift in Sources */,
@@ -998,15 +998,15 @@
 				0000000000000000000001B4 /* SabancimSavingsOverviewCard.swift in Sources */,
 				0000000000000000000001B5 /* SabancimSectionHeader.swift in Sources */,
 				0000000000000000000001B6 /* SabancimSummaryCard.swift in Sources */,
-				0000000000000000000001B7 /* SabancimTabBar.swift in Sources */,
+				0000000000000000000001B7 /* AppTabBar.swift in Sources */,
 				0000000000000000000001B8 /* SabancimTopBar.swift in Sources */,
 				0000000000000000000001B9 /* SabancimComingSoonView.swift in Sources */,
 				0000000000000000000001BA /* StateViews.swift in Sources */,
-				0000000000000000000001BB /* AppTheme.swift in Sources */,
-				0000000000000000000001BC /* SabancimBrandColors.swift in Sources */,
-				0000000000000000000001BD /* SabancimFormat.swift in Sources */,
-				0000000000000000000001BE /* SabancimTheme.swift in Sources */,
-				0000000000000000000001BF /* SabancimThemeTokens.swift in Sources */,
+				0000000000000000000001BB /* Theme.swift in Sources */,
+				0000000000000000000001BC /* BrandColors.swift in Sources */,
+				0000000000000000000001BD /* AppFormat.swift in Sources */,
+				0000000000000000000001BE /* AppTheme.swift in Sources */,
+				0000000000000000000001BF /* AppThemeTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

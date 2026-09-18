@@ -1,35 +1,27 @@
 import SwiftUI
 
-/// Uygulama teması — kullanıcı seçimi (Ayarlar > Uygulama > Tema).
-/// `@AppStorage("app_theme")` ile saklanır; kök view `preferredColorScheme` uygular,
-/// böylece uygulamadan çıkmadan **runtime**'da değişir (tek anahtar → her yer senkron).
-public enum AppTheme: String, CaseIterable, Identifiable, Sendable {
-    case system   // Varsayılan (cihaz ayarı)
-    case light    // Açık
-    case dark     // Koyu
-
-    public var id: String { rawValue }
-
-    /// Ayarlar ekranında görünen ad.
-    public var title: String {
-        switch self {
-        case .system: return "Varsayılan"
-        case .light:  return "Açık"
-        case .dark:   return "Koyu"
-        }
+/// Android `:designsystem` tema (Material3 theme) karşılığı.
+/// Reusable component'ler buradan renk/tipografi çeker.
+public enum AppTheme {
+    public enum Colors {
+        public static let primary = Color(red: 0.0, green: 0.40, blue: 0.80)
+        public static let onPrimary = Color.white
+        public static let background = Color(.systemBackground)
+        public static let error = Color(red: 0.78, green: 0.13, blue: 0.13)
+        public static let surface = Color(.secondarySystemBackground)
+        public static let onSurface = Color(.label)
+        public static let muted = Color(.secondaryLabel)
     }
 
-    /// SwiftUI `preferredColorScheme` değeri (system → nil = cihazı takip et).
-    public var colorScheme: ColorScheme? {
-        switch self {
-        case .system: return nil
-        case .light:  return .light
-        case .dark:   return .dark
-        }
+    public enum Spacing {
+        public static let xs: CGFloat = 4
+        public static let sm: CGFloat = 8
+        public static let md: CGFloat = 16
+        public static let lg: CGFloat = 24
     }
-}
 
-/// `@AppStorage` için ortak anahtar (App kökü ve Ayarlar aynı anahtarı kullanır).
-public enum AppThemeStorage {
-    public static let key = "app_theme"
+    public enum Radius {
+        public static let button: CGFloat = 12
+        public static let card: CGFloat = 16
+    }
 }

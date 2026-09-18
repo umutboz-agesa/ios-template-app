@@ -39,7 +39,7 @@ public struct SabancimGradientStatCard: View {
 
     private var card: some View {
         ZStack(alignment: .bottomTrailing) {
-            VStack(alignment: .leading, spacing: SabancimTheme.Spacing.sm) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.sm) {
                 HStack(alignment: .top) {
                     Text(badge)
                         .font(.caption.weight(.bold))
@@ -56,7 +56,7 @@ public struct SabancimGradientStatCard: View {
                     .font(.title3)
                     .foregroundStyle(.white.opacity(0.95))
 
-                Spacer(minLength: SabancimTheme.Spacing.md)
+                Spacer(minLength: AppTheme.Spacing.md)
 
                 Text(stat)
                     .font(.system(size: 30, weight: .bold))
@@ -78,9 +78,9 @@ public struct SabancimGradientStatCard: View {
             }
             .frame(width: 64, height: 64)
         }
-        .padding(SabancimTheme.Spacing.lg)
+        .padding(AppTheme.Spacing.lg)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(gradient)
-        .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.tile, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.tile, style: .continuous))
     }
 }

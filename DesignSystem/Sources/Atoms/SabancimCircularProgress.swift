@@ -41,20 +41,20 @@ public struct SabancimCircularProgress: View {
         var body: some View {
             ZStack {
                 Circle()
-                    .stroke(SabancimTheme.Colors.surface, lineWidth: lineWidth)
+                    .stroke(AppTheme.Colors.surface, lineWidth: lineWidth)
                 Circle()
                     .trim(from: 0, to: max(0, min(value, 1)))
-                    .stroke(SabancimTheme.Colors.primary,
+                    .stroke(AppTheme.Colors.primary,
                             style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .rotationEffect(.degrees(-90))
                 VStack(spacing: 2) {
-                    Text(SabancimFormat.percent(value * 100, fractionDigits: 0))
+                    Text(AppFormat.percent(value * 100, fractionDigits: 0))
                         .font(.headline.bold())
-                        .foregroundStyle(SabancimTheme.Colors.primary)
+                        .foregroundStyle(AppTheme.Colors.primary)
                     if let caption {
                         Text(caption)
                             .font(.system(size: 9))
-                            .foregroundStyle(SabancimTheme.Colors.muted)
+                            .foregroundStyle(AppTheme.Colors.muted)
                             .multilineTextAlignment(.center)
                     }
                 }

@@ -38,5 +38,5 @@ public struct LoginRegistrationCredentials: Sendable, Equatable {
 }
 
 public protocol LoginRegistrationRepository: Sendable {
-    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> SabancimResult<Void>
+    func loginRegistration(_ credentials: LoginRegistrationCredentials) async -> AppResult<Void>
 }

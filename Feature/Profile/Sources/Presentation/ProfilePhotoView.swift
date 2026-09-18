@@ -25,9 +25,9 @@ struct ProfileAvatarButton: View {
                     .font(.system(size: 12, weight: .bold))
                     .foregroundStyle(.white)
                     .frame(width: 28, height: 28)
-                    .background(SabancimTheme.Colors.primary)
+                    .background(AppTheme.Colors.primary)
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(SabancimTheme.Colors.cardSurface, lineWidth: 2))
+                    .overlay(Circle().stroke(AppTheme.Colors.cardSurface, lineWidth: 2))
             }
         }
         .buttonStyle(.plain)
@@ -43,7 +43,7 @@ struct ProfileAvatarButton: View {
                 .scaledToFill()
                 .frame(width: size, height: size)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(SabancimTheme.Colors.primary.opacity(0.2), lineWidth: 1))
+                .overlay(Circle().stroke(AppTheme.Colors.primary.opacity(0.2), lineWidth: 1))
         } else {
             Image("maleUserAvatar")
                 .resizable()
@@ -71,23 +71,23 @@ struct ProfilePhotoEditorSheet: View {
     private let cropSize: CGFloat = 300
 
     var body: some View {
-        VStack(spacing: SabancimTheme.Spacing.lg) {
+        VStack(spacing: AppTheme.Spacing.lg) {
             header
             Spacer(minLength: 0)
             if let picked {
                 cropArea(picked)
                 Text("Yakınlaştırmak için iki parmakla sık, konumlandırmak için sürükle.")
                     .font(.caption)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .foregroundStyle(AppTheme.Colors.muted)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, SabancimTheme.Spacing.lg)
+                    .padding(.horizontal, AppTheme.Spacing.lg)
             } else {
                 placeholder
             }
             Spacer(minLength: 0)
             controls
         }
-        .padding(SabancimTheme.Spacing.md)
+        .padding(AppTheme.Spacing.md)
         .background { SabancimHeroBackground() }
         .presentationDetents([.large])
         .presentationDragIndicator(.visible)
@@ -109,15 +109,15 @@ struct ProfilePhotoEditorSheet: View {
     private var header: some View {
         HStack {
             Button("İptal") { dismiss() }
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
             Spacer()
             Text("Profil Fotoğrafı")
                 .font(.headline)
-                .foregroundStyle(SabancimTheme.Colors.onSurface)
+                .foregroundStyle(AppTheme.Colors.onSurface)
             Spacer()
             Button("Kaydet") { save() }
                 .fontWeight(.semibold)
-                .foregroundStyle(picked == nil ? SabancimTheme.Colors.muted : SabancimTheme.Colors.primary)
+                .foregroundStyle(picked == nil ? AppTheme.Colors.muted : AppTheme.Colors.primary)
                 .disabled(picked == nil)
         }
     }
@@ -131,7 +131,7 @@ struct ProfilePhotoEditorSheet: View {
             .frame(width: cropSize, height: cropSize)
             .clipShape(Circle())
             .overlay(Circle().stroke(.white, lineWidth: 3))
-            .overlay(Circle().stroke(SabancimTheme.Colors.primary.opacity(0.35), lineWidth: 1))
+            .overlay(Circle().stroke(AppTheme.Colors.primary.opacity(0.35), lineWidth: 1))
             .contentShape(Circle())
             .gesture(
                 SimultaneousGesture(
@@ -149,36 +149,36 @@ struct ProfilePhotoEditorSheet: View {
     }
 
     private var placeholder: some View {
-        VStack(spacing: SabancimTheme.Spacing.md) {
+        VStack(spacing: AppTheme.Spacing.md) {
             Image(systemName: "person.crop.circle.badge.plus")
                 .font(.system(size: 64))
-                .foregroundStyle(SabancimTheme.Colors.primary)
+                .foregroundStyle(AppTheme.Colors.primary)
             Text("Bir fotoğraf seç")
                 .font(.subheadline)
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
         }
         .frame(width: cropSize, height: cropSize)
     }
 
     private var controls: some View {
-        VStack(spacing: SabancimTheme.Spacing.sm) {
+        VStack(spacing: AppTheme.Spacing.sm) {
             PhotosPicker(selection: $pickerItem, matching: .images) {
                 Label(picked == nil ? "Fotoğraf Seç" : "Farklı Fotoğraf Seç",
                       systemImage: "photo.on.rectangle")
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, SabancimTheme.Spacing.sm + 4)
-                    .background(SabancimTheme.Colors.primary)
-                    .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.button, style: .continuous))
+                    .padding(.vertical, AppTheme.Spacing.sm + 4)
+                    .background(AppTheme.Colors.primary)
+                    .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous))
             }
             if !photoB64.isEmpty {
                 Button(role: .destructive) { remove() } label: {
                     Text("Fotoğrafı Kaldır")
                         .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(SabancimTheme.Brand.red)
+                        .foregroundStyle(AppTheme.Brand.red)
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, SabancimTheme.Spacing.sm + 4)
+                        .padding(.vertical, AppTheme.Spacing.sm + 4)
                 }
             }
         }

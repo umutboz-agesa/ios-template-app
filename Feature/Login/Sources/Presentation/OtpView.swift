@@ -14,7 +14,7 @@ public struct OtpView: BaseView {
     public init(
         identityNumber: String,
         password: String,
-        onFinished: @escaping (SabancimRoute) -> Void = { _ in }
+        onFinished: @escaping (AppRoute) -> Void = { _ in }
     ) {
         _viewModel = State(initialValue: OtpViewModel(
             identityNumber: identityNumber,
@@ -24,10 +24,10 @@ public struct OtpView: BaseView {
     }
 
     public var screenBody: some View {
-        VStack(alignment: .leading, spacing: SabancimTheme.Spacing.md) {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.md) {
             Text("Lütfen cep telefonunuza gelen doğrulama kodunu aşağıdaki alana girin.")
                 .font(.body)
-                .foregroundStyle(SabancimTheme.Colors.muted)
+                .foregroundStyle(AppTheme.Colors.muted)
 
             Text("Kalan süreniz: \(viewModel.remainingTimeText)")
                 .font(.headline)
@@ -51,15 +51,15 @@ public struct OtpView: BaseView {
             // sistem `Button` kendi rengini otomatik dimlemiyor, elle veriyoruz.
             .foregroundStyle(
                 viewModel.canResend
-                    ? SabancimTheme.Colors.primary
-                    : SabancimTheme.Colors.muted.opacity(0.5)
+                    ? AppTheme.Colors.primary
+                    : AppTheme.Colors.muted.opacity(0.5)
             )
             .frame(maxWidth: .infinity, alignment: .center)
 
             if let error = viewModel.state.error {
                 Text(error.userMessage)
                     .font(.footnote)
-                    .foregroundStyle(SabancimTheme.Colors.error)
+                    .foregroundStyle(AppTheme.Colors.error)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
 
@@ -70,8 +70,8 @@ public struct OtpView: BaseView {
             }
             .disabled(!viewModel.canSubmit)
         }
-        .padding(SabancimTheme.Spacing.lg)
-        .background(SabancimTheme.Colors.background)
+        .padding(AppTheme.Spacing.lg)
+        .background(AppTheme.Colors.background)
         .navigationTitle("Cep Telefonu Doğrulama")
         .navigationBarTitleDisplayMode(.inline)
         .task {

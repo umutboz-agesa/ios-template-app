@@ -1,7 +1,7 @@
 // ── FLAVOR: tst (iç QA) ──
-SABANCIM_FLAVOR = tst
+APP_FLAVOR = tst
 BUNDLE_ID = com.agesa.template.tst
-SABANCIM_DISPLAY_NAME = iOSTemplate TST
+APP_DISPLAY_NAME = iOSTemplate TST
 
 MARKETING_VERSION = 1.0.0
 CURRENT_PROJECT_VERSION = 1

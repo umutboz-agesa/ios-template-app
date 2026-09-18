@@ -25,18 +25,18 @@ public struct SabancimProductCard: View {
 
     public var body: some View {
         Button(action: onTap) {
-            HStack(spacing: SabancimTheme.Spacing.md) {
+            HStack(spacing: AppTheme.Spacing.md) {
                 SabancimAsyncImage(url: imageURL)
                     .frame(width: 56, height: 56)
-                VStack(alignment: .leading, spacing: SabancimTheme.Spacing.xs) {
-                    Text(title).font(.headline).foregroundStyle(SabancimTheme.Colors.onSurface)
-                    Text(subtitle).font(.subheadline).foregroundStyle(SabancimTheme.Colors.muted)
+                VStack(alignment: .leading, spacing: AppTheme.Spacing.xs) {
+                    Text(title).font(.headline).foregroundStyle(AppTheme.Colors.onSurface)
+                    Text(subtitle).font(.subheadline).foregroundStyle(AppTheme.Colors.muted)
                 }
                 Spacer()
             }
-            .padding(SabancimTheme.Spacing.md)
-            .background(SabancimTheme.Colors.surface)
-            .clipShape(RoundedRectangle(cornerRadius: SabancimTheme.Radius.card))
+            .padding(AppTheme.Spacing.md)
+            .background(AppTheme.Colors.surface)
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
         }
         .buttonStyle(.plain)
     }

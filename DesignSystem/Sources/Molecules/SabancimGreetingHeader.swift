@@ -17,12 +17,12 @@ public struct SabancimGreetingHeader: View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 6) {
                 Text(title)
-                    .font(SabancimTheme.Typography.greeting)
-                    .foregroundStyle(SabancimTheme.Colors.onSurface)
+                    .font(AppTheme.Typography.greeting)
+                    .foregroundStyle(AppTheme.Colors.onSurface)
 
                 if showsWave {
                     Image(systemName: "hand.raised.fill")
-                        .font(SabancimTheme.Typography.greeting)
+                        .font(AppTheme.Typography.greeting)
                         .symbolRenderingMode(.monochrome)
                         .foregroundStyle(Color.yellow)
                         .rotationEffect(.degrees(wave ? 14 : -14), anchor: .bottom)
@@ -36,7 +36,7 @@ public struct SabancimGreetingHeader: View {
             if let subtitle {
                 Text(subtitle)
                     .font(.subheadline)
-                    .foregroundStyle(SabancimTheme.Colors.muted)
+                    .foregroundStyle(AppTheme.Colors.muted)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

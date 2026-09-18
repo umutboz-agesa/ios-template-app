@@ -12,7 +12,7 @@ final class AuthRepositoryImpl: AuthRepository, @unchecked Sendable {
         self.session = session
     }
 
-    func login(_ credentials: LoginCredentials) async -> SabancimResult<AuthenticationResult> {
+    func login(_ credentials: LoginCredentials) async -> AppResult<AuthenticationResult> {
         await remote.login(credentials)
     }
 
